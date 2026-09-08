@@ -1,0 +1,50 @@
+:root {
+  --ink: #0e1f17;
+  --ink-soft: #16302279;
+  --turf: #1f6b4a;
+  --turf-line: #3f8f5c66;
+  --paper: #eeead9;
+  --paper-dim: #ded9c4;
+  --text: #16241c;
+  --text-muted: #57604f;
+  --gold: #c9a227;
+  --rise: #2f7d4f;
+  --fall: #b23a2e;
+
+  --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Karla', system-ui, sans-serif;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}

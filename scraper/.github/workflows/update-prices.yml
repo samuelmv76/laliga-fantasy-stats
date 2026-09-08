@@ -1,0 +1,41 @@
+name: Actualizar precios LaLiga Fantasy
+
+on:
+  schedule:
+    # 01:15 UTC = 02:15 o 03:15 hora española según horario de verano/invierno.
+    # El mercado de futbolfantasy se actualiza pasada la medianoche española,
+    # así que dejamos margen para que ya esté publicado.
+    - cron: "15 1 * * *"
+  workflow_dispatch: {} # permite lanzarlo a mano desde la pestaña Actions
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r scraper/requirements.txt
+
+      - name: Scrapear mercado de hoy
+        run: python scraper/scrape_market.py
+
+      - name: Fusionar en jugadores.json
+        run: |
+          LATEST=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
+          python scraper/merge_history.py "$LATEST"
+
+      - name: Copiar al front (opcional, si sirves el JSON como estático)
+        run: cp scraper/data/jugadores.json laliga-fantasy/public/jugadores.json
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scraper/data laliga-fantasy/public/jugadores.json
+          git diff --staged --quiet || git commit -m "Actualizar precios $(date -u +%F)"
+          git push
