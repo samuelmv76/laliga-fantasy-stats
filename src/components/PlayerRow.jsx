@@ -1,4 +1,5 @@
 import { POSITION_LABEL, currentPrice, todayDelta, last } from '../data/mockPlayers'
+import { formatEuros } from '../utils/format'
 
 function Sparkline({ player }) {
   const points = last(player, 7).map((p) => p.price)
@@ -33,10 +34,10 @@ export default function PlayerRow({ player, status, onAdd, onRemove, inSquad, on
       <span className="player-row__points">{player.points}<small>pts</small></span>
 
       <span className={`player-row__delta ${delta > 0 ? 'is-rise' : delta < 0 ? 'is-fall' : ''}`}>
-        {delta > 0 ? '▲' : delta < 0 ? '▼' : '·'} {Math.abs(delta).toFixed(1)}M
+        {delta > 0 ? '▲' : delta < 0 ? '▼' : '·'} {formatEuros(Math.abs(delta))}
       </span>
 
-      <span className="player-row__price">{price.toFixed(1)}M</span>
+      <span className="player-row__price">{formatEuros(price)}</span>
 
       {inSquad ? (
         <button className="btn btn--remove" onClick={() => onRemove(player.id)}>

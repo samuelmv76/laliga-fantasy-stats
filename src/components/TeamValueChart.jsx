@@ -1,5 +1,5 @@
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts'
-import { formatDay, formatMoney } from '../utils/format'
+import { formatDay, formatEuros, formatEurosCompact } from '../utils/format'
 
 export default function TeamValueChart({ data }) {
   return (
@@ -19,11 +19,11 @@ export default function TeamValueChart({ data }) {
             width={44}
             fontSize={11}
             stroke="var(--text-muted)"
-            tickFormatter={(v) => `${v}M`}
-            domain={['dataMin - 2', 'dataMax + 2']}
+            tickFormatter={formatEurosCompact}
+            domain={['dataMin - 2000000', 'dataMax + 2000000']}
           />
           <Tooltip
-            formatter={(v) => [`${v}M`, 'Valor']}
+            formatter={(v) => [formatEuros(v), 'Valor']}
             labelFormatter={formatDay}
             contentStyle={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', borderRadius: 6 }}
           />

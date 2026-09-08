@@ -26,7 +26,7 @@ export function useSquad(players) {
   )
 
   const totalValue = useMemo(
-    () => +squad.reduce((sum, p) => sum + currentPrice(p), 0).toFixed(1),
+    () => squad.reduce((sum, p) => sum + currentPrice(p), 0),
     [squad]
   )
 

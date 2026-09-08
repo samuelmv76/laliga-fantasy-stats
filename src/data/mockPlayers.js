@@ -92,7 +92,7 @@ export const TEAMS = [...new Set(BASE_PLAYERS.map((p) => p.team))].sort()
 
 export const PLAYERS = BASE_PLAYERS.map((p) => {
   const walk = seededWalk(p.id * 97 + 13, HISTORY_DAYS, p.basePrice)
-  const priceHistory = DATES.map((date, i) => ({ date, price: +walk[i].toFixed(1) }))
+  const priceHistory = DATES.map((date, i) => ({ date, price: Math.round(walk[i] * 1_000_000) }))
 
   const jornadaPoints = seededPoints(p.id * 53 + 7, MATCHDAYS.length)
   const pointsByMatchday = MATCHDAYS.map((matchday, i) => ({ matchday, points: jornadaPoints[i] }))
@@ -108,7 +108,7 @@ export function currentPrice(player) {
 export function todayDelta(player) {
   const h = player.priceHistory
   if (h.length < 2) return 0 // primer día de histórico real, aún sin variación
-  return +(h[h.length - 1].price - h[h.length - 2].price).toFixed(1)
+  return h[h.length - 1].price - h[h.length - 2].price
 }
 
 export function last(player, n) {

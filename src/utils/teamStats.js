@@ -16,7 +16,7 @@ function priceOnDate(player, date) {
 export function teamValueSeries(squad, dateRange) {
   return dateRange.map((date) => ({
     date,
-    value: +squad.reduce((sum, p) => sum + (priceOnDate(p, date) ?? 0), 0).toFixed(1),
+    value: squad.reduce((sum, p) => sum + (priceOnDate(p, date) ?? 0), 0),
   }))
 }
 
@@ -32,7 +32,7 @@ export function teamDailySeries(squad, dateRange) {
       if (today == null || yesterday == null) return sum
       return sum + (today - yesterday)
     }, 0)
-    out.push({ date, delta: +delta.toFixed(1) })
+    out.push({ date, delta })
   }
   return out
 }

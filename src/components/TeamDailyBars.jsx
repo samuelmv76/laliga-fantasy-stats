@@ -1,5 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell, ReferenceLine } from 'recharts'
-import { formatDay } from '../utils/format'
+import { formatDay, formatEuros, formatEurosCompact } from '../utils/format'
 
 export default function TeamDailyBars({ data }) {
   return (
@@ -9,10 +9,10 @@ export default function TeamDailyBars({ data }) {
         <BarChart data={data} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="var(--paper-dim)" vertical={false} />
           <XAxis dataKey="date" tickFormatter={formatDay} fontSize={11} stroke="var(--text-muted)" />
-          <YAxis width={44} fontSize={11} stroke="var(--text-muted)" tickFormatter={(v) => `${v}M`} />
+          <YAxis width={44} fontSize={11} stroke="var(--text-muted)" tickFormatter={formatEurosCompact} />
           <ReferenceLine y={0} stroke="var(--text-muted)" />
           <Tooltip
-            formatter={(v) => [`${v > 0 ? '+' : ''}${v}M`, 'Variación']}
+            formatter={(v) => [`${v > 0 ? '+' : ''}${formatEuros(v)}`, 'Variación']}
             labelFormatter={formatDay}
             contentStyle={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', borderRadius: 6 }}
           />

@@ -12,8 +12,8 @@ Formato de salida (uno por jugador):
   "pos": "POR",
   "points": 17,                 # total de la temporada, exacto
   "priceHistory": [
-    {"date": "2026-08-10", "price": 29.98},
-    {"date": "2026-09-09", "price": 42.9}
+    {"date": "2026-08-10", "price": 29984533},
+    {"date": "2026-09-09", "price": 42896693}
   ],
   "pointsHistory": [
     {"date": "2026-09-09", "points": 17}
@@ -37,12 +37,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 CANONICAL_PATH = ROOT / "data" / "jugadores.json"
-
-
-def to_millions(price_euros):
-    if price_euros is None:
-        return None
-    return round(price_euros / 1_000_000, 1)
 
 
 def load_canonical():
@@ -94,16 +88,16 @@ def merge_market(raw_scrape_path: Path, by_id: dict):
             entry["pos"] = sp.get("pos") or entry["pos"]
             updated += 1
 
-        set_history_point(entry["priceHistory"], scrape_date.isoformat(), price=to_millions(sp.get("price")))
+        price_today = sp.get("price")
+        if price_today is not None:
+            set_history_point(entry["priceHistory"], scrape_date.isoformat(), price=price_today)
+
         for key, value in sp.items():
-            if not key.startswith("price_") or not key.endswith("d_ago"):
+            if not key.startswith("price_") or not key.endswith("d_ago") or value is None:
                 continue
             days_ago = int(key.removeprefix("price_").removesuffix("d_ago"))
-            price = to_millions(value)
-            if price is None:
-                continue
             point_date = (scrape_date - timedelta(days=days_ago)).isoformat()
-            set_history_point(entry["priceHistory"], point_date, price=price)
+            set_history_point(entry["priceHistory"], point_date, price=value)
 
     print(f"[ok] mercado: {added} jugadores nuevos, {updated} actualizados.")
 

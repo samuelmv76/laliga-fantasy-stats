@@ -11,7 +11,7 @@ import {
   CartesianGrid,
 } from 'recharts'
 import { POSITION_LABEL, currentPrice, todayDelta } from '../data/mockPlayers'
-import { formatDay } from '../utils/format'
+import { formatDay, formatEuros, formatEurosCompact } from '../utils/format'
 
 export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose }) {
   if (!player) return null
@@ -32,13 +32,13 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
         <div className="modal__stats">
           <div>
             <span className="scoreboard__label">Precio actual</span>
-            <span className="modal__stat-value">{currentPrice(player).toFixed(1)}M</span>
+            <span className="modal__stat-value">{formatEuros(currentPrice(player))}</span>
           </div>
           <div>
             <span className="scoreboard__label">Variación hoy</span>
             <span className={`modal__stat-value ${delta > 0 ? 'is-rise' : delta < 0 ? 'is-fall' : ''}`}>
               {delta > 0 ? '+' : ''}
-              {delta.toFixed(1)}M
+              {formatEuros(delta)}
             </span>
           </div>
           <div>
@@ -51,9 +51,9 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
           <LineChart data={player.priceHistory} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--paper-dim)" vertical={false} />
             <XAxis dataKey="date" tickFormatter={formatDay} fontSize={11} stroke="var(--text-muted)" />
-            <YAxis width={44} fontSize={11} stroke="var(--text-muted)" tickFormatter={(v) => `${v}M`} domain={['dataMin - 0.3', 'dataMax + 0.3']} />
+            <YAxis width={44} fontSize={11} stroke="var(--text-muted)" tickFormatter={formatEurosCompact} domain={['dataMin - 300000', 'dataMax + 300000']} />
             <Tooltip
-              formatter={(v) => [`${v}M`, 'Precio']}
+              formatter={(v) => [formatEuros(v), 'Precio']}
               labelFormatter={formatDay}
               contentStyle={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', borderRadius: 6 }}
             />
