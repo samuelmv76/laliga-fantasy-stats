@@ -84,6 +84,25 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
           </>
         )}
 
+        {!player.pointsByMatchday && player.pointsHistory && player.pointsHistory.length > 1 && (
+          <>
+            <h3 className="modal__section-title">Evolución de puntos</h3>
+            <ResponsiveContainer width="100%" height={140}>
+              <LineChart data={player.pointsHistory} margin={{ top: 4, right: 12, left: -12, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--paper-dim)" vertical={false} />
+                <XAxis dataKey="date" tickFormatter={formatDay} fontSize={11} stroke="var(--text-muted)" />
+                <YAxis width={30} fontSize={11} stroke="var(--text-muted)" />
+                <Tooltip
+                  formatter={(v) => [v, 'Puntos totales']}
+                  labelFormatter={formatDay}
+                  contentStyle={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', borderRadius: 6 }}
+                />
+                <Line type="monotone" dataKey="points" stroke="var(--turf)" strokeWidth={2} dot={false} />
+              </LineChart>
+            </ResponsiveContainer>
+          </>
+        )}
+
         {inSquad ? (
           <button className="btn btn--remove" onClick={() => onRemove(player.id)}>
             Quitar de mi equipo

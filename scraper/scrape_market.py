@@ -45,11 +45,20 @@ POSITION_MAP = {
 
 OUT_DIR = Path(__file__).parent / "data" / "raw"
 
+# La propia fila trae, además del precio de hoy (data-valor), el precio
+# exacto de hace N días en data-valorN. Los volcamos todos: da varios puntos
+# reales de histórico de golpe en vez de esperar N ejecuciones nocturnas.
+PRICE_SNAPSHOT_DAYS_AGO = (1, 2, 3, 7, 14, 30)
+
 
 def fetch_html(url: str) -> str:
     resp = requests.get(url, headers=HEADERS, timeout=30)
     resp.raise_for_status()
     return resp.text
+
+
+def _int_or_none(value):
+    return int(value) if value else None
 
 
 def parse_table(html: str):
@@ -74,13 +83,16 @@ def parse_table(html: str):
         name_el = tr.select_one(".player-name span.d-md-inline")
         team_el = tr.select_one(".player-equipo span")
 
-        players.append({
+        player = {
             "slug": tr.get("data-id"),
             "name": name_el.get_text(strip=True) if name_el else tr.get("data-nombre"),
             "team": team_el.get_text(strip=True) if team_el else None,
             "pos": pos,
             "price": int(price),
-        })
+        }
+        for days_ago in PRICE_SNAPSHOT_DAYS_AGO:
+            player[f"price_{days_ago}d_ago"] = _int_or_none(tr.get(f"data-valor{days_ago}"))
+        players.append(player)
     return players
 
 

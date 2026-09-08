@@ -21,13 +21,16 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r scraper/requirements.txt
 
-      - name: Scrapear mercado de hoy
-        run: python scraper/scrape_market.py
+      - name: Scrapear mercado y puntos de hoy
+        run: |
+          python scraper/scrape_market.py
+          python scraper/scrape_points.py
 
       - name: Fusionar en jugadores.json
         run: |
-          LATEST=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
-          python scraper/merge_history.py "$LATEST"
+          LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
+          LATEST_PUNTOS=$(ls -t scraper/data/raw/puntos_*.json | head -n 1)
+          python scraper/merge_history.py "$LATEST_MERCADO" "$LATEST_PUNTOS"
 
       - name: Copiar al front (opcional, si sirves el JSON como estático)
         run: cp scraper/data/jugadores.json public/jugadores.json
