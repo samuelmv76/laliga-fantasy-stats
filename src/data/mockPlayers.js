@@ -107,6 +107,7 @@ export function currentPrice(player) {
 
 export function todayDelta(player) {
   const h = player.priceHistory
+  if (h.length < 2) return 0 // primer día de histórico real, aún sin variación
   return +(h[h.length - 1].price - h[h.length - 2].price).toFixed(1)
 }
 

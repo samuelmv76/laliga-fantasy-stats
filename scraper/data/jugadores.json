@@ -1,1 +1,8517 @@
-[]
+[
+  {
+    "id": "1059",
+    "name": "Antonio Sivera",
+    "team": "Alavés",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 42.9
+      }
+    ]
+  },
+  {
+    "id": "15127",
+    "name": "Ángel Pérez",
+    "team": "Alavés",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 13.7
+      }
+    ]
+  },
+  {
+    "id": "16803",
+    "name": "Hugo Burcio",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "17190",
+    "name": "Álex Sánchez",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "8496",
+    "name": "Martín Satriano",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 19.9
+      }
+    ]
+  },
+  {
+    "id": "17145",
+    "name": "Adrián Riquelme",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "17166",
+    "name": "Dani Mesonero",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "14210",
+    "name": "Zaid Romero",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 30.4
+      }
+    ]
+  },
+  {
+    "id": "17161",
+    "name": "Sebastián Boselli",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "17116",
+    "name": "Thiago Fernández",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.2
+      }
+    ]
+  },
+  {
+    "id": "17119",
+    "name": "Joselillo Gaitán",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "17248",
+    "name": "Lucas Cepeda",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "17275",
+    "name": "Alex Freeman",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "17284",
+    "name": "Ville Koski",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.2
+      }
+    ]
+  },
+  {
+    "id": "6393",
+    "name": "Álvaro Fidalgo",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.5
+      }
+    ]
+  },
+  {
+    "id": "6882",
+    "name": "Tete Morente",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "4434",
+    "name": "Ademola Lookman",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 55.7
+      }
+    ]
+  },
+  {
+    "id": "15572",
+    "name": "Obed Vargas",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "17129",
+    "name": "Julio Díaz",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "16874",
+    "name": "Joel Fontanet",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "17406",
+    "name": "Lamini Fati",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "12925",
+    "name": "Aitor Mañas",
+    "team": "Alavés",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16922",
+    "name": "Gorka Carrera",
+    "team": "Real Sociedad",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16938",
+    "name": "Carlos Macià",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "16982",
+    "name": "Unai Santos",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "14036",
+    "name": "Joan Martínez",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "16975",
+    "name": "Iker Muñoz",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16931",
+    "name": "Xanet Oláiz",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16920",
+    "name": "Izei Hernández",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16818",
+    "name": "Asier Hierro",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16867",
+    "name": "Ibai Aguirre",
+    "team": "R. Sociedad B",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "11861",
+    "name": "Dani Martínez",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16940",
+    "name": "Aleksa Puric",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "16873",
+    "name": "Ángel Arcos",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16948",
+    "name": "Jorge Cestero",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16917",
+    "name": "Jorge Montes",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16809",
+    "name": "Ferran Gómez",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16247",
+    "name": "Lander Astiazaran",
+    "team": "R. Sociedad B",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "12878",
+    "name": "Buba Sangaré",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.8
+      }
+    ]
+  },
+  {
+    "id": "16802",
+    "name": "Andrés Antañón",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16924",
+    "name": "Huseini Nakoha",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "13979",
+    "name": "Diego Murillo",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "16863",
+    "name": "Bil Nsongo",
+    "team": "Deportivo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.0
+      }
+    ]
+  },
+  {
+    "id": "15164",
+    "name": "Zakaria Eddahchouri",
+    "team": "Deportivo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "17151",
+    "name": "Abiel Osorio",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "6973",
+    "name": "Alfonso Herrero",
+    "team": "Málaga",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 13.0
+      }
+    ]
+  },
+  {
+    "id": "13978",
+    "name": "Carlos López",
+    "team": "Málaga",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "14177",
+    "name": "Andrés Céspedes",
+    "team": "Málaga",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "13982",
+    "name": "Carlos Puga",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.3
+      }
+    ]
+  },
+  {
+    "id": "15344",
+    "name": "Rafa Garrido",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.4
+      }
+    ]
+  },
+  {
+    "id": "8712",
+    "name": "Mario Soriano",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 30.4
+      }
+    ]
+  },
+  {
+    "id": "3174",
+    "name": "Einar Galilea",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.9
+      }
+    ]
+  },
+  {
+    "id": "15417",
+    "name": "Angel Recio",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "10353",
+    "name": "Álex Pastor",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "15315",
+    "name": "Pablo Arriaza",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "10832",
+    "name": "Moussa Diarra",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "13983",
+    "name": "Izan Merino",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.3
+      }
+    ]
+  },
+  {
+    "id": "16286",
+    "name": "Dani Lorenzo",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.0
+      }
+    ]
+  },
+  {
+    "id": "9772",
+    "name": "Luismi Cruz",
+    "team": "Deportivo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.6
+      }
+    ]
+  },
+  {
+    "id": "13975",
+    "name": "David Mella",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.2
+      }
+    ]
+  },
+  {
+    "id": "14021",
+    "name": "Job Ochieng",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16797",
+    "name": "Damián Canedo",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "17495",
+    "name": "Javi Morcillo",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "17529",
+    "name": "Miguel Cubo",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16763",
+    "name": "Hugo Ríos",
+    "team": "Deportivo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "698",
+    "name": "Germán Parreño",
+    "team": "Deportivo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "10473",
+    "name": "Giacomo Quagliata",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.4
+      }
+    ]
+  },
+  {
+    "id": "10478",
+    "name": "Miguel Loureiro",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.2
+      }
+    ]
+  },
+  {
+    "id": "16764",
+    "name": "Quique Teijo",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "14869",
+    "name": "Samu Fernández",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "13972",
+    "name": "Diego Villares",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "16099",
+    "name": "Lucas Noubi",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.3
+      }
+    ]
+  },
+  {
+    "id": "9854",
+    "name": "Arnau Comas",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "13970",
+    "name": "Dani Barcia",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "392",
+    "name": "Ximo Navarro",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.8
+      }
+    ]
+  },
+  {
+    "id": "14097",
+    "name": "Pablo García",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16976",
+    "name": "Noé Carrillo",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "7309",
+    "name": "Riki Rodríguez",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "13973",
+    "name": "Rubén López",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16933",
+    "name": "Pablo Rosón",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16798",
+    "name": "Marc Jurado",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "13984",
+    "name": "Aarón Ochoa",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.5
+      }
+    ]
+  },
+  {
+    "id": "16004",
+    "name": "Davinchi",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.8
+      }
+    ]
+  },
+  {
+    "id": "16146",
+    "name": "Samu Becerra",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "5978",
+    "name": "Ionut Radu",
+    "team": "Celta",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 37.5
+      }
+    ]
+  },
+  {
+    "id": "13035",
+    "name": "Javi Rueda",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.7
+      }
+    ]
+  },
+  {
+    "id": "14832",
+    "name": "Albert Niculaesei",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "10237",
+    "name": "Rodrigo Mendoza",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "16158",
+    "name": "Mauro Echegoyen",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "1859",
+    "name": "Josan Ferrández",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "16237",
+    "name": "Thiago Pitarch",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.0
+      }
+    ]
+  },
+  {
+    "id": "10191",
+    "name": "Alejandro Primo",
+    "team": "Levante",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "10114",
+    "name": "Renato Veiga",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 25.3
+      }
+    ]
+  },
+  {
+    "id": "16287",
+    "name": "Iván Corralejo",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16020",
+    "name": "Nacho Pérez",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "16198",
+    "name": "Edu Altozano",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16236",
+    "name": "Miguel Sierra",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.6
+      }
+    ]
+  },
+  {
+    "id": "16018",
+    "name": "Aimar Blázquez",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "12358",
+    "name": "Gabriel Suazo",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.3
+      }
+    ]
+  },
+  {
+    "id": "14004",
+    "name": "Jozhua Vertrouwd",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "13145",
+    "name": "Paco Cortés",
+    "team": "Levante",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "6235",
+    "name": "Odysseas Vlachodimos",
+    "team": "Sevilla",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 27.7
+      }
+    ]
+  },
+  {
+    "id": "3799",
+    "name": "Andoni Gorosabel",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "9157",
+    "name": "Roger Brugué",
+    "team": "Levante",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.4
+      }
+    ]
+  },
+  {
+    "id": "7614",
+    "name": "Pablo Martínez",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.0
+      }
+    ]
+  },
+  {
+    "id": "12879",
+    "name": "Jorge Cabello",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "8088",
+    "name": "Oriol Rey",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "11683",
+    "name": "Jon Gorrotxategi",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.3
+      }
+    ]
+  },
+  {
+    "id": "12025",
+    "name": "Filip Ugrinic",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.6
+      }
+    ]
+  },
+  {
+    "id": "404",
+    "name": "Pedro Bigas",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.7
+      }
+    ]
+  },
+  {
+    "id": "15423",
+    "name": "Lander Pinillos",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "12870",
+    "name": "Carlos Espí",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.2
+      }
+    ]
+  },
+  {
+    "id": "15409",
+    "name": "Alejandro Rego",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.5
+      }
+    ]
+  },
+  {
+    "id": "15422",
+    "name": "Salvi Esquivel",
+    "team": "Atlético",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "14118",
+    "name": "Ali Houary",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "15316",
+    "name": "Roger Hinojo",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.9
+      }
+    ]
+  },
+  {
+    "id": "12539",
+    "name": "Joselu Pérez",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "7644",
+    "name": "Víctor García",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "11807",
+    "name": "Pablo Campos",
+    "team": "Levante",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "4976",
+    "name": "Jeremy Toljan",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.4
+      }
+    ]
+  },
+  {
+    "id": "1743",
+    "name": "Mathew Ryan",
+    "team": "Levante",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 23.9
+      }
+    ]
+  },
+  {
+    "id": "13440",
+    "name": "Tani Oluwaseyi",
+    "team": "Villarreal",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.5
+      }
+    ]
+  },
+  {
+    "id": "16017",
+    "name": "Alejandro Panach",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16201",
+    "name": "Mahamoud Barry",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16171",
+    "name": "Juan Hernández",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16765",
+    "name": "Xavi Espart",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.0
+      }
+    ]
+  },
+  {
+    "id": "11714",
+    "name": "Jorge Benito",
+    "team": "Getafe",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16166",
+    "name": "Mykyta Aleksandrov",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16735",
+    "name": "Javi Navarro",
+    "team": "Real Madrid",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "15273",
+    "name": "Luken Beitia",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "11793",
+    "name": "Alex Lebarbier",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16767",
+    "name": "David Delgado",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16350",
+    "name": "Iker Monreal",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "12993",
+    "name": "Álvaro García",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16810",
+    "name": "Selton Sánchez",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16801",
+    "name": "Pablo Meixús",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16156",
+    "name": "Óscar Marcos",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "12990",
+    "name": "Nordin Al Lal",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "12975",
+    "name": "Yassin Tallal",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "14881",
+    "name": "Alex Marchal",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16349",
+    "name": "Adrián Pérez",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16758",
+    "name": "Carlos Ballestero",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "12479",
+    "name": "Rúben Montero",
+    "team": "Alavés",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "5194",
+    "name": "Grady Diangana",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "16308",
+    "name": "Clemens Riedel",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.5
+      }
+    ]
+  },
+  {
+    "id": "2799",
+    "name": "Carlos Soler",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 30.1
+      }
+    ]
+  },
+  {
+    "id": "16155",
+    "name": "Theo Folgado",
+    "team": "Real Sociedad",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "16235",
+    "name": "Álex Costa",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "9500",
+    "name": "Fábio Cardoso",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16317",
+    "name": "Marcos Navarro",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "12139",
+    "name": "Georges Mikautadze",
+    "team": "Villarreal",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 62.4
+      }
+    ]
+  },
+  {
+    "id": "11758",
+    "name": "Alemão",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.9
+      }
+    ]
+  },
+  {
+    "id": "16723",
+    "name": "Eder Aller",
+    "team": "Barcelona",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "697",
+    "name": "Aymeric Laporte",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 40.7
+      }
+    ]
+  },
+  {
+    "id": "3589",
+    "name": "Dominik Livakovic",
+    "team": "Barcelona",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.9
+      }
+    ]
+  },
+  {
+    "id": "14016",
+    "name": "Mikel Santos",
+    "team": "Athletic",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "14024",
+    "name": "Javier Hernández",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.2
+      }
+    ]
+  },
+  {
+    "id": "12922",
+    "name": "Adam Boayar",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "10658",
+    "name": "Roony Bardghji",
+    "team": "Barcelona",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "13871",
+    "name": "Taufik Seidu",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "16014",
+    "name": "Antonio Martínez Bastida",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "15336",
+    "name": "Rafa Rodríguez",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.2
+      }
+    ]
+  },
+  {
+    "id": "7703",
+    "name": "Ramón Enríquez",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "9161",
+    "name": "Matías Dituro",
+    "team": "Elche",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.1
+      }
+    ]
+  },
+  {
+    "id": "18283",
+    "name": "Kayne van Oevelen",
+    "team": "Valencia",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "18026",
+    "name": "Manuel Ángel Castillo",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "18279",
+    "name": "Jaume Durá",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "18041",
+    "name": "Nizar El Jmili",
+    "team": "Villarreal",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "7589",
+    "name": "Troy Parrott",
+    "team": "Betis",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 19.9
+      }
+    ]
+  },
+  {
+    "id": "18406",
+    "name": "Ifeanyi Ndukwe",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.8
+      }
+    ]
+  },
+  {
+    "id": "18294",
+    "name": "Yanis Musuayi",
+    "team": "Levante",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "11857",
+    "name": "Matteo Prati",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.5
+      }
+    ]
+  },
+  {
+    "id": "18418",
+    "name": "Álvaro de Pablo",
+    "team": "Betis",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "18411",
+    "name": "Curro Burgos",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "14199",
+    "name": "Couhaib Driouech",
+    "team": "Celta",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.3
+      }
+    ]
+  },
+  {
+    "id": "18201",
+    "name": "Kike Ribes",
+    "team": "Celta Fortuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "15089",
+    "name": "Axel Tape",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.4
+      }
+    ]
+  },
+  {
+    "id": "18316",
+    "name": "Rockson Yeboah",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "17130",
+    "name": "Iker Luque",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "15944",
+    "name": "Mamadou Sarr",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.4
+      }
+    ]
+  },
+  {
+    "id": "17376",
+    "name": "Aaron Ndive Mayol",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "18412",
+    "name": "Óscar López",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "18240",
+    "name": "Brian Fariñas",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "18053",
+    "name": "Asier Bonel",
+    "team": "Osasuna",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "18225",
+    "name": "Juani",
+    "team": "Málaga",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "13812",
+    "name": "Sergio José Lozano",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "6310",
+    "name": "Cristian Romero",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 32.9
+      }
+    ]
+  },
+  {
+    "id": "15736",
+    "name": "Facundo Bernal",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 13.0
+      }
+    ]
+  },
+  {
+    "id": "7995",
+    "name": "Francho Serrano",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.7
+      }
+    ]
+  },
+  {
+    "id": "8337",
+    "name": "Georgiy Tsitaishvili",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.5
+      }
+    ]
+  },
+  {
+    "id": "18378",
+    "name": "Joseph Otu",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "18214",
+    "name": "Jorge Castillo",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "2733",
+    "name": "Rodri Hernández",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 72.1
+      }
+    ]
+  },
+  {
+    "id": "18268",
+    "name": "Jordi Pesquer",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "8395",
+    "name": "Karim Adeyemi",
+    "team": "Barcelona",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 50.5
+      }
+    ]
+  },
+  {
+    "id": "16229",
+    "name": "Johaneko Louis-Jean",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": "7595",
+    "name": "Anthony Gordon",
+    "team": "Barcelona",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 83.9
+      }
+    ]
+  },
+  {
+    "id": "17663",
+    "name": "Hamza Abdelkarim",
+    "team": "Barcelona",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.4
+      }
+    ]
+  },
+  {
+    "id": "18222",
+    "name": "Hugo Pérez",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "14019",
+    "name": "Alexis Ciria",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "7786",
+    "name": "Giorgi Kochorashvili",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.5
+      }
+    ]
+  },
+  {
+    "id": "18031",
+    "name": "Ryunosuke Sato",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.8
+      }
+    ]
+  },
+  {
+    "id": "17695",
+    "name": "Nathan-Dylan Saliba",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.5
+      }
+    ]
+  },
+  {
+    "id": "18273",
+    "name": "Gnangoro Bouare",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "10208",
+    "name": "Jonathan Dubasin",
+    "team": "Osasuna",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.3
+      }
+    ]
+  },
+  {
+    "id": "9573",
+    "name": "Jonathan David",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 35.1
+      }
+    ]
+  },
+  {
+    "id": "3246",
+    "name": "Aarón Martín",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.2
+      }
+    ]
+  },
+  {
+    "id": "3724",
+    "name": "Gabriel Jesus",
+    "team": "Barcelona",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 28.0
+      }
+    ]
+  },
+  {
+    "id": "13608",
+    "name": "Sebastián Cáceres",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.5
+      }
+    ]
+  },
+  {
+    "id": "972",
+    "name": "Adama Traoré",
+    "team": "Deportivo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 16.1
+      }
+    ]
+  },
+  {
+    "id": "14377",
+    "name": "Roy Revivo",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.5
+      }
+    ]
+  },
+  {
+    "id": "8782",
+    "name": "Iván Azón",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.0
+      }
+    ]
+  },
+  {
+    "id": "11998",
+    "name": "Petar Ratkov",
+    "team": "Levante",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.7
+      }
+    ]
+  },
+  {
+    "id": "8485",
+    "name": "Romain Del Castillo",
+    "team": "Osasuna",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.2
+      }
+    ]
+  },
+  {
+    "id": "11286",
+    "name": "Jeanuël Belocian",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.1
+      }
+    ]
+  },
+  {
+    "id": "18228",
+    "name": "Rodrigo Gamón",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "5228",
+    "name": "Mujaid Sadick",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.4
+      }
+    ]
+  },
+  {
+    "id": "8091",
+    "name": "Félix Correia",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.5
+      }
+    ]
+  },
+  {
+    "id": "6580",
+    "name": "Harvey Elliott",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.2
+      }
+    ]
+  },
+  {
+    "id": "16149",
+    "name": "Moha Hamdoune",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "9670",
+    "name": "Youssouf Fofana",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.6
+      }
+    ]
+  },
+  {
+    "id": "18438",
+    "name": "Kevin Lomónaco",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.9
+      }
+    ]
+  },
+  {
+    "id": "2413",
+    "name": "Emil Audero",
+    "team": "Rayo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.6
+      }
+    ]
+  },
+  {
+    "id": "18437",
+    "name": "Lucas Stassin",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 21.8
+      }
+    ]
+  },
+  {
+    "id": "18221",
+    "name": "Jorge Castellanos",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "18250",
+    "name": "Ibrahima Danfakha",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "6050",
+    "name": "Joaquín Muñoz",
+    "team": "Málaga",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.8
+      }
+    ]
+  },
+  {
+    "id": "5013",
+    "name": "Marc Cucurella",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 62.6
+      }
+    ]
+  },
+  {
+    "id": "18224",
+    "name": "Miguel Ángel Santaella",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "18218",
+    "name": "Andrés Vallecillo",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "14096",
+    "name": "Chupete",
+    "team": "Málaga",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 31.3
+      }
+    ]
+  },
+  {
+    "id": "8780",
+    "name": "David Larrubia",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 30.9
+      }
+    ]
+  },
+  {
+    "id": "13974",
+    "name": "Yeremay Hernández",
+    "team": "Deportivo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 30.1
+      }
+    ]
+  },
+  {
+    "id": "6055",
+    "name": "Denzel Dumfries",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 37.0
+      }
+    ]
+  },
+  {
+    "id": "11467",
+    "name": "Quilindschy Hartman",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.3
+      }
+    ]
+  },
+  {
+    "id": "4884",
+    "name": "Ibrahima Konaté",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 45.4
+      }
+    ]
+  },
+  {
+    "id": "132",
+    "name": "Sergio Canales",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 26.6
+      }
+    ]
+  },
+  {
+    "id": "3414",
+    "name": "Pierre-Emerick Aubameyang",
+    "team": "Deportivo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 81.6
+      }
+    ]
+  },
+  {
+    "id": "11863",
+    "name": "Álex Calatrava",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.7
+      }
+    ]
+  },
+  {
+    "id": "10393",
+    "name": "Morten Hjulmand",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 24.5
+      }
+    ]
+  },
+  {
+    "id": "3431",
+    "name": "Bernardo Silva",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 47.6
+      }
+    ]
+  },
+  {
+    "id": "11198",
+    "name": "Lorenzo Amatucci",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 17.4
+      }
+    ]
+  },
+  {
+    "id": "18018",
+    "name": "Justin de Haas",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.0
+      }
+    ]
+  },
+  {
+    "id": "15928",
+    "name": "Aliou Dieng",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.3
+      }
+    ]
+  },
+  {
+    "id": "16263",
+    "name": "Santi Franco",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "17148",
+    "name": "Giorgi Guliashvili",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "3106",
+    "name": "Péter Gulácsi",
+    "team": "Villarreal",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.7
+      }
+    ]
+  },
+  {
+    "id": "10338",
+    "name": "Íñigo Sainz-Maza",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "7686",
+    "name": "Julen Lobete",
+    "team": "Málaga",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "6814",
+    "name": "Eneko Jauregi",
+    "team": "Málaga",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "9321",
+    "name": "Haitam Abaida",
+    "team": "Málaga",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "17126",
+    "name": "Álvaro Jiménez",
+    "team": "Racing",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "15033",
+    "name": "Simon Eriksson",
+    "team": "Racing",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "16359",
+    "name": "Laro Gómez",
+    "team": "Racing",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "10336",
+    "name": "Álvaro Mantilla",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.9
+      }
+    ]
+  },
+  {
+    "id": "3836",
+    "name": "Manu Hernando",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.7
+      }
+    ]
+  },
+  {
+    "id": "9930",
+    "name": "Juan Carlos Arana",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "14105",
+    "name": "Jorge Salinas",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.9
+      }
+    ]
+  },
+  {
+    "id": "17493",
+    "name": "Carlos Sánchez",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "10209",
+    "name": "Facundo González",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "14766",
+    "name": "Aitor Crespo",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "14155",
+    "name": "Maguette Gueye",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.3
+      }
+    ]
+  },
+  {
+    "id": "16262",
+    "name": "Sergio Martínez",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "14962",
+    "name": "Mario Solórzano",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "6442",
+    "name": "Iñigo Vicente",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 28.8
+      }
+    ]
+  },
+  {
+    "id": "15957",
+    "name": "Gabriel Moscardo",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.5
+      }
+    ]
+  },
+  {
+    "id": "16186",
+    "name": "Mikel Rodriguez",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.6
+      }
+    ]
+  },
+  {
+    "id": "18021",
+    "name": "Álvaro Padilla",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "10213",
+    "name": "Beñat Gerenabarrena",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.3
+      }
+    ]
+  },
+  {
+    "id": "18028",
+    "name": "Marc Santos",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "18027",
+    "name": "Igor Galdin",
+    "team": "Levante",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16147",
+    "name": "Iván Alonso",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "18048",
+    "name": "Marco Román",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "12590",
+    "name": "Ibrahima Sow",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "13865",
+    "name": "Nico Guillén",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.6
+      }
+    ]
+  },
+  {
+    "id": "18039",
+    "name": "Cheikh Thiam",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "6337",
+    "name": "Kang-In Lee",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 67.1
+      }
+    ]
+  },
+  {
+    "id": "18241",
+    "name": "Manel Usedo",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "11579",
+    "name": "Arnau Ortiz",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "9012",
+    "name": "Altay Bayindir",
+    "team": "Celta",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "12420",
+    "name": "Abdoulaye Faye",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.4
+      }
+    ]
+  },
+  {
+    "id": "18017",
+    "name": "Teun Gijselhart",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.5
+      }
+    ]
+  },
+  {
+    "id": "14876",
+    "name": "Kevin Sánchez",
+    "team": "Deportivo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "14115",
+    "name": "Matia Barzic",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "2727",
+    "name": "Ezequiel Ponce",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "18029",
+    "name": "Alberto Calatrava",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "18006",
+    "name": "Enzo Bardelli",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.8
+      }
+    ]
+  },
+  {
+    "id": "3605",
+    "name": "Angeliño",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.8
+      }
+    ]
+  },
+  {
+    "id": "14979",
+    "name": "Nicolás Valentini",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "10893",
+    "name": "Marcos Fernández",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "11905",
+    "name": "Saba Sazonov",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "10463",
+    "name": "Orel Mangala",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.2
+      }
+    ]
+  },
+  {
+    "id": "11916",
+    "name": "Andrés García",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.9
+      }
+    ]
+  },
+  {
+    "id": "16760",
+    "name": "Pedro Felipe",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "15342",
+    "name": "Yan Diomande",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 55.2
+      }
+    ]
+  },
+  {
+    "id": "18014",
+    "name": "Arouna Sangante",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.1
+      }
+    ]
+  },
+  {
+    "id": "2771",
+    "name": "Álex Grimaldo",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 34.1
+      }
+    ]
+  },
+  {
+    "id": "14928",
+    "name": "José Ángel López",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "18030",
+    "name": "Bright Ede",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.3
+      }
+    ]
+  },
+  {
+    "id": "15351",
+    "name": "Jonathan Asp Jensen",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.8
+      }
+    ]
+  },
+  {
+    "id": "11214",
+    "name": "Facundo Buonanotte",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.0
+      }
+    ]
+  },
+  {
+    "id": "7081",
+    "name": "Fernando Niño",
+    "team": "Elche",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.7
+      }
+    ]
+  },
+  {
+    "id": "18282",
+    "name": "Yassir Zabiri",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.2
+      }
+    ]
+  },
+  {
+    "id": "18314",
+    "name": "Robbie Ure",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.6
+      }
+    ]
+  },
+  {
+    "id": "13119",
+    "name": "Vanja Drkusic",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.2
+      }
+    ]
+  },
+  {
+    "id": "17445",
+    "name": "Adama Timera",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "16202",
+    "name": "Tyrhys Dolan",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.5
+      }
+    ]
+  },
+  {
+    "id": "15505",
+    "name": "Federico Redondo",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": "4620",
+    "name": "Junior Firpo",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.9
+      }
+    ]
+  },
+  {
+    "id": "6633",
+    "name": "Jorge de Frutos",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 32.2
+      }
+    ]
+  },
+  {
+    "id": "989",
+    "name": "Stole Dimitrievski",
+    "team": "Valencia",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 20.7
+      }
+    ]
+  },
+  {
+    "id": "6560",
+    "name": "Andrei Ratiu",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 26.3
+      }
+    ]
+  },
+  {
+    "id": "6957",
+    "name": "Isi Palazón",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.0
+      }
+    ]
+  },
+  {
+    "id": "6853",
+    "name": "Randy Nteka",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "7570",
+    "name": "Dani Cárdenas",
+    "team": "Rayo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "1881",
+    "name": "Unai López",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.5
+      }
+    ]
+  },
+  {
+    "id": "867",
+    "name": "Álvaro García",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 19.3
+      }
+    ]
+  },
+  {
+    "id": "7251",
+    "name": "Iván Balliu",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "7082",
+    "name": "Jorge Herrando",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.8
+      }
+    ]
+  },
+  {
+    "id": "7307",
+    "name": "Pathé Ciss",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 22.5
+      }
+    ]
+  },
+  {
+    "id": "6889",
+    "name": "Óscar Valentín",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.8
+      }
+    ]
+  },
+  {
+    "id": "863",
+    "name": "Florian Lejeune",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 24.7
+      }
+    ]
+  },
+  {
+    "id": "6562",
+    "name": "Sergio Camello",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.4
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "name": "Thibaut Courtois",
+    "team": "Real Madrid",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 62.7
+      }
+    ]
+  },
+  {
+    "id": "6062",
+    "name": "Éder Militão",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.1
+      }
+    ]
+  },
+  {
+    "id": "8386",
+    "name": "Jude Bellingham",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 118.0
+      }
+    ]
+  },
+  {
+    "id": "11362",
+    "name": "Iker Muñoz",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.8
+      }
+    ]
+  },
+  {
+    "id": "6493",
+    "name": "Alejandro Catena",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 37.1
+      }
+    ]
+  },
+  {
+    "id": "6631",
+    "name": "Rodrygo Goes",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.9
+      }
+    ]
+  },
+  {
+    "id": "1928",
+    "name": "Lucas Torró",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "9779",
+    "name": "Bryan Zaragoza",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.8
+      }
+    ]
+  },
+  {
+    "id": "9989",
+    "name": "Sergi Cardona",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.6
+      }
+    ]
+  },
+  {
+    "id": "9990",
+    "name": "Alberto Moleiro",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 45.4
+      }
+    ]
+  },
+  {
+    "id": "3686",
+    "name": "Álvaro Valles",
+    "team": "Betis",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 47.2
+      }
+    ]
+  },
+  {
+    "id": "9234",
+    "name": "José Manuel Copete",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "2663",
+    "name": "Pablo Maffeo",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.5
+      }
+    ]
+  },
+  {
+    "id": "6611",
+    "name": "Sergio Herrera",
+    "team": "Osasuna",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 35.9
+      }
+    ]
+  },
+  {
+    "id": "7204",
+    "name": "Jon Moncayola",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.6
+      }
+    ]
+  },
+  {
+    "id": "899",
+    "name": "Johan Mojica",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.9
+      }
+    ]
+  },
+  {
+    "id": "7203",
+    "name": "Aimar Oroz",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.2
+      }
+    ]
+  },
+  {
+    "id": "3206",
+    "name": "Kike Barja",
+    "team": "Osasuna",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "7638",
+    "name": "Jesús Areso",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.3
+      }
+    ]
+  },
+  {
+    "id": "829",
+    "name": "Aitor Fernández",
+    "team": "Osasuna",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "660",
+    "name": "Rubén García",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.1
+      }
+    ]
+  },
+  {
+    "id": "841",
+    "name": "Moi Gómez",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.9
+      }
+    ]
+  },
+  {
+    "id": "6635",
+    "name": "Ante Budimir",
+    "team": "Osasuna",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 57.4
+      }
+    ]
+  },
+  {
+    "id": "10258",
+    "name": "Pablo Ibáñez",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.1
+      }
+    ]
+  },
+  {
+    "id": "5565",
+    "name": "Vinicius Junior",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 106.2
+      }
+    ]
+  },
+  {
+    "id": "8479",
+    "name": "Eduardo Camavinga",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.6
+      }
+    ]
+  },
+  {
+    "id": "5124",
+    "name": "Lucas Boyé",
+    "team": "Alavés",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 19.2
+      }
+    ]
+  },
+  {
+    "id": "15696",
+    "name": "Nelson Deossa",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.6
+      }
+    ]
+  },
+  {
+    "id": "6002",
+    "name": "Robin Le Normand",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.6
+      }
+    ]
+  },
+  {
+    "id": "8679",
+    "name": "Unai Marrero",
+    "team": "Real Sociedad",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "11816",
+    "name": "Aitor Fraga",
+    "team": "Real Sociedad",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "8228",
+    "name": "Urko González de Zarate",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.6
+      }
+    ]
+  },
+  {
+    "id": "3759",
+    "name": "Marko Dmitrovic",
+    "team": "Espanyol",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 39.8
+      }
+    ]
+  },
+  {
+    "id": "5587",
+    "name": "Adrià Pedrosa",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.8
+      }
+    ]
+  },
+  {
+    "id": "7028",
+    "name": "Nemanja Gudelj",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.4
+      }
+    ]
+  },
+  {
+    "id": "4208",
+    "name": "Marcão",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "7725",
+    "name": "Jon Pacheco",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.1
+      }
+    ]
+  },
+  {
+    "id": "11180",
+    "name": "Manu Bueno",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "3607",
+    "name": "Mouctar Diakhaby",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.0
+      }
+    ]
+  },
+  {
+    "id": "9201",
+    "name": "Sergi Canós",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "9927",
+    "name": "Javi Guerra",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 21.5
+      }
+    ]
+  },
+  {
+    "id": "5019",
+    "name": "Hugo Duro",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.8
+      }
+    ]
+  },
+  {
+    "id": "10533",
+    "name": "André Almeida",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.5
+      }
+    ]
+  },
+  {
+    "id": "5080",
+    "name": "Cristian Rivero",
+    "team": "Valencia",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "8651",
+    "name": "Beñat Turrientes",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.1
+      }
+    ]
+  },
+  {
+    "id": "8294",
+    "name": "Umar Sadiq",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.0
+      }
+    ]
+  },
+  {
+    "id": "5526",
+    "name": "Andriy Lunin",
+    "team": "Real Madrid",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "11439",
+    "name": "Arda Güler",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 84.0
+      }
+    ]
+  },
+  {
+    "id": "3758",
+    "name": "Federico Valverde",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 70.8
+      }
+    ]
+  },
+  {
+    "id": "9669",
+    "name": "Aurélien Tchouaméni",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 23.9
+      }
+    ]
+  },
+  {
+    "id": "1062",
+    "name": "Dani Ceballos",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 22.0
+      }
+    ]
+  },
+  {
+    "id": "6392",
+    "name": "Fran García",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 23.7
+      }
+    ]
+  },
+  {
+    "id": "5035",
+    "name": "Brahim Díaz",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.5
+      }
+    ]
+  },
+  {
+    "id": "2536",
+    "name": "Antonio Rüdiger",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 22.5
+      }
+    ]
+  },
+  {
+    "id": "6158",
+    "name": "Ferland Mendy",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "1975",
+    "name": "Álex Remiro",
+    "team": "Real Sociedad",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 39.4
+      }
+    ]
+  },
+  {
+    "id": "8961",
+    "name": "Jon Ander Olasagasti",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.3
+      }
+    ]
+  },
+  {
+    "id": "2807",
+    "name": "Álvaro Odriozola",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "6394",
+    "name": "Aihen Muñoz",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "2802",
+    "name": "Igor Zubeldia",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.7
+      }
+    ]
+  },
+  {
+    "id": "6363",
+    "name": "Ander Barrenetxea",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 22.7
+      }
+    ]
+  },
+  {
+    "id": "10830",
+    "name": "Pablo Marín",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "2675",
+    "name": "Mikel Oyarzabal",
+    "team": "Real Sociedad",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 59.3
+      }
+    ]
+  },
+  {
+    "id": "9011",
+    "name": "Arsen Zakharyan",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "7091",
+    "name": "Takefusa Kubo",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 23.6
+      }
+    ]
+  },
+  {
+    "id": "5227",
+    "name": "Gonzalo Villar",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.4
+      }
+    ]
+  },
+  {
+    "id": "7542",
+    "name": "Eric Garcia",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 51.5
+      }
+    ]
+  },
+  {
+    "id": "9304",
+    "name": "Diego López",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "63",
+    "name": "Koke Resurrección",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.1
+      }
+    ]
+  },
+  {
+    "id": "9213",
+    "name": "Julen Agirrezabala",
+    "team": "Racing",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 13.3
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "name": "Íñigo Ruiz de Galarreta",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 13.8
+      }
+    ]
+  },
+  {
+    "id": "735",
+    "name": "Yuri Berchiche",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.4
+      }
+    ]
+  },
+  {
+    "id": "3671",
+    "name": "Asier Villalibre",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.8
+      }
+    ]
+  },
+  {
+    "id": "7917",
+    "name": "Beñat Prados",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "11676",
+    "name": "Unai Egiluz",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "775",
+    "name": "José María Giménez",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.7
+      }
+    ]
+  },
+  {
+    "id": "3427",
+    "name": "Thomas Lemar",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.4
+      }
+    ]
+  },
+  {
+    "id": "8693",
+    "name": "Nico Williams",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 50.3
+      }
+    ]
+  },
+  {
+    "id": "1826",
+    "name": "Jan Oblak",
+    "team": "Atlético",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 47.8
+      }
+    ]
+  },
+  {
+    "id": "1931",
+    "name": "Marcos Llorente",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 42.3
+      }
+    ]
+  },
+  {
+    "id": "6487",
+    "name": "Javi Galán",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.1
+      }
+    ]
+  },
+  {
+    "id": "10005",
+    "name": "Pablo Barrios",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 55.3
+      }
+    ]
+  },
+  {
+    "id": "6450",
+    "name": "Rodrigo Riquelme",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.4
+      }
+    ]
+  },
+  {
+    "id": "1882",
+    "name": "Joao Cancelo",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 34.0
+      }
+    ]
+  },
+  {
+    "id": "9316",
+    "name": "Alejandro Balde",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 14.6
+      }
+    ]
+  },
+  {
+    "id": "5859",
+    "name": "Gorka Guruzeta",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.3
+      }
+    ]
+  },
+  {
+    "id": "1934",
+    "name": "Iñaki Williams",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 29.4
+      }
+    ]
+  },
+  {
+    "id": "7257",
+    "name": "Pedri González",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 92.2
+      }
+    ]
+  },
+  {
+    "id": "10476",
+    "name": "Abde Rebbach",
+    "team": "Alavés",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.3
+      }
+    ]
+  },
+  {
+    "id": "5083",
+    "name": "Abdel Abqar",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.9
+      }
+    ]
+  },
+  {
+    "id": "3802",
+    "name": "Ander Guevara",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "8737",
+    "name": "Antonio Blanco",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.8
+      }
+    ]
+  },
+  {
+    "id": "6665",
+    "name": "Luis Rioja",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.6
+      }
+    ]
+  },
+  {
+    "id": "9909",
+    "name": "Nahuel Tenaglia",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 32.6
+      }
+    ]
+  },
+  {
+    "id": "2751",
+    "name": "Kike García",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "3736",
+    "name": "Jon Guridi",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.8
+      }
+    ]
+  },
+  {
+    "id": "10448",
+    "name": "Carlos Benavidez",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "7006",
+    "name": "Oihan Sancet",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 38.5
+      }
+    ]
+  },
+  {
+    "id": "11719",
+    "name": "Selu Diallo",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "9897",
+    "name": "Adrián Rodríguez",
+    "team": "Alavés",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "9823",
+    "name": "Marc Pubill",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 47.5
+      }
+    ]
+  },
+  {
+    "id": "3693",
+    "name": "Unai Simón",
+    "team": "Athletic",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 47.6
+      }
+    ]
+  },
+  {
+    "id": "5245",
+    "name": "Dani Vivian",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.2
+      }
+    ]
+  },
+  {
+    "id": "7916",
+    "name": "Aitor Paredes",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.3
+      }
+    ]
+  },
+  {
+    "id": "1972",
+    "name": "Yeray Álvarez",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.8
+      }
+    ]
+  },
+  {
+    "id": "3204",
+    "name": "Álex Berenguer",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.9
+      }
+    ]
+  },
+  {
+    "id": "9273",
+    "name": "Pablo Gavi",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.4
+      }
+    ]
+  },
+  {
+    "id": "4288",
+    "name": "Raphinha",
+    "team": "Barcelona",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 132.0
+      }
+    ]
+  },
+  {
+    "id": "6563",
+    "name": "Iván Martín",
+    "team": "Racing",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.3
+      }
+    ]
+  },
+  {
+    "id": "3751",
+    "name": "Enes Ünal",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.9
+      }
+    ]
+  },
+  {
+    "id": "10860",
+    "name": "Carlos Dotor",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.7
+      }
+    ]
+  },
+  {
+    "id": "175",
+    "name": "Iago Aspas",
+    "team": "Celta",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.4
+      }
+    ]
+  },
+  {
+    "id": "3255",
+    "name": "Iván Villar",
+    "team": "Celta",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "10207",
+    "name": "Williot Swedberg",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.2
+      }
+    ]
+  },
+  {
+    "id": "8080",
+    "name": "Miguel Rodríguez",
+    "team": "Alavés",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.5
+      }
+    ]
+  },
+  {
+    "id": "8988",
+    "name": "Hugo Sotelo",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "3881",
+    "name": "Dakonam Djené",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.7
+      }
+    ]
+  },
+  {
+    "id": "2759",
+    "name": "Carles Aleñá",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.8
+      }
+    ]
+  },
+  {
+    "id": "9612",
+    "name": "Carl Starfelt",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.7
+      }
+    ]
+  },
+  {
+    "id": "9317",
+    "name": "José Ángel Carmona",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.4
+      }
+    ]
+  },
+  {
+    "id": "1919",
+    "name": "David Soria",
+    "team": "Getafe",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 35.2
+      }
+    ]
+  },
+  {
+    "id": "3235",
+    "name": "Diego Rico",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.8
+      }
+    ]
+  },
+  {
+    "id": "1989",
+    "name": "Borja Mayoral",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "8686",
+    "name": "Juan Iglesias",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.4
+      }
+    ]
+  },
+  {
+    "id": "9218",
+    "name": "Arnau Martínez",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.0
+      }
+    ]
+  },
+  {
+    "id": "6446",
+    "name": "Yangel Herrera",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.8
+      }
+    ]
+  },
+  {
+    "id": "3785",
+    "name": "Unai Núñez",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.0
+      }
+    ]
+  },
+  {
+    "id": "8273",
+    "name": "Víctor Chust",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.7
+      }
+    ]
+  },
+  {
+    "id": "2417",
+    "name": "Andreas Christensen",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.4
+      }
+    ]
+  },
+  {
+    "id": "2153",
+    "name": "Héctor Bellerín",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.9
+      }
+    ]
+  },
+  {
+    "id": "4397",
+    "name": "Marcos Alonso",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 28.1
+      }
+    ]
+  },
+  {
+    "id": "6210",
+    "name": "Frenkie de Jong",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.5
+      }
+    ]
+  },
+  {
+    "id": "6674",
+    "name": "Jules Koundé",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 29.6
+      }
+    ]
+  },
+  {
+    "id": "11520",
+    "name": "Lamine Yamal",
+    "team": "Barcelona",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 132.8
+      }
+    ]
+  },
+  {
+    "id": "10217",
+    "name": "Marc Casadó",
+    "team": "Deportivo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.6
+      }
+    ]
+  },
+  {
+    "id": "11706",
+    "name": "Pau Cubarsí",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 66.8
+      }
+    ]
+  },
+  {
+    "id": "11709",
+    "name": "Fermín López",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 101.0
+      }
+    ]
+  },
+  {
+    "id": "7676",
+    "name": "Guido Rodríguez",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.0
+      }
+    ]
+  },
+  {
+    "id": "7293",
+    "name": "Robert Navarro",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.0
+      }
+    ]
+  },
+  {
+    "id": "9750",
+    "name": "Abde Ezzalzouli",
+    "team": "Betis",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 28.9
+      }
+    ]
+  },
+  {
+    "id": "1945",
+    "name": "Borja Iglesias",
+    "team": "Celta",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.8
+      }
+    ]
+  },
+  {
+    "id": "4511",
+    "name": "Ayoze Pérez",
+    "team": "Villarreal",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.4
+      }
+    ]
+  },
+  {
+    "id": "322",
+    "name": "Marc Bartra",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 35.1
+      }
+    ]
+  },
+  {
+    "id": "10823",
+    "name": "Juan Cruz",
+    "team": "Málaga",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.6
+      }
+    ]
+  },
+  {
+    "id": "3215",
+    "name": "Marc Roca",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.4
+      }
+    ]
+  },
+  {
+    "id": "336",
+    "name": "Isco Alarcón",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 39.9
+      }
+    ]
+  },
+  {
+    "id": "5051",
+    "name": "Aitor Ruibal",
+    "team": "Betis",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "663",
+    "name": "José Gayà",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.3
+      }
+    ]
+  },
+  {
+    "id": "3226",
+    "name": "Mariano Díaz",
+    "team": "Alavés",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.1
+      }
+    ]
+  },
+  {
+    "id": "2715",
+    "name": "Pepelu",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.6
+      }
+    ]
+  },
+  {
+    "id": "8972",
+    "name": "Pablo Ramón",
+    "team": "Racing",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "2534",
+    "name": "Wojciech Szczesny",
+    "team": "Barcelona",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "14017",
+    "name": "Peio Canales",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.5
+      }
+    ]
+  },
+  {
+    "id": "9314",
+    "name": "Javi Serrano",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "12639",
+    "name": "Raúl Asencio",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.3
+      }
+    ]
+  },
+  {
+    "id": "9987",
+    "name": "Roberto Fernández",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 24.5
+      }
+    ]
+  },
+  {
+    "id": "14045",
+    "name": "Facundo Garcés",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "9125",
+    "name": "Rubén Vargas",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 12.9
+      }
+    ]
+  },
+  {
+    "id": "13830",
+    "name": "Maroan Sannadi",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "12860",
+    "name": "Pau Navarro",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.8
+      }
+    ]
+  },
+  {
+    "id": "8405",
+    "name": "Antony",
+    "team": "Betis",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 61.7
+      }
+    ]
+  },
+  {
+    "id": "14980",
+    "name": "Jones El-Abdellaoui",
+    "team": "Celta",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "13036",
+    "name": "Yoel Lago",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.7
+      }
+    ]
+  },
+  {
+    "id": "10767",
+    "name": "Sergio Mestre",
+    "team": "Real Madrid",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "7658",
+    "name": "Germán Valera",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.2
+      }
+    ]
+  },
+  {
+    "id": "10638",
+    "name": "Tajon Buchanan",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 13.2
+      }
+    ]
+  },
+  {
+    "id": "5546",
+    "name": "Cucho Hernández",
+    "team": "Betis",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 38.7
+      }
+    ]
+  },
+  {
+    "id": "10326",
+    "name": "Karl Etta Eyong",
+    "team": "Levante",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 16.1
+      }
+    ]
+  },
+  {
+    "id": "10660",
+    "name": "Orri Steinn Óskarsson",
+    "team": "Real Sociedad",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.7
+      }
+    ]
+  },
+  {
+    "id": "14812",
+    "name": "Rubén Gómez",
+    "team": "Villarreal",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "14125",
+    "name": "Luiz Junior",
+    "team": "Villarreal",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 29.8
+      }
+    ]
+  },
+  {
+    "id": "10822",
+    "name": "Pablo Durán",
+    "team": "Celta",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "12534",
+    "name": "Javi Rodríguez",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.9
+      }
+    ]
+  },
+  {
+    "id": "9740",
+    "name": "Hugo Álvarez",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.1
+      }
+    ]
+  },
+  {
+    "id": "7100",
+    "name": "Marash Kumbulla",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.6
+      }
+    ]
+  },
+  {
+    "id": "5671",
+    "name": "Juan Berrocal",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "11792",
+    "name": "Jon Martín",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 27.1
+      }
+    ]
+  },
+  {
+    "id": "12538",
+    "name": "Jon Aramburu",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.3
+      }
+    ]
+  },
+  {
+    "id": "943",
+    "name": "Dimitri Foulquier",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "13814",
+    "name": "Marco de la Sías",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "9759",
+    "name": "Alejandro Iturbe",
+    "team": "Elche",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "3717",
+    "name": "Giovani Lo Celso",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 17.8
+      }
+    ]
+  },
+  {
+    "id": "12594",
+    "name": "David Otorbi",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "14034",
+    "name": "Iker Córdoba",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "14135",
+    "name": "Manu González",
+    "team": "Betis",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "8703",
+    "name": "Alfonso González",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.9
+      }
+    ]
+  },
+  {
+    "id": "12917",
+    "name": "Alberto Risco",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "13801",
+    "name": "Pelayo Fernández",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "13808",
+    "name": "Miguel Román",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.5
+      }
+    ]
+  },
+  {
+    "id": "14816",
+    "name": "Jean Ives Valou",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "13864",
+    "name": "Marc Bernal",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.0
+      }
+    ]
+  },
+  {
+    "id": "4480",
+    "name": "Trent Alexander-Arnold",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 22.3
+      }
+    ]
+  },
+  {
+    "id": "11767",
+    "name": "Álvaro Núñez",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.6
+      }
+    ]
+  },
+  {
+    "id": "11562",
+    "name": "Yago Santiago",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "10358",
+    "name": "Marc Aguado",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.8
+      }
+    ]
+  },
+  {
+    "id": "6346",
+    "name": "Adrián de la Fuente",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 17.0
+      }
+    ]
+  },
+  {
+    "id": "7629",
+    "name": "Iván Romero",
+    "team": "Levante",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.7
+      }
+    ]
+  },
+  {
+    "id": "8250",
+    "name": "José Salinas",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "11830",
+    "name": "Dean Huijsen",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 55.2
+      }
+    ]
+  },
+  {
+    "id": "189",
+    "name": "Jonny Castro",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.5
+      }
+    ]
+  },
+  {
+    "id": "5022",
+    "name": "Bambo Diaby",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "11677",
+    "name": "Hugo Rincón",
+    "team": "Athletic",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.8
+      }
+    ]
+  },
+  {
+    "id": "5705",
+    "name": "Luiz Felipe",
+    "team": "Rayo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.8
+      }
+    ]
+  },
+  {
+    "id": "5995",
+    "name": "David Hancko",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 40.7
+      }
+    ]
+  },
+  {
+    "id": "15961",
+    "name": "Jesús Fortea",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "7842",
+    "name": "Ferran Jutglà",
+    "team": "Celta",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.6
+      }
+    ]
+  },
+  {
+    "id": "13883",
+    "name": "Martim Neto",
+    "team": "Elche",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": "16203",
+    "name": "Valentín Gómez",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.8
+      }
+    ]
+  },
+  {
+    "id": "6885",
+    "name": "Aleix Febas",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.0
+      }
+    ]
+  },
+  {
+    "id": "14935",
+    "name": "Youssef Enríquez",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "12475",
+    "name": "Adrián Niño",
+    "team": "Málaga",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": "14020",
+    "name": "Arkaitz Mariezkurrena",
+    "team": "Real Sociedad",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "12608",
+    "name": "Rayane Belaid",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "10233",
+    "name": "Ángel Ortiz",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": "12453",
+    "name": "Asier Osambela",
+    "team": "Osasuna",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "14967",
+    "name": "Juanpe Gil",
+    "team": "Rayo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "14904",
+    "name": "Daniel Yáñez",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "14886",
+    "name": "Diego Aguado",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  },
+  {
+    "id": "11554",
+    "name": "Fran González",
+    "team": "Sevilla",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "13888",
+    "name": "Andrés Castrín",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.8
+      }
+    ]
+  },
+  {
+    "id": "12598",
+    "name": "Dani Requena",
+    "team": "Levante",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.1
+      }
+    ]
+  },
+  {
+    "id": "8634",
+    "name": "Rafael Romero",
+    "team": "Sevilla",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "14022",
+    "name": "Alassane Diatta",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "15133",
+    "name": "Grégoire Swiderski",
+    "team": "Alavés",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "13822",
+    "name": "Pablo García",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.6
+      }
+    ]
+  },
+  {
+    "id": "12823",
+    "name": "Iñigo Arguibide",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.9
+      }
+    ]
+  },
+  {
+    "id": "13813",
+    "name": "Adrián Molina",
+    "team": "Rayo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "15135",
+    "name": "Pol Fortuny",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "15227",
+    "name": "Mario Rivas",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "11813",
+    "name": "Natan",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 31.6
+      }
+    ]
+  },
+  {
+    "id": "12354",
+    "name": "Logan Costa",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "12641",
+    "name": "Gerard Martín",
+    "team": "Barcelona",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 50.3
+      }
+    ]
+  },
+  {
+    "id": "5032",
+    "name": "Toni Martinez",
+    "team": "Alavés",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 20.9
+      }
+    ]
+  },
+  {
+    "id": "11680",
+    "name": "Isaac Romero",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.3
+      }
+    ]
+  },
+  {
+    "id": "12647",
+    "name": "Johnny Cardoso",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.2
+      }
+    ]
+  },
+  {
+    "id": "8082",
+    "name": "Ilaix Moriba",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.6
+      }
+    ]
+  },
+  {
+    "id": "7249",
+    "name": "Lucien Agoume",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.7
+      }
+    ]
+  },
+  {
+    "id": "2242",
+    "name": "Gonçalo Guedes",
+    "team": "Real Sociedad",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 19.3
+      }
+    ]
+  },
+  {
+    "id": "11577",
+    "name": "Héctor Fort",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.4
+      }
+    ]
+  },
+  {
+    "id": "2632",
+    "name": "Pablo Fornals",
+    "team": "Betis",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 51.1
+      }
+    ]
+  },
+  {
+    "id": "7279",
+    "name": "Joan Garcia",
+    "team": "Barcelona",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 73.0
+      }
+    ]
+  },
+  {
+    "id": "9276",
+    "name": "Giuliano Simeone",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 40.9
+      }
+    ]
+  },
+  {
+    "id": "5553",
+    "name": "Fernando Calero",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.4
+      }
+    ]
+  },
+  {
+    "id": "582",
+    "name": "Leandro Cabrera",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.0
+      }
+    ]
+  },
+  {
+    "id": "3807",
+    "name": "Javi Puado",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.1
+      }
+    ]
+  },
+  {
+    "id": "3879",
+    "name": "Pol Lozano",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "1927",
+    "name": "Pere Milla",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.3
+      }
+    ]
+  },
+  {
+    "id": "9850",
+    "name": "Jofre Carreras",
+    "team": "Espanyol",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.7
+      }
+    ]
+  },
+  {
+    "id": "3738",
+    "name": "Edu Expósito",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 28.0
+      }
+    ]
+  },
+  {
+    "id": "12651",
+    "name": "Augusto Batalla",
+    "team": "Rayo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 21.7
+      }
+    ]
+  },
+  {
+    "id": "10176",
+    "name": "Álvaro F. Carreras",
+    "team": "Real Madrid",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.6
+      }
+    ]
+  },
+  {
+    "id": "9695",
+    "name": "Rubén Sánchez",
+    "team": "Elche",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "5134",
+    "name": "Alexander Sorloth",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.5
+      }
+    ]
+  },
+  {
+    "id": "8684",
+    "name": "Jesús Vázquez",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.9
+      }
+    ]
+  },
+  {
+    "id": "10210",
+    "name": "Fran Pérez",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "9744",
+    "name": "Hugo González",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "9762",
+    "name": "César Tárrega",
+    "team": "Valencia",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.5
+      }
+    ]
+  },
+  {
+    "id": "5549",
+    "name": "Santi Comesaña",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 20.2
+      }
+    ]
+  },
+  {
+    "id": "843",
+    "name": "Gerard Moreno",
+    "team": "Villarreal",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 34.1
+      }
+    ]
+  },
+  {
+    "id": "4705",
+    "name": "Juan Foyth",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 16.3
+      }
+    ]
+  },
+  {
+    "id": "7645",
+    "name": "Álex Baena",
+    "team": "Atlético",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 67.6
+      }
+    ]
+  },
+  {
+    "id": "9931",
+    "name": "Kike Salas",
+    "team": "Sevilla",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 8.0
+      }
+    ]
+  },
+  {
+    "id": "3178",
+    "name": "Kiko Femenia",
+    "team": "Getafe",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.5
+      }
+    ]
+  },
+  {
+    "id": "8944",
+    "name": "Ramón Terrats",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.1
+      }
+    ]
+  },
+  {
+    "id": "1778",
+    "name": "Denis Suárez",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.6
+      }
+    ]
+  },
+  {
+    "id": "1566",
+    "name": "Aissa Mandi",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 11.4
+      }
+    ]
+  },
+  {
+    "id": "9763",
+    "name": "Ilias Akhomach",
+    "team": "Villarreal",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.9
+      }
+    ]
+  },
+  {
+    "id": "10357",
+    "name": "Adrià Altimira",
+    "team": "Deportivo",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.1
+      }
+    ]
+  },
+  {
+    "id": "6605",
+    "name": "Manu Sánchez",
+    "team": "Levante",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.0
+      }
+    ]
+  },
+  {
+    "id": "7027",
+    "name": "Raúl García",
+    "team": "Osasuna",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "10220",
+    "name": "Omar El Hilali",
+    "team": "Espanyol",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 13.1
+      }
+    ]
+  },
+  {
+    "id": "340",
+    "name": "Juanmi Jiménez",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "12918",
+    "name": "Rafel Bauzà",
+    "team": "Espanyol",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "13877",
+    "name": "Jiri Letácek",
+    "team": "Getafe",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "8413",
+    "name": "Pape Gueye",
+    "team": "Villarreal",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 39.4
+      }
+    ]
+  },
+  {
+    "id": "7201",
+    "name": "Iker Losada",
+    "team": "Betis",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.3
+      }
+    ]
+  },
+  {
+    "id": "707",
+    "name": "Diego Javier Llorente",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 10.1
+      }
+    ]
+  },
+  {
+    "id": "11230",
+    "name": "Abel Bretones",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.1
+      }
+    ]
+  },
+  {
+    "id": "3623",
+    "name": "Pedro Díaz",
+    "team": "Rayo",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": "8392",
+    "name": "Luka Sucic",
+    "team": "Real Sociedad",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 7.2
+      }
+    ]
+  },
+  {
+    "id": "3612",
+    "name": "Álvaro Fernández",
+    "team": "Deportivo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.4
+      }
+    ]
+  },
+  {
+    "id": "7902",
+    "name": "Hugo Novoa",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "13780",
+    "name": "Christantus Uche",
+    "team": "Getafe",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.4
+      }
+    ]
+  },
+  {
+    "id": "12891",
+    "name": "Llorenç Serred",
+    "team": "Espanyol",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "10287",
+    "name": "Julián Álvarez",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 46.6
+      }
+    ]
+  },
+  {
+    "id": "10214",
+    "name": "Alex Padilla",
+    "team": "Athletic",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "12605",
+    "name": "Mikel Jauregizar",
+    "team": "Athletic",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 16.9
+      }
+    ]
+  },
+  {
+    "id": "13876",
+    "name": "Diego Ferrer",
+    "team": "Getafe",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "9405",
+    "name": "Leo Román",
+    "team": "Deportivo",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 37.7
+      }
+    ]
+  },
+  {
+    "id": "11202",
+    "name": "Mario Martín",
+    "team": "Getafe",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.9
+      }
+    ]
+  },
+  {
+    "id": "2288",
+    "name": "Dani Olmo",
+    "team": "Barcelona",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 47.7
+      }
+    ]
+  },
+  {
+    "id": "5942",
+    "name": "Juan Musso",
+    "team": "Atlético",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.5
+      }
+    ]
+  },
+  {
+    "id": "7209",
+    "name": "Nicolas Pépé",
+    "team": "Villarreal",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 65.3
+      }
+    ]
+  },
+  {
+    "id": "6890",
+    "name": "Andrés Martín",
+    "team": "Racing",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.8
+      }
+    ]
+  },
+  {
+    "id": "11983",
+    "name": "Álvaro Djaló",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "12042",
+    "name": "Chidera Ejuke",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 5.0
+      }
+    ]
+  },
+  {
+    "id": "10341",
+    "name": "Peque",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.8
+      }
+    ]
+  },
+  {
+    "id": "6180",
+    "name": "Sergio Gómez",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 15.4
+      }
+    ]
+  },
+  {
+    "id": "7199",
+    "name": "Sergio Carreira",
+    "team": "Celta",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 6.5
+      }
+    ]
+  },
+  {
+    "id": "13564",
+    "name": "Endrick",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.1
+      }
+    ]
+  },
+  {
+    "id": "3429",
+    "name": "Kylian Mbappé",
+    "team": "Real Madrid",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 139.7
+      }
+    ]
+  },
+  {
+    "id": "11172",
+    "name": "Carlos Romero",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 27.6
+      }
+    ]
+  },
+  {
+    "id": "9531",
+    "name": "Valentin Rosier",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 2.7
+      }
+    ]
+  },
+  {
+    "id": "6174",
+    "name": "Arnaut Danjuma",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 4.7
+      }
+    ]
+  },
+  {
+    "id": "11678",
+    "name": "Santiago Mouriño",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 22.0
+      }
+    ]
+  },
+  {
+    "id": "7920",
+    "name": "Nico Serrano",
+    "team": "Athletic",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "3732",
+    "name": "Daniel Raba",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.9
+      }
+    ]
+  },
+  {
+    "id": "7554",
+    "name": "Diego Conde",
+    "team": "Betis",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "7870",
+    "name": "Raul Moro",
+    "team": "Osasuna",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 9.8
+      }
+    ]
+  },
+  {
+    "id": "8695",
+    "name": "Boyomo",
+    "team": "Osasuna",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 18.1
+      }
+    ]
+  },
+  {
+    "id": "10219",
+    "name": "Ángel Fortuño",
+    "team": "Espanyol",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "10328",
+    "name": "Marc Doménech",
+    "team": "Atlético",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.6
+      }
+    ]
+  },
+  {
+    "id": "15000",
+    "name": "Pablo López",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.4
+      }
+    ]
+  },
+  {
+    "id": "1123",
+    "name": "Raúl De Tomás",
+    "team": "Rayo",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 3.2
+      }
+    ]
+  },
+  {
+    "id": "9638",
+    "name": "Coke Carrillo",
+    "team": "Celta",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "14903",
+    "name": "Hugo de Llanos",
+    "team": "Real Madrid",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "8986",
+    "name": "Eneko Ortiz",
+    "team": "Villarreal",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "12611",
+    "name": "Alberto Collado",
+    "team": "Sevilla",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "14100",
+    "name": "Raúl Jiménez",
+    "team": "Valencia",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "10247",
+    "name": "Arnau Solà",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "12695",
+    "name": "Djordjije Medenica",
+    "team": "Getafe",
+    "pos": "POR",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "10192",
+    "name": "Carlos Giménez",
+    "team": "Atlético",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "12694",
+    "name": "Iñaki Rupérez",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.6
+      }
+    ]
+  },
+  {
+    "id": "13040",
+    "name": "Jon Balda",
+    "team": "Real Sociedad",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "14894",
+    "name": "Ismael Santana",
+    "team": "Valencia",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "12536",
+    "name": "Isra Domínguez",
+    "team": "Sevilla",
+    "pos": "DEL",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.7
+      }
+    ]
+  },
+  {
+    "id": "10495",
+    "name": "Stefan Bajcetic",
+    "team": "Celta",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.2
+      }
+    ]
+  },
+  {
+    "id": "14183",
+    "name": "Adam Aznou",
+    "team": "Málaga",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 1.0
+      }
+    ]
+  },
+  {
+    "id": "10003",
+    "name": "Joseda Álvarez",
+    "team": "Alavés",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.3
+      }
+    ]
+  },
+  {
+    "id": "9863",
+    "name": "Tomás Mendes",
+    "team": "Alavés",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "12883",
+    "name": "Ian Forns",
+    "team": "Betis",
+    "pos": "DEF",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.5
+      }
+    ]
+  },
+  {
+    "id": "11790",
+    "name": "Mario González",
+    "team": "Valencia",
+    "pos": "MID",
+    "points": 0,
+    "priceHistory": [
+      {
+        "date": "2026-09-09",
+        "price": 0.8
+      }
+    ]
+  }
+]
