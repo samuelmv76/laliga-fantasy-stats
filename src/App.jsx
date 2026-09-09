@@ -7,17 +7,18 @@ import Market from './components/Market'
 import TeamView from './components/TeamView'
 import Ranking from './components/Ranking'
 import PlayerDetail from './components/PlayerDetail'
+import { TEAM_NAME } from './config'
 import './App.css'
 
 const TABS = [
   { id: 'mercado', label: 'Mercado' },
-  { id: 'equipo', label: 'Mi equipo' },
+  { id: 'equipo', label: TEAM_NAME },
   { id: 'ranking', label: 'Ranking' },
 ]
 
 export default function App() {
   const { players, source } = usePlayers()
-  const { squad, squadIds, totalValue, canAdd, addPlayer, removePlayer, clearSquad } = useSquad(players)
+  const { squad, squadIds, totalValue, canAdd, addPlayer, removePlayer } = useSquad(players)
   const { theme, toggleTheme } = useTheme()
   const [tab, setTab] = useState('mercado')
   const [selected, setSelected] = useState(null)
@@ -98,7 +99,7 @@ export default function App() {
             totalValue={totalValue}
             removePlayer={removePlayer}
             onSelect={setSelected}
-            onClear={clearSquad}
+            onAddPlayer={() => setTab('mercado')}
           />
         )}
         {tab === 'ranking' && <Ranking players={players} onSelect={setSelected} />}

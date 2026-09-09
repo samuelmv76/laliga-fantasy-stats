@@ -101,15 +101,6 @@ export function useSquad(players) {
     [getToken, squadIds]
   )
 
-  const clearSquad = useCallback(() => {
-    const previous = squadIds
-    setSquadIds([]) // optimista
-    callTeamsApi(getToken, { method: 'POST', body: { action: 'clear' } }).then((result) => {
-      if (result.ok) setSquadIds(result.squadIds)
-      else setSquadIds(previous) // revertir si falla
-    })
-  }, [getToken, squadIds])
-
   return {
     squad,
     squadIds,
@@ -118,7 +109,6 @@ export function useSquad(players) {
     canAdd,
     addPlayer,
     removePlayer,
-    clearSquad,
     loading,
   }
 }
