@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { usePlayers } from './hooks/usePlayers'
 import { useSquad } from './hooks/useSquad'
 import { useTheme } from './hooks/useTheme'
-import { useTeamName } from './hooks/useTeamName'
 import { Show, SignInButton, UserButton } from '@clerk/react'
 import Market from './components/Market'
 import TeamView from './components/TeamView'
@@ -12,9 +11,8 @@ import './App.css'
 
 export default function App() {
   const { players, source } = usePlayers()
-  const { squad, squadIds, totalValue, canAdd, addPlayer, removePlayer } = useSquad(players)
+  const { squad, squadIds, totalValue, canAdd, addPlayer, removePlayer, teamName, renameTeam } = useSquad(players)
   const { theme, toggleTheme } = useTheme()
-  const { teamName, setTeamName } = useTeamName()
   const TABS = [
     { id: 'mercado', label: 'Mercado' },
     { id: 'equipo', label: teamName },
@@ -101,7 +99,7 @@ export default function App() {
             onSelect={setSelected}
             onAddPlayer={() => setTab('mercado')}
             teamName={teamName}
-            onRenameTeam={setTeamName}
+            onRenameTeam={renameTeam}
           />
         )}
         {tab === 'ranking' && <Ranking players={players} onSelect={setSelected} />}

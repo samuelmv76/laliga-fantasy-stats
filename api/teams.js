@@ -30,13 +30,13 @@ async function ensureUserAndTeam(clerkUserId) {
     userId = inserted[0].id
   }
 
-  const existingTeam = await sql`SELECT id FROM teams WHERE user_id = ${userId}`
+  const existingTeam = await sql`SELECT id, name FROM teams WHERE user_id = ${userId}`
   if (existingTeam.length > 0) {
-    return existingTeam[0].id
+    return existingTeam[0]
   }
 
-  const insertedTeam = await sql`INSERT INTO teams (user_id) VALUES (${userId}) RETURNING id`
-  return insertedTeam[0].id
+  const insertedTeam = await sql`INSERT INTO teams (user_id) VALUES (${userId}) RETURNING id, name`
+  return insertedTeam[0]
 }
 
 async function getSquadIds(teamId) {
@@ -53,9 +53,9 @@ export default async function handler(req, res) {
     return
   }
 
-  let teamId
+  let teamId, teamName
   try {
-    teamId = await ensureUserAndTeam(clerkUserId)
+    ;({ id: teamId, name: teamName } = await ensureUserAndTeam(clerkUserId))
   } catch (error) {
     console.error('Error creando/leyendo usuario o equipo:', error)
     res.status(500).json({ error: 'error-servidor' })
@@ -64,12 +64,23 @@ export default async function handler(req, res) {
 
   try {
     if (req.method === 'GET') {
-      res.status(200).json({ squadIds: await getSquadIds(teamId) })
+      res.status(200).json({ squadIds: await getSquadIds(teamId), teamName })
       return
     }
 
     if (req.method === 'POST') {
-      const { action, playerId } = req.body || {}
+      const { action, playerId, name } = req.body || {}
+
+      if (action === 'rename') {
+        const trimmed = (name ?? '').trim().slice(0, 40)
+        if (!trimmed) {
+          res.status(400).json({ error: 'nombre-invalido' })
+          return
+        }
+        await sql`UPDATE teams SET name = ${trimmed}, updated_at = now() WHERE id = ${teamId}`
+        res.status(200).json({ squadIds: await getSquadIds(teamId), teamName: trimmed })
+        return
+      }
 
       if (action === 'add') {
         if (!playerId) {

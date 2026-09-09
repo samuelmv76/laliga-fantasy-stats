@@ -1,1 +1,0 @@
-export const TEAM_NAME = 'Mi equipo'

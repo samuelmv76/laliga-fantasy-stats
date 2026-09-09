@@ -19,12 +19,13 @@ async function callTeamsApi(getToken, options = {}) {
   if (!res.ok) {
     return { ok: false, reason: data.error ?? 'error-servidor' }
   }
-  return { ok: true, squadIds: data.squadIds ?? [] }
+  return { ok: true, squadIds: data.squadIds ?? [], teamName: data.teamName }
 }
 
 export function useSquad(players) {
   const { isLoaded, isSignedIn, getToken } = useAuth()
   const [squadIds, setSquadIds] = useState([])
+  const [teamName, setTeamName] = useState('Mi equipo')
   const [loading, setLoading] = useState(true)
 
   // Carga el equipo desde /api/teams en cuanto sabemos si hay sesión.
@@ -41,7 +42,10 @@ export function useSquad(players) {
     setLoading(true)
     callTeamsApi(getToken).then((result) => {
       if (cancelled) return
-      if (result.ok) setSquadIds(result.squadIds)
+      if (result.ok) {
+        setSquadIds(result.squadIds)
+        setTeamName(result.teamName)
+      }
       setLoading(false)
     })
 
@@ -101,6 +105,18 @@ export function useSquad(players) {
     [getToken, squadIds]
   )
 
+  const renameTeam = useCallback(
+    (name) => {
+      const previous = teamName
+      setTeamName(name) // optimista
+      callTeamsApi(getToken, { method: 'POST', body: { action: 'rename', name } }).then((result) => {
+        if (result.ok) setTeamName(result.teamName)
+        else setTeamName(previous) // revertir si falla
+      })
+    },
+    [getToken, teamName]
+  )
+
   return {
     squad,
     squadIds,
@@ -109,6 +125,8 @@ export function useSquad(players) {
     canAdd,
     addPlayer,
     removePlayer,
+    teamName,
+    renameTeam,
     loading,
   }
 }

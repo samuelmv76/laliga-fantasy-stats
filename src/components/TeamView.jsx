@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { POSITIONS, POSITION_LABEL, currentPrice, todayDelta } from '../data/mockPlayers'
 import { teamValueSeries, teamDailySeries, unionDates } from '../utils/teamStats'
 import { formatEuros } from '../utils/format'
@@ -9,6 +9,8 @@ import { SORTERS, TeamSelect } from './Market'
 import { MAX_SQUAD } from '../hooks/useSquad'
 
 export default function TeamView({ squad, totalValue, removePlayer, onSelect, onAddPlayer, teamName, onRenameTeam }) {
+  const [nameDraft, setNameDraft] = useState(teamName)
+  useEffect(() => setNameDraft(teamName), [teamName])
   const [query, setQuery] = useState('')
   const [pos, setPos] = useState('TODOS')
   const [team, setTeam] = useState('TODOS')
@@ -47,8 +49,10 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
         <div>
           <input
             className="team-view__name"
-            value={teamName}
-            onChange={(e) => onRenameTeam(e.target.value)}
+            value={nameDraft}
+            onChange={(e) => setNameDraft(e.target.value)}
+            onBlur={() => nameDraft.trim() && nameDraft !== teamName && onRenameTeam(nameDraft.trim())}
+            onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.blur()}
             maxLength={40}
             aria-label="Nombre del equipo"
           />
