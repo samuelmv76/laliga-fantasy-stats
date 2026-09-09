@@ -1,24 +1,54 @@
 import { useEffect, useState, useCallback, useMemo } from 'react'
+import { useAuth } from '@clerk/react'
 import { currentPrice } from '../data/mockPlayers'
 
-const STORAGE_KEY = 'laliga-fantasy:equipo'
 export const MAX_SQUAD = 25
 
-function loadSquad() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? JSON.parse(raw) : []
-  } catch {
-    return []
+async function callTeamsApi(getToken, options = {}) {
+  const token = await getToken()
+  const res = await fetch('/api/teams', {
+    method: options.method ?? 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: options.body ? JSON.stringify(options.body) : undefined,
+  })
+
+  const data = await res.json().catch(() => ({}))
+  if (!res.ok) {
+    return { ok: false, reason: data.error ?? 'error-servidor' }
   }
+  return { ok: true, squadIds: data.squadIds ?? [] }
 }
 
 export function useSquad(players) {
-  const [squadIds, setSquadIds] = useState(loadSquad)
+  const { isLoaded, isSignedIn, getToken } = useAuth()
+  const [squadIds, setSquadIds] = useState([])
+  const [loading, setLoading] = useState(true)
 
+  // Carga el equipo desde /api/teams en cuanto sabemos si hay sesión.
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(squadIds))
-  }, [squadIds])
+    if (!isLoaded) return
+
+    if (!isSignedIn) {
+      setSquadIds([])
+      setLoading(false)
+      return
+    }
+
+    let cancelled = false
+    setLoading(true)
+    callTeamsApi(getToken).then((result) => {
+      if (cancelled) return
+      if (result.ok) setSquadIds(result.squadIds)
+      setLoading(false)
+    })
+
+    return () => {
+      cancelled = true
+    }
+  }, [isLoaded, isSignedIn, getToken])
 
   const squad = useMemo(
     () => squadIds.map((id) => players.find((p) => p.id === id)).filter(Boolean),
@@ -30,32 +60,55 @@ export function useSquad(players) {
     [squad]
   )
 
-  const isFull = squad.length >= MAX_SQUAD
+  const isFull = squadIds.length >= MAX_SQUAD
 
   const canAdd = useCallback(
     (player) => {
+      if (!isSignedIn) return { ok: false, reason: 'no-autenticado' }
       if (squadIds.includes(player.id)) return { ok: false, reason: 'ya-en-equipo' }
       if (isFull) return { ok: false, reason: 'equipo-completo' }
       return { ok: true }
     },
-    [squadIds, isFull]
+    [squadIds, isFull, isSignedIn]
   )
 
   const addPlayer = useCallback(
-    (player) => {
+    async (player) => {
       const check = canAdd(player)
       if (!check.ok) return check
-      setSquadIds((ids) => [...ids, player.id])
+
+      setSquadIds((ids) => [...ids, player.id]) // optimista
+      const result = await callTeamsApi(getToken, { method: 'POST', body: { action: 'add', playerId: player.id } })
+      if (!result.ok) {
+        setSquadIds((ids) => ids.filter((x) => x !== player.id)) // revertir
+        return result
+      }
+      setSquadIds(result.squadIds)
       return { ok: true }
     },
-    [canAdd]
+    [canAdd, getToken]
   )
 
-  const removePlayer = useCallback((id) => {
-    setSquadIds((ids) => ids.filter((x) => x !== id))
-  }, [])
+  const removePlayer = useCallback(
+    (id) => {
+      const previous = squadIds
+      setSquadIds((ids) => ids.filter((x) => x !== id)) // optimista
+      callTeamsApi(getToken, { method: 'POST', body: { action: 'remove', playerId: id } }).then((result) => {
+        if (result.ok) setSquadIds(result.squadIds)
+        else setSquadIds(previous) // revertir si falla
+      })
+    },
+    [getToken, squadIds]
+  )
 
-  const clearSquad = useCallback(() => setSquadIds([]), [])
+  const clearSquad = useCallback(() => {
+    const previous = squadIds
+    setSquadIds([]) // optimista
+    callTeamsApi(getToken, { method: 'POST', body: { action: 'clear' } }).then((result) => {
+      if (result.ok) setSquadIds(result.squadIds)
+      else setSquadIds(previous) // revertir si falla
+    })
+  }, [getToken, squadIds])
 
   return {
     squad,
@@ -66,5 +119,6 @@ export function useSquad(players) {
     addPlayer,
     removePlayer,
     clearSquad,
+    loading,
   }
 }

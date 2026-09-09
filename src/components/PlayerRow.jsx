@@ -65,6 +65,8 @@ function reasonLabel(reason) {
   switch (reason) {
     case 'equipo-completo':
       return 'Equipo completo (25)'
+    case 'no-autenticado':
+      return 'Inicia sesión'
     default:
       return 'No disponible'
   }
