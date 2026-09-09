@@ -5,7 +5,7 @@ export function formatDay(dateStr) {
 
 // Valor exacto en euros, con separador de miles español: 130345103 -> "130.345.103 €"
 export function formatEuros(value) {
-  return `${Math.round(value).toLocaleString('es-ES')} €`
+  return `${Math.round(value).toLocaleString('es-ES')} €`
 }
 
 // Solo para ejes de gráfica, donde no cabe el valor exacto — nunca para

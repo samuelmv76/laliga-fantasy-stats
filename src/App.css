@@ -323,7 +323,7 @@
 
 .player-row {
   display: grid;
-  grid-template-columns: 36px 1fr 70px 56px 66px 60px 130px;
+  grid-template-columns: 36px 1fr 70px 56px 90px 110px 130px;
   align-items: center;
   gap: 10px;
   padding: 10px 4px;
@@ -407,6 +407,10 @@
   gap: 5px;
   font-size: 0.76rem;
   color: var(--text-muted);
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sparkline {
@@ -440,6 +444,7 @@
   font-size: 0.8rem;
   text-align: right;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .player-row__delta.is-rise,
@@ -462,6 +467,7 @@
   font-family: var(--font-display);
   font-size: 0.98rem;
   text-align: right;
+  white-space: nowrap;
 }
 
 /* ---------- buttons ---------- */
@@ -611,7 +617,7 @@
 
 .roster__item {
   display: grid;
-  grid-template-columns: 1fr 70px 80px 80px;
+  grid-template-columns: 1fr 92px 78px 78px;
   align-items: center;
   gap: 10px;
   padding: 9px 4px;
@@ -647,12 +653,15 @@
 .roster__price {
   font-family: var(--font-display);
   text-align: right;
+  white-space: nowrap;
+  margin-right: 6px;
 }
 
 .roster__delta {
   font-family: var(--font-display);
   text-align: right;
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 /* ---------- ranking ---------- */
@@ -704,7 +713,7 @@
 
 .ranking__list li {
   display: grid;
-  grid-template-columns: 20px 1fr 60px 70px;
+  grid-template-columns: 20px 1fr 100px 80px;
   align-items: center;
   gap: 8px;
   padding: 7px 0;
@@ -744,12 +753,14 @@
   font-family: var(--font-display);
   text-align: right;
   font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 .ranking__delta {
   font-family: var(--font-display);
   text-align: right;
   font-size: 0.88rem;
+  white-space: nowrap;
 }
 
 .ranking__empty {
@@ -896,13 +907,36 @@
 
 @media (max-width: 560px) {
   .player-row {
-    grid-template-columns: 30px 1fr 56px 110px;
+    grid-template-columns: 24px 1fr 38px 104px minmax(58px, auto);
+    gap: 4px;
   }
   .sparkline,
   .player-row__delta {
     display: none;
   }
   .roster__item {
-    grid-template-columns: 1fr 60px 70px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "name button"
+      "price delta";
+    row-gap: 4px;
+    column-gap: 10px;
+  }
+  .roster__item .roster__name {
+    grid-area: name;
+  }
+  .roster__item .roster__price {
+    grid-area: price;
+    text-align: left;
+    margin-right: 0;
+  }
+  .roster__item .roster__delta {
+    grid-area: delta;
+    text-align: left;
+    margin-left: 16px;
+  }
+  .roster__item .btn--remove {
+    grid-area: button;
+    justify-self: end;
   }
 }
