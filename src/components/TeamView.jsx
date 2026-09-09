@@ -5,12 +5,17 @@ import { formatEuros } from '../utils/format'
 import TeamValueChart from './TeamValueChart'
 import TeamDailyBars from './TeamDailyBars'
 import TeamCrest from './TeamCrest'
+import { SORTERS, TeamSelect } from './Market'
 import { MAX_SQUAD } from '../hooks/useSquad'
 import { TEAM_NAME } from '../config'
 
 export default function TeamView({ squad, totalValue, removePlayer, onSelect, onAddPlayer }) {
   const [query, setQuery] = useState('')
   const [pos, setPos] = useState('TODOS')
+  const [team, setTeam] = useState('TODOS')
+  const [sortKey, setSortKey] = useState('puntos')
+
+  const teams = useMemo(() => [...new Set(squad.map((p) => p.team))].sort(), [squad])
 
   const dateRange = useMemo(() => unionDates(squad), [squad])
   const valueSeries = useMemo(() => teamValueSeries(squad, dateRange), [squad, dateRange])
@@ -20,8 +25,10 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
   const filtered = useMemo(() => {
     return squad
       .filter((p) => (pos === 'TODOS' ? true : p.pos === pos))
+      .filter((p) => (team === 'TODOS' ? true : p.team === team))
       .filter((p) => p.name.toLowerCase().includes(query.toLowerCase()) || p.team.toLowerCase().includes(query.toLowerCase()))
-  }, [squad, pos, query])
+      .sort(SORTERS[sortKey])
+  }, [squad, pos, team, query, sortKey])
 
   if (squad.length === 0) {
     return (
@@ -47,9 +54,6 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
         <span className={`team-view__today ${todayTeamDelta > 0 ? 'is-rise' : todayTeamDelta < 0 ? 'is-fall' : ''}`}>
           {todayTeamDelta > 0 ? '▲' : todayTeamDelta < 0 ? '▼' : '·'} {formatEuros(Math.abs(todayTeamDelta))} hoy
         </span>
-        <button className="btn btn--ghost-dark" onClick={onAddPlayer}>
-          + Añadir jugador
-        </button>
       </header>
 
       <div className="team-view__charts">
@@ -75,6 +79,15 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
+        <div className="market__selects">
+          <TeamSelect teams={teams} value={team} onChange={setTeam} />
+          <select className="market__sort" value={sortKey} onChange={(e) => setSortKey(e.target.value)}>
+            <option value="puntos">Ordenar: puntos</option>
+            <option value="precio">Ordenar: precio</option>
+            <option value="ratio">Ordenar: puntos/millón</option>
+            <option value="subida">Ordenar: subida de hoy</option>
+          </select>
+        </div>
       </div>
 
       <ul className="roster">
@@ -102,6 +115,10 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
           )
         })}
       </ul>
+
+      <button className="btn btn--ghost-dark team-view__add" onClick={onAddPlayer}>
+        + Añadir jugador
+      </button>
     </section>
   )
 }

@@ -3,7 +3,7 @@ import { POSITIONS, POSITION_LABEL, currentPrice, todayDelta } from '../data/moc
 import PlayerRow from './PlayerRow'
 import TeamCrest from './TeamCrest'
 
-const SORTERS = {
+export const SORTERS = {
   puntos: (a, b) => b.points - a.points,
   precio: (a, b) => currentPrice(b) - currentPrice(a),
   ratio: (a, b) => b.points / currentPrice(b) - a.points / currentPrice(a),
@@ -81,7 +81,7 @@ export default function Market({ players, squadIds, canAdd, addPlayer, removePla
   )
 }
 
-function TeamSelect({ teams, value, onChange }) {
+export function TeamSelect({ teams, value, onChange }) {
   const ref = useRef(null)
 
   useEffect(() => {

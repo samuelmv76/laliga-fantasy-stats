@@ -615,6 +615,12 @@
   border-top: 1px solid var(--paper-dim);
 }
 
+.team-view__add {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+}
+
 .roster__item {
   display: grid;
   grid-template-columns: 1fr 92px 78px 78px;
