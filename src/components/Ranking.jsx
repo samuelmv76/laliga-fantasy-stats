@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { currentPrice, todayDelta } from '../data/mockPlayers'
 import { formatEuros } from '../utils/format'
+import TeamCrest from './TeamCrest'
 
 export default function Ranking({ players, onSelect }) {
   const sorted = useMemo(() => [...players].sort((a, b) => todayDelta(b) - todayDelta(a)), [players])
@@ -30,7 +31,10 @@ function RankingColumn({ title, players, onSelect, tone }) {
               <span className="ranking__rank">{i + 1}</span>
               <button className="ranking__name" onClick={() => onSelect(p)}>
                 {p.name}
-                <span className="ranking__team">{p.team}</span>
+                <span className="ranking__team">
+                  <TeamCrest team={p.team} size={12} />
+                  {p.team}
+                </span>
               </button>
               <span className="ranking__price">{formatEuros(currentPrice(p))}</span>
               <span className={`ranking__delta is-${tone}`}>

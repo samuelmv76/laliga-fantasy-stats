@@ -1,5 +1,6 @@
 import { POSITION_LABEL, currentPrice, todayDelta, last } from '../data/mockPlayers'
 import { formatEuros } from '../utils/format'
+import TeamCrest from './TeamCrest'
 
 function Sparkline({ player }) {
   const points = last(player, 7).map((p) => p.price)
@@ -22,11 +23,14 @@ export default function PlayerRow({ player, status, onAdd, onRemove, inSquad, on
 
   return (
     <li className={`player-row${inSquad ? ' player-row--added' : ''}`}>
-      <span className="player-row__pos">{player.pos}</span>
+      <span className={`player-row__pos player-row__pos--${player.pos}`}>{player.pos}</span>
 
       <button className="player-row__id player-row__id--link" onClick={() => onSelect(player)}>
         <span className="player-row__name">{player.name}</span>
-        <span className="player-row__team">{player.team} · {POSITION_LABEL[player.pos]}</span>
+        <span className="player-row__team">
+          <TeamCrest team={player.team} size={14} />
+          {player.team} · {POSITION_LABEL[player.pos]}
+        </span>
       </button>
 
       <Sparkline player={player} />

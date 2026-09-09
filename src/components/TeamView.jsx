@@ -4,6 +4,7 @@ import { teamValueSeries, teamDailySeries, unionDates } from '../utils/teamStats
 import { formatEuros } from '../utils/format'
 import TeamValueChart from './TeamValueChart'
 import TeamDailyBars from './TeamDailyBars'
+import TeamCrest from './TeamCrest'
 import { MAX_SQUAD } from '../hooks/useSquad'
 
 export default function TeamView({ squad, totalValue, removePlayer, onSelect, onClear }) {
@@ -53,7 +54,10 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
             <li key={p.id} className="roster__item">
               <button className="roster__name" onClick={() => onSelect(p)}>
                 {p.name}
-                <span className="roster__team">{p.team}</span>
+                <span className="roster__team">
+                  <TeamCrest team={p.team} size={14} />
+                  {p.team}
+                </span>
               </button>
               <span className="roster__price">{formatEuros(currentPrice(p))}</span>
               <span className={`roster__delta ${delta > 0 ? 'is-rise' : delta < 0 ? 'is-fall' : ''}`}>

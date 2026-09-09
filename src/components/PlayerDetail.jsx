@@ -12,6 +12,7 @@ import {
 } from 'recharts'
 import { POSITION_LABEL, currentPrice, todayDelta } from '../data/mockPlayers'
 import { formatDay, formatEuros, formatEurosCompact } from '../utils/format'
+import TeamCrest from './TeamCrest'
 
 export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose }) {
   if (!player) return null
@@ -24,7 +25,8 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
           ×
         </button>
 
-        <p className="app__eyebrow" style={{ color: 'var(--turf)' }}>
+        <p className="app__eyebrow modal__team-line" style={{ color: 'var(--turf)' }}>
+          <TeamCrest team={player.team} size={16} />
           {player.team} · {POSITION_LABEL[player.pos]}
         </p>
         <h2 className="modal__title">{player.name}</h2>
