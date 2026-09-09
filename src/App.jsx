@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { usePlayers } from './hooks/usePlayers'
 import { useSquad } from './hooks/useSquad'
 import { useTheme } from './hooks/useTheme'
+import { Show, SignInButton, UserButton } from '@clerk/react'
 import Market from './components/Market'
 import TeamView from './components/TeamView'
 import Ranking from './components/Ranking'
@@ -67,6 +68,16 @@ export default function App() {
               </svg>
             )}
           </button>
+          <Show when="signed-out">
+            <SignInButton mode="modal">
+              <button type="button" className="btn btn--ghost">
+                Iniciar sesión
+              </button>
+            </SignInButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton afterSignOutUrl="/" />
+          </Show>
         </div>
       </header>
 
