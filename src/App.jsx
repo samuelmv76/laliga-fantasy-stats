@@ -2,24 +2,24 @@ import { useState } from 'react'
 import { usePlayers } from './hooks/usePlayers'
 import { useSquad } from './hooks/useSquad'
 import { useTheme } from './hooks/useTheme'
+import { useTeamName } from './hooks/useTeamName'
 import { Show, SignInButton, UserButton } from '@clerk/react'
 import Market from './components/Market'
 import TeamView from './components/TeamView'
 import Ranking from './components/Ranking'
 import PlayerDetail from './components/PlayerDetail'
-import { TEAM_NAME } from './config'
 import './App.css'
-
-const TABS = [
-  { id: 'mercado', label: 'Mercado' },
-  { id: 'equipo', label: TEAM_NAME },
-  { id: 'ranking', label: 'Ranking' },
-]
 
 export default function App() {
   const { players, source } = usePlayers()
   const { squad, squadIds, totalValue, canAdd, addPlayer, removePlayer } = useSquad(players)
   const { theme, toggleTheme } = useTheme()
+  const { teamName, setTeamName } = useTeamName()
+  const TABS = [
+    { id: 'mercado', label: 'Mercado' },
+    { id: 'equipo', label: teamName },
+    { id: 'ranking', label: 'Ranking' },
+  ]
   const [tab, setTab] = useState('mercado')
   const [selected, setSelected] = useState(null)
 
@@ -100,6 +100,8 @@ export default function App() {
             removePlayer={removePlayer}
             onSelect={setSelected}
             onAddPlayer={() => setTab('mercado')}
+            teamName={teamName}
+            onRenameTeam={setTeamName}
           />
         )}
         {tab === 'ranking' && <Ranking players={players} onSelect={setSelected} />}

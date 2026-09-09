@@ -7,9 +7,8 @@ import TeamDailyBars from './TeamDailyBars'
 import TeamCrest from './TeamCrest'
 import { SORTERS, TeamSelect } from './Market'
 import { MAX_SQUAD } from '../hooks/useSquad'
-import { TEAM_NAME } from '../config'
 
-export default function TeamView({ squad, totalValue, removePlayer, onSelect, onAddPlayer }) {
+export default function TeamView({ squad, totalValue, removePlayer, onSelect, onAddPlayer, teamName, onRenameTeam }) {
   const [query, setQuery] = useState('')
   const [pos, setPos] = useState('TODOS')
   const [team, setTeam] = useState('TODOS')
@@ -33,7 +32,7 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
   if (squad.length === 0) {
     return (
       <section className="team-view team-view--empty">
-        <h2>{TEAM_NAME}</h2>
+        <h2>{teamName}</h2>
         <p>
           Todavía no sigues a ningún jugador. Ve a <strong>Mercado</strong> y pulsa «Seguir» en los que
           quieras controlar — hasta {MAX_SQUAD}.
@@ -46,7 +45,13 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
     <section className="team-view">
       <header className="team-view__header">
         <div>
-          <h2>{TEAM_NAME}</h2>
+          <input
+            className="team-view__name"
+            value={teamName}
+            onChange={(e) => onRenameTeam(e.target.value)}
+            maxLength={40}
+            aria-label="Nombre del equipo"
+          />
           <p className="team-view__subtitle">
             {squad.length}/{MAX_SQUAD} jugadores · valor total {formatEuros(totalValue)}
           </p>
@@ -103,6 +108,7 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
                   {p.team}
                 </span>
               </button>
+              <span className="roster__points">{p.points} pts</span>
               <span className="roster__price">{formatEuros(currentPrice(p))}</span>
               <span className={`roster__delta ${delta > 0 ? 'is-rise' : delta < 0 ? 'is-fall' : ''}`}>
                 {delta > 0 ? '+' : ''}
