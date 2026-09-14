@@ -54,6 +54,14 @@ export const POSITION_LABEL = {
   DEL: 'Delantero',
 }
 
+// Estado deportivo del jugador. El scraper publicará `status` con una de estas
+// claves (o null si está disponible).
+export const PLAYER_STATUS = {
+  duda: { label: 'DUDA', tone: 'warn' },
+  lesion: { label: 'LESIÓN', tone: 'danger' },
+  sancion: { label: 'SANCIÓN', tone: 'danger' },
+}
+
 const HISTORY_DAYS = 14
 
 // Generador determinista (mismo resultado siempre) para simular el histórico
@@ -98,7 +106,11 @@ export const PLAYERS = BASE_PLAYERS.map((p) => {
   const pointsByMatchday = MATCHDAYS.map((matchday, i) => ({ matchday, points: jornadaPoints[i] }))
   const points = jornadaPoints.reduce((sum, v) => sum + v, 0)
 
-  return { ...p, priceHistory, pointsByMatchday, points }
+  // Bajas de prueba, deterministas: 1 de cada 7 lesionado, 1 de cada 11
+  // sancionado, 1 de cada 5 en duda.
+  const status = p.id % 7 === 0 ? 'lesion' : p.id % 11 === 0 ? 'sancion' : p.id % 5 === 0 ? 'duda' : null
+
+  return { ...p, priceHistory, pointsByMatchday, points, status }
 })
 
 export function currentPrice(player) {

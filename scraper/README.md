@@ -74,11 +74,38 @@ vez de 1:
 ```bash
 python scrape_market.py
 python scrape_fixtures.py data/raw/mercado_2026-09-14.json
-python build_calendar.py data/raw/calendario_2026-09-14.json   # -> data/calendario.json
+python scrape_odds.py data/raw/mercado_2026-09-14.json         # -> data/raw/cuotas_*.json
+python build_calendar.py data/raw/calendario_2026-09-14.json data/raw/cuotas_2026-09-14.json
 ```
 
 Guarda hasta 6 próximos partidos de LaLiga por equipo (el front muestra
 los que haya, mínimo pensado para 4).
+
+### Cuotas 1X2 (probabilidad de victoria y dificultad)
+
+`scrape_odds.py` baja `https://www.football-data.co.uk/fixtures.csv` (CSV
+plano, sin API key) y se queda con las filas `Div == SP1`. Usa las cuotas
+medias del mercado (`AvgH/AvgD/AvgA`), con Bet365 y la máxima como
+alternativas, y traduce los nombres de equipo a los del mercado fantasy
+(`TEAM_ALIASES`).
+
+`build_calendar.py` las pega a cada partido como `odds` y el front
+(`src/utils/opponent.js`) quita el margen de la casa —las probabilidades
+implícitas se normalizan para que sumen 100%— y de ahí salen el porcentaje
+de victoria y la dificultad del rival (1 fácil … 5 muy difícil). Sin cuotas
+para un partido, el front cae a una estimación por dificultad.
+
+Ojo: football-data solo publica en `fixtures.csv` los partidos de los
+próximos días, así que lo normal es que solo la jornada más cercana traiga
+cuotas; el resto se rellena en la siguiente ejecución.
+
+`sync_to_neon.mjs` crea las columnas `odds_home/odds_draw/odds_away` en
+`team_fixtures` (`ADD COLUMN IF NOT EXISTS`) y `/api/fixtures` las sirve
+dentro de `odds`. Comprobación rápida del cálculo:
+
+```bash
+node ../src/utils/opponent.test.mjs
+```
 
 A diferencia de `jugadores.json`, `calendario.json` no acumula histórico:
 cada ejecución lo sustituye entero (solo interesan los partidos por jugar).

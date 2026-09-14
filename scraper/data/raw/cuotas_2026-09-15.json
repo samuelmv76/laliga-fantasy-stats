@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-15",
+  "source": "https://www.football-data.co.uk/fixtures.csv",
+  "matches": [
+    {
+      "kickoff": "2026-09-11T21:00:00+02:00",
+      "date": "2026-09-11",
+      "home": "Sevilla",
+      "away": "Valencia",
+      "odds": {
+        "home": 1.96,
+        "draw": 3.31,
+        "away": 4.02
+      }
+    },
+    {
+      "kickoff": "2026-09-12T14:00:00+02:00",
+      "date": "2026-09-12",
+      "home": "Santander",
+      "away": "Alavés",
+      "odds": {
+        "home": 2.42,
+        "draw": 3.5,
+        "away": 2.76
+      }
+    },
+    {
+      "kickoff": "2026-09-12T16:15:00+02:00",
+      "date": "2026-09-12",
+      "home": "Osasuna",
+      "away": "Espanyol",
+      "odds": {
+        "home": 2.11,
+        "draw": 3.25,
+        "away": 3.58
+      }
+    },
+    {
+      "kickoff": "2026-09-12T18:30:00+02:00",
+      "date": "2026-09-12",
+      "home": "Athletic",
+      "away": "Elche",
+      "odds": {
+        "home": 1.41,
+        "draw": 4.73,
+        "away": 7.35
+      }
+    },
+    {
+      "kickoff": "2026-09-12T21:00:00+02:00",
+      "date": "2026-09-12",
+      "home": "Real Madrid",
+      "away": "Rayo Vallecano",
+      "odds": {
+        "home": 1.11,
+        "draw": 9.06,
+        "away": 18.38
+      }
+    },
+    {
+      "kickoff": "2026-09-13T14:00:00+02:00",
+      "date": "2026-09-13",
+      "home": "Celta",
+      "away": "Málaga",
+      "odds": {
+        "home": 1.7,
+        "draw": 3.62,
+        "away": 4.89
+      }
+    },
+    {
+      "kickoff": "2026-09-13T16:15:00+02:00",
+      "date": "2026-09-13",
+      "home": "Levante",
+      "away": "Barcelona",
+      "odds": {
+        "home": 14.46,
+        "draw": 7.89,
+        "away": 1.15
+      }
+    },
+    {
+      "kickoff": "2026-09-13T18:30:00+02:00",
+      "date": "2026-09-13",
+      "home": "Getafe",
+      "away": "Deportivo",
+      "odds": {
+        "home": 2.4,
+        "draw": 2.79,
+        "away": 3.38
+      }
+    },
+    {
+      "kickoff": "2026-09-13T21:00:00+02:00",
+      "date": "2026-09-13",
+      "home": "Real Sociedad",
+      "away": "Atlético",
+      "odds": {
+        "home": 2.81,
+        "draw": 3.48,
+        "away": 2.35
+      }
+    },
+    {
+      "kickoff": "2026-09-14T21:00:00+02:00",
+      "date": "2026-09-14",
+      "home": "Villarreal",
+      "away": "Betis",
+      "odds": {
+        "home": 1.88,
+        "draw": 3.79,
+        "away": 3.62
+      }
+    }
+  ]
+}

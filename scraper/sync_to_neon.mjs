@@ -113,7 +113,10 @@ async function syncFixtures(calendario) {
     matchdays = [],
     opponents = [],
     homes = [],
-    kickoffs = []
+    kickoffs = [],
+    oddsHome = [],
+    oddsDraw = [],
+    oddsAway = []
   for (const [team, fixtures] of Object.entries(calendario)) {
     for (const f of fixtures) {
       teams.push(team)
@@ -121,8 +124,17 @@ async function syncFixtures(calendario) {
       opponents.push(f.opponent)
       homes.push(f.home)
       kickoffs.push(f.kickoff)
+      oddsHome.push(f.odds?.home ?? null)
+      oddsDraw.push(f.odds?.draw ?? null)
+      oddsAway.push(f.odds?.away ?? null)
     }
   }
+
+  // Cuotas 1X2 del partido (football-data.co.uk). Nulas si aún no se publican.
+  await sql`ALTER TABLE team_fixtures
+    ADD COLUMN IF NOT EXISTS odds_home numeric,
+    ADD COLUMN IF NOT EXISTS odds_draw numeric,
+    ADD COLUMN IF NOT EXISTS odds_away numeric`
   // El calendario no acumula histórico (solo próximos partidos), así que
   // se sustituye entero en vez de acumularse, igual que build_calendar.py.
   await sql.transaction([
@@ -130,13 +142,16 @@ async function syncFixtures(calendario) {
     ...(teams.length > 0
       ? [
           sql`
-            INSERT INTO team_fixtures (team, matchday, opponent, home, kickoff)
+            INSERT INTO team_fixtures (team, matchday, opponent, home, kickoff, odds_home, odds_draw, odds_away)
             SELECT * FROM UNNEST(
               ${teams}::text[],
               ${matchdays}::int[],
               ${opponents}::text[],
               ${homes}::boolean[],
-              ${kickoffs}::timestamptz[]
+              ${kickoffs}::timestamptz[],
+              ${oddsHome}::numeric[],
+              ${oddsDraw}::numeric[],
+              ${oddsAway}::numeric[]
             )
           `,
         ]

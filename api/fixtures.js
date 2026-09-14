@@ -6,14 +6,30 @@ const sql = neon(process.env.DATABASE_URL)
 // con sus próximos partidos.
 export default async function handler(req, res) {
   try {
-    const rows = await sql`
-      SELECT team, matchday, opponent, home, kickoff
-      FROM team_fixtures
-      WHERE kickoff > now()
-      ORDER BY team, kickoff
-    `
+    // Las columnas de cuotas las crea sync_to_neon.mjs; si la base aún no las
+    // tiene, se sirve el calendario sin ellas en vez de romper el endpoint.
+    let rows
+    try {
+      rows = await sql`
+        SELECT team, matchday, opponent, home, kickoff, odds_home, odds_draw, odds_away
+        FROM team_fixtures
+        WHERE kickoff > now()
+        ORDER BY team, kickoff
+      `
+    } catch {
+      rows = await sql`
+        SELECT team, matchday, opponent, home, kickoff
+        FROM team_fixtures
+        WHERE kickoff > now()
+        ORDER BY team, kickoff
+      `
+    }
+
     const byTeam = {}
-    for (const { team, ...fixture } of rows) {
+    for (const { team, odds_home, odds_draw, odds_away, ...fixture } of rows) {
+      if (odds_home != null && odds_draw != null && odds_away != null) {
+        fixture.odds = { home: Number(odds_home), draw: Number(odds_draw), away: Number(odds_away) }
+      }
       ;(byTeam[team] ??= []).push(fixture)
     }
     res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=3600')

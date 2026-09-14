@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { POSITIONS, POSITION_LABEL, currentPrice, todayDelta } from '../data/mockPlayers'
+import { POSITIONS, currentPrice, todayDelta } from '../data/mockPlayers'
 import PlayerRow from './PlayerRow'
 import TeamCrest from './TeamCrest'
 
@@ -10,7 +10,7 @@ export const SORTERS = {
   subida: (a, b) => todayDelta(b) - todayDelta(a),
 }
 
-export default function Market({ players, squadIds, canAdd, addPlayer, removePlayer, onSelect }) {
+export default function Market({ players, fixtures, squadIds, canAdd, addPlayer, removePlayer, onSelect }) {
   const [query, setQuery] = useState('')
   const [pos, setPos] = useState('TODOS')
   const [team, setTeam] = useState('TODOS')
@@ -29,27 +29,51 @@ export default function Market({ players, squadIds, canAdd, addPlayer, removePla
   return (
     <section className="market">
       <header className="market__header">
-        <h2>Mercado</h2>
-        <input
-          className="market__search"
-          type="search"
-          placeholder="Buscar jugador o equipo…"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+        <h2>
+          Mercado{' '}
+          <span className="market__count">
+            {filtered.length} de {players.length} jugadores
+          </span>
+        </h2>
+        <div className="market__search-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+          <input
+            className="market__search"
+            type="search"
+            placeholder="Buscar jugador o equipo…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
       </header>
 
       <div className="market__filters">
         <div className="chip-group" role="tablist" aria-label="Filtrar por posición">
           <button className={`chip${pos === 'TODOS' ? ' chip--active' : ''}`} onClick={() => setPos('TODOS')}>
-            Todos
+            Todos <span className="chip__count">{players.length}</span>
           </button>
           {POSITIONS.map((p) => (
             <button key={p} className={`chip${pos === p ? ' chip--active' : ''}`} onClick={() => setPos(p)}>
-              {POSITION_LABEL[p]}
+              <span className="chip__dot" style={{ background: `var(--pos-${p.toLowerCase()})` }} />
+              {p}
+              <span className="chip__count">{players.filter((x) => x.pos === p).length}</span>
             </button>
           ))}
         </div>
+
+        <p className="market__legend">
+          <span className="market__legend-item">
+            <span className="market__legend-dot" style={{ background: '#ffd60a' }} />
+            Duda
+          </span>
+          <span className="market__legend-item">
+            <span className="market__legend-dot" style={{ background: '#ff453a' }} />
+            Lesión / sanción
+          </span>
+        </p>
 
         <div className="market__selects">
           <TeamSelect teams={teams} value={team} onChange={setTeam} />
@@ -63,20 +87,39 @@ export default function Market({ players, squadIds, canAdd, addPlayer, removePla
         </div>
       </div>
 
-      <ul className="player-list">
-        {filtered.map((p) => (
-          <PlayerRow
-            key={p.id}
-            player={p}
-            inSquad={squadIds.includes(p.id)}
-            status={canAdd(p)}
-            onAdd={addPlayer}
-            onRemove={removePlayer}
-            onSelect={onSelect}
-          />
-        ))}
-        {filtered.length === 0 && <li className="player-list__empty">Ningún jugador coincide con la búsqueda.</li>}
-      </ul>
+      <div className="market__table">
+        <div className="market__table-inner">
+          <div className="player-list__head" aria-hidden="true">
+            <span>Pos</span>
+            <span>Jugador</span>
+            <span className="is-center">14 días</span>
+            <span className="is-right">Pts</span>
+            <span className="is-right">Pts/M€</span>
+            <span>Próximo rival</span>
+            <span className="is-right">Hoy</span>
+            <span className="is-right">Valor</span>
+            <span />
+          </div>
+
+          <ul className="player-list">
+            {filtered.map((p) => (
+              <PlayerRow
+                key={p.id}
+                player={p}
+                nextFixture={fixtures?.[p.team]?.[0]}
+                inSquad={squadIds.includes(p.id)}
+                status={canAdd(p)}
+                onAdd={addPlayer}
+                onRemove={removePlayer}
+                onSelect={onSelect}
+              />
+            ))}
+            {filtered.length === 0 && (
+              <li className="player-list__empty">Ningún jugador coincide con la búsqueda.</li>
+            )}
+          </ul>
+        </div>
+      </div>
     </section>
   )
 }

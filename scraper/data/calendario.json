@@ -156,7 +156,12 @@
       "matchday": 5,
       "opponent": "Villarreal",
       "home": false,
-      "kickoff": "2026-09-14T21:00:00+02:00"
+      "kickoff": "2026-09-14T21:00:00+02:00",
+      "odds": {
+        "home": 1.88,
+        "draw": 3.79,
+        "away": 3.62
+      }
     },
     {
       "matchday": 6,
@@ -726,7 +731,12 @@
       "matchday": 5,
       "opponent": "Betis",
       "home": true,
-      "kickoff": "2026-09-14T21:00:00+02:00"
+      "kickoff": "2026-09-14T21:00:00+02:00",
+      "odds": {
+        "home": 1.88,
+        "draw": 3.79,
+        "away": 3.62
+      }
     },
     {
       "matchday": 6,

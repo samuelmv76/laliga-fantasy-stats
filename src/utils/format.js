@@ -21,3 +21,16 @@ export function formatEuros(value) {
 export function formatEurosCompact(value) {
   return `${(value / 1_000_000).toFixed(1)}M`
 }
+
+// Valor de mercado en la tabla: 7380000 -> "7,38 M€"
+export function formatMillions(value) {
+  return `${(value / 1_000_000).toFixed(2).replace('.', ',')} M€`
+}
+
+// Variación del día en la tabla: 80345 -> "80k €"
+export function formatDeltaShort(value) {
+  const abs = Math.abs(value)
+  if (abs >= 1_000_000) return `${(abs / 1_000_000).toFixed(2).replace('.', ',')}M €`
+  if (abs >= 1000) return `${Math.round(abs / 1000)}k €`
+  return `${Math.round(abs)} €`
+}

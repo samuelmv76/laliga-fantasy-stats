@@ -1,4 +1,6 @@
-import { useId, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
+import { currentPrice, todayDelta } from './data/mockPlayers'
+import { formatDeltaShort } from './utils/format'
 import { usePlayers } from './hooks/usePlayers'
 import { useFixtures } from './hooks/useFixtures'
 import { useSquad } from './hooks/useSquad'
@@ -11,7 +13,7 @@ import PlayerDetail from './components/PlayerDetail'
 import './App.css'
 
 export default function App() {
-  const { players, source } = usePlayers()
+  const { players } = usePlayers()
   const { fixtures } = useFixtures()
   const { squad, squadIds, totalValue, canAdd, addPlayer, removePlayer, teamName, renameTeam } = useSquad(players)
   const { theme, toggleTheme } = useTheme()
@@ -22,13 +24,22 @@ export default function App() {
   ]
   const [tab, setTab] = useState('mercado')
   const [selected, setSelected] = useState(null)
+  const nextMatch = useMemo(() => nextMatchday(fixtures), [fixtures])
+  const pulse = useMemo(() => pulseStats(players), [players])
 
   return (
     <div className="app">
       <header className="app__header">
         <div className="app__brand">
           <AppMark size={30} />
-          <span className="app__wordmark">LaLiga Fantasy</span>
+          <span className="app__wordmark">
+            Fantasy <span className="app__wordmark-dim">Stats</span>
+          </span>
+          {nextMatch && (
+            <span className="app__live">
+              <span className="app__live-dot" />J{nextMatch.matchday} · cierra {nextMatch.label}
+            </span>
+          )}
         </div>
         <div className="app__header-controls">
           <nav className="tabs" role="tablist">
@@ -77,19 +88,38 @@ export default function App() {
       </header>
 
       <div className="app__hero">
-        <p className="app__eyebrow">Temporada 25/26</p>
-        <h1 className="app__title">LaLiga Fantasy Stats</h1>
-        <p className="app__tagline">
-          {source === 'real'
-            ? 'Precios y puntos de todos los jugadores, actualizados cada noche.'
-            : 'Datos de prueba — se sustituirán en cuanto el scraper publique jugadores.json.'}
-        </p>
+        <div>
+          <p className="app__eyebrow">
+            Temporada 25/26
+            <span className="app__eyebrow-rule" />
+            {nextMatch && <span className="app__eyebrow-soft">Jornada {nextMatch.matchday}</span>}
+          </p>
+          <h1 className="app__title">
+            Cada precio de LaLiga Fantasy,
+            <br />
+            <span className="app__title-dim">día a día.</span>
+          </h1>
+          <p className="app__tagline">
+            Sigue el valor de mercado, los puntos y el próximo rival de cada jugador de LaLiga
+            Fantasy. Arma tu equipo, compara rendimiento por millón y detecta subidas y bajadas
+            antes de fichar.
+          </p>
+        </div>
+        <div className="pulse">
+          {pulse.map((p) => (
+            <div key={p.label} className="pulse__tile">
+              <p className="pulse__label">{p.label}</p>
+              <p className={`pulse__value${p.tone ? ` is-${p.tone}` : ''}`}>{p.value}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <main className="app__main app__main--single">
         {tab === 'mercado' && (
           <Market
             players={players}
+            fixtures={fixtures}
             squadIds={squadIds}
             canAdd={canAdd}
             addPlayer={addPlayer}
@@ -116,8 +146,10 @@ export default function App() {
           <div className="app__footer-brand">
             <AppMark size={28} />
             <div>
-              <p className="app__footer-title">LaLiga Fantasy Stats</p>
-              <p className="app__footer-tagline">Seguimiento de precios y puntos, temporada 25/26.</p>
+              <p className="app__footer-title">Fantasy Stats</p>
+              <p className="app__footer-tagline">
+                Valor de mercado, puntos y calendario de LaLiga Fantasy · Temporada 25/26
+              </p>
             </div>
           </div>
           <div className="app__footer-links">
@@ -149,11 +181,7 @@ export default function App() {
         </div>
         <div className="app__footer-divider" />
         <div className="app__footer-meta">
-          <p>
-            {source === 'real'
-              ? 'Los precios se actualizan cada noche.'
-              : 'Mostrando datos de prueba — se sustituirán por los reales en cuanto el scraper publique jugadores.json.'}
-          </p>
+          <p>Valores de mercado y puntuaciones actualizados cada noche.</p>
           <p className="app__footer-legal">
             Proyecto personal, no oficial ni afiliado a LaLiga. El equipo y el seguimiento se guardan en este
             navegador. © {new Date().getFullYear()} Samuel Martos
@@ -177,24 +205,78 @@ export default function App() {
   )
 }
 
+// Próxima jornada = la más baja del calendario, con el primer partido que se juega.
+function nextMatchday(fixtures) {
+  // /api/fixtures es dato externo: solo cuentan los partidos con jornada y hora válidas.
+  const all = Object.values(fixtures ?? {})
+    .flat()
+    .filter((f) => Number.isFinite(f?.matchday) && !Number.isNaN(Date.parse(f?.kickoff)))
+  if (all.length === 0) return null
+  const matchday = Math.min(...all.map((f) => f.matchday))
+  const first = all
+    .filter((f) => f.matchday === matchday)
+    .sort((a, b) => new Date(a.kickoff) - new Date(b.kickoff))[0]
+  const d = new Date(first.kickoff)
+  const day = d.toLocaleDateString('es-ES', { weekday: 'short' }).replace('.', '')
+  const time = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })
+  return { matchday, label: `${day} ${time}` }
+}
+
+function pulseStats(players) {
+  // /api/players es dato externo: sin histórico de precios no hay variación que resumir.
+  const valid = players.filter((p) => Array.isArray(p?.priceHistory) && p.priceHistory.length > 0 && currentPrice(p) > 0)
+  if (valid.length === 0) return []
+  const deltas = valid.map((p) => ({ player: p, delta: todayDelta(p) }))
+  const up = deltas.filter((d) => d.delta > 0).length
+  const down = deltas.filter((d) => d.delta < 0).length
+  const avgPct =
+    deltas.reduce((sum, d) => sum + d.delta / currentPrice(d.player), 0) / deltas.length * 100
+  const best = deltas.reduce((a, b) => (b.delta > a.delta ? b : a))
+  return [
+    { label: 'Al alza hoy', value: `↑ ${up}`, tone: 'rise' },
+    { label: 'A la baja', value: `↓ ${down}`, tone: 'fall' },
+    {
+      label: 'Variación media',
+      value: `${avgPct >= 0 ? '↑' : '↓'} ${Math.abs(avgPct).toFixed(2).replace('.', ',')}%`,
+      tone: avgPct >= 0 ? 'rise' : 'fall',
+    },
+    { label: 'Mayor subida', value: `${best.player.name} · ${formatDeltaShort(best.delta)}` },
+  ]
+}
+
 function AppMark({ size = 32 }) {
-  const gradientId = `mark-${useId().replace(/:/g, '')}`
+  const uid = useId().replace(/:/g, '')
+  const tile = `tile-${uid}`
+  const blade = `blade-${uid}`
+  const shard = `shard-${uid}`
+  const rim = `rim-${uid}`
   return (
     <svg className="app__mark" width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
       <defs>
-        <linearGradient id={gradientId} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="64">
-          <stop offset="0" stopColor="#0A9BFF" />
-          <stop offset="1" stopColor="#0A45E0" />
+        <linearGradient id={tile} x1="0" y1="0" x2="0.8" y2="1">
+          <stop offset="0" stopColor="#232326" />
+          <stop offset="1" stopColor="#0a0a0b" />
+        </linearGradient>
+        <linearGradient id={blade} x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stopColor="#4a4a4f" />
+          <stop offset="0.5" stopColor="#f5f5f7" />
+          <stop offset="1" stopColor="#ffffff" />
+        </linearGradient>
+        <linearGradient id={shard} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#ffffff" stopOpacity="0.28" />
+          <stop offset="1" stopColor="#ffffff" stopOpacity="0.04" />
+        </linearGradient>
+        <linearGradient id={rim} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#ffffff" stopOpacity="0.55" />
+          <stop offset="0.45" stopColor="#ffffff" stopOpacity="0.05" />
+          <stop offset="1" stopColor="#000018" stopOpacity="0.35" />
         </linearGradient>
       </defs>
-      <rect width="64" height="64" rx="14.4" fill={`url(#${gradientId})`} />
-      <g fill="#fff">
-        <circle cx="32" cy="23" r="10.5" />
-        <rect x="19" y="43.5" width="6.5" height="7.5" rx="3.25" />
-        <rect x="28.75" y="40" width="6.5" height="11" rx="3.25" />
-        <rect x="38.5" y="36" width="6.5" height="15" rx="3.25" />
-      </g>
-      <path d="M32 16.6 38.56 21.37 36.06 29.08 27.94 29.08 25.44 21.37Z" fill={`url(#${gradientId})`} />
+      <rect width="64" height="64" rx="15" fill={`url(#${tile})`} />
+      <path d="M8 56 26 38 26 56Z" fill={`url(#${shard})`} />
+      <path d="M11 48 31 28 31 44 53 22" fill="none" stroke={`url(#${blade})`} strokeWidth="6.5" strokeLinejoin="round" strokeLinecap="round" />
+      <path d="M44 14h12v12" fill="none" stroke="#f5f5f7" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.4" fill="none" stroke={`url(#${rim})`} strokeWidth="1.5" />
     </svg>
   )
 }

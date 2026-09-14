@@ -7,6 +7,7 @@ import TeamValueChart from './TeamValueChart'
 import TeamDailyBars from './TeamDailyBars'
 import TeamCrest from './TeamCrest'
 import { SORTERS, TeamSelect } from './Market'
+import { StatusBadge } from './PlayerRow'
 import { MAX_SQUAD } from '../hooks/useSquad'
 import { StatCards } from './spectrumui/charts/stat-cards'
 
@@ -124,7 +125,10 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
           return (
             <li key={p.id} className="roster__item">
               <button className="roster__name" onClick={() => onSelect(p)}>
-                {p.name}
+                <span className="player-row__name-line">
+                  {p.name}
+                  <StatusBadge status={p.status} />
+                </span>
                 <span className="roster__team">
                   <TeamCrest team={p.team} size={14} />
                   {p.team}

@@ -12,6 +12,8 @@ import {
 } from 'recharts'
 import { POSITION_LABEL } from '../data/mockPlayers'
 import { formatDay, formatEuros, formatEurosCompact, formatMatchDateTime } from '../utils/format'
+import { oddsLabel, winChance } from '../utils/opponent'
+import { DifficultyBars, StatusBadge } from './PlayerRow'
 import TeamCrest from './TeamCrest'
 import { StatCards } from './spectrumui/charts/stat-cards'
 
@@ -67,7 +69,12 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
           <TeamCrest team={rendered.team} size={16} />
           {rendered.team} · {POSITION_LABEL[rendered.pos]}
         </p>
-        <h2 className="modal__title">{rendered.name}</h2>
+        <h2 className="modal__title">
+          <span className="player-row__name-line">
+            {rendered.name}
+            <StatusBadge status={rendered.status} />
+          </span>
+        </h2>
 
         <StatCards
           className="modal__stat-cards"
@@ -170,6 +177,10 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
                   <span className="modal__fixture-opponent">
                     <TeamCrest team={f.opponent} size={16} />
                     {f.home ? `vs ${f.opponent}` : `en ${f.opponent}`}
+                    <DifficultyBars fixture={f} />
+                    <span className="win-chance" title={oddsLabel(f)}>
+                      {winChance(f)}%
+                    </span>
                   </span>
                   <span className="modal__fixture-time">{formatMatchDateTime(f.kickoff)}</span>
                 </li>
