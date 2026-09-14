@@ -35,6 +35,14 @@ jobs:
           LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
           python scraper/scrape_fixtures.py "$LATEST_MERCADO"
 
+      # Las cuotas son un extra: si football-data no responde, el resto de la
+      # actualización sigue adelante y el front cae a su estimación.
+      - name: Descargar cuotas 1X2 de los próximos partidos
+        continue-on-error: true
+        run: |
+          LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
+          python scraper/scrape_odds.py "$LATEST_MERCADO"
+
       - name: Fusionar mercado y puntos en jugadores.json
         run: |
           LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
@@ -48,8 +56,9 @@ jobs:
         run: |
           LATEST_JORNADAS=$(ls -t scraper/data/raw/jornadas_*.json | head -n 1)
           LATEST_CALENDARIO=$(ls -t scraper/data/raw/calendario_*.json | head -n 1)
+          LATEST_CUOTAS=$(ls -t scraper/data/raw/cuotas_*.json 2>/dev/null | head -n 1)
           python scraper/merge_history.py "$LATEST_JORNADAS"
-          python scraper/build_calendar.py "$LATEST_CALENDARIO"
+          python scraper/build_calendar.py "$LATEST_CALENDARIO" $LATEST_CUOTAS
 
       - name: Subir a Neon (el front lee de /api/players y /api/fixtures)
         env:
