@@ -111,23 +111,23 @@
     },
     {
       "slug": "63",
-      "points": 18
+      "points": 20
     },
     {
       "slug": "1826",
-      "points": 22
+      "points": 34
     },
     {
       "slug": "1931",
-      "points": 20
+      "points": 29
     },
     {
       "slug": "2771",
-      "points": 9
+      "points": 28
     },
     {
       "slug": "4434",
-      "points": 20
+      "points": 24
     },
     {
       "slug": "5942",
@@ -135,7 +135,7 @@
     },
     {
       "slug": "5995",
-      "points": 24
+      "points": 37
     },
     {
       "slug": "6002",
@@ -143,15 +143,15 @@
     },
     {
       "slug": "6337",
-      "points": 25
+      "points": 30
     },
     {
       "slug": "7645",
-      "points": 33
+      "points": 35
     },
     {
       "slug": "9276",
-      "points": 19
+      "points": 30
     },
     {
       "slug": "9755",
@@ -159,7 +159,7 @@
     },
     {
       "slug": "9823",
-      "points": 15
+      "points": 22
     },
     {
       "slug": "10005",
@@ -171,11 +171,11 @@
     },
     {
       "slug": "10393",
-      "points": 11
+      "points": 19
     },
     {
       "slug": "11579",
-      "points": 7
+      "points": 10
     },
     {
       "slug": "11861",
@@ -207,15 +207,19 @@
     },
     {
       "slug": "6310",
-      "points": 2
+      "points": 13
     },
     {
       "slug": "9573",
+      "points": 9
+    },
+    {
+      "slug": "15572",
       "points": 0
     },
     {
       "slug": "1882",
-      "points": 5
+      "points": 7
     },
     {
       "slug": "2288",
@@ -223,7 +227,7 @@
     },
     {
       "slug": "2417",
-      "points": 16
+      "points": 17
     },
     {
       "slug": "2534",
@@ -231,7 +235,7 @@
     },
     {
       "slug": "4288",
-      "points": 63
+      "points": 75
     },
     {
       "slug": "6674",
@@ -239,23 +243,23 @@
     },
     {
       "slug": "7257",
-      "points": 33
+      "points": 39
     },
     {
       "slug": "7279",
-      "points": 40
+      "points": 46
     },
     {
       "slug": "7542",
-      "points": 21
+      "points": 25
     },
     {
       "slug": "7595",
-      "points": 23
+      "points": 27
     },
     {
       "slug": "8395",
-      "points": 21
+      "points": 29
     },
     {
       "slug": "9273",
@@ -263,23 +267,23 @@
     },
     {
       "slug": "11520",
-      "points": 47
+      "points": 65
     },
     {
       "slug": "11706",
-      "points": 18
+      "points": 23
     },
     {
       "slug": "11709",
-      "points": 57
+      "points": 58
     },
     {
       "slug": "12641",
-      "points": 29
+      "points": 31
     },
     {
       "slug": "13864",
-      "points": 26
+      "points": 33
     },
     {
       "slug": "14882",
@@ -291,7 +295,7 @@
     },
     {
       "slug": "16765",
-      "points": 36
+      "points": 49
     },
     {
       "slug": "17663",
@@ -307,7 +311,7 @@
     },
     {
       "slug": "2733",
-      "points": 10
+      "points": 16
     },
     {
       "slug": "9316",
@@ -418,8 +422,20 @@
       "points": 0
     },
     {
+      "slug": "1062",
+      "points": 0
+    },
+    {
+      "slug": "3717",
+      "points": 0
+    },
+    {
+      "slug": "7554",
+      "points": 0
+    },
+    {
       "slug": "175",
-      "points": 18
+      "points": 20
     },
     {
       "slug": "1945",
@@ -431,15 +447,15 @@
     },
     {
       "slug": "4397",
-      "points": 26
+      "points": 29
     },
     {
       "slug": "5978",
-      "points": 38
+      "points": 42
     },
     {
       "slug": "6487",
-      "points": 10
+      "points": 12
     },
     {
       "slug": "6885",
@@ -447,15 +463,15 @@
     },
     {
       "slug": "7199",
-      "points": 17
+      "points": 21
     },
     {
       "slug": "7842",
-      "points": 14
+      "points": 26
     },
     {
       "slug": "8082",
-      "points": 12
+      "points": 20
     },
     {
       "slug": "9012",
@@ -467,15 +483,15 @@
     },
     {
       "slug": "9740",
-      "points": 7
+      "points": 12
     },
     {
       "slug": "9744",
-      "points": 11
+      "points": 21
     },
     {
       "slug": "10207",
-      "points": 9
+      "points": 10
     },
     {
       "slug": "10822",
@@ -495,15 +511,15 @@
     },
     {
       "slug": "13035",
-      "points": 15
+      "points": 21
     },
     {
       "slug": "13036",
-      "points": 15
+      "points": 21
     },
     {
       "slug": "13808",
-      "points": 29
+      "points": 33
     },
     {
       "slug": "14980",
@@ -527,7 +543,7 @@
     },
     {
       "slug": "14199",
-      "points": 7
+      "points": 9
     },
     {
       "slug": "13608",
@@ -535,7 +551,7 @@
     },
     {
       "slug": "392",
-      "points": 10
+      "points": 13
     },
     {
       "slug": "698",
@@ -543,7 +559,7 @@
     },
     {
       "slug": "3414",
-      "points": 48
+      "points": 60
     },
     {
       "slug": "3605",
@@ -559,15 +575,15 @@
     },
     {
       "slug": "8712",
-      "points": 22
+      "points": 26
     },
     {
       "slug": "9405",
-      "points": 21
+      "points": 26
     },
     {
       "slug": "9772",
-      "points": 24
+      "points": 28
     },
     {
       "slug": "9854",
@@ -579,7 +595,7 @@
     },
     {
       "slug": "10473",
-      "points": 12
+      "points": 14
     },
     {
       "slug": "10478",
@@ -587,7 +603,7 @@
     },
     {
       "slug": "11198",
-      "points": 19
+      "points": 21
     },
     {
       "slug": "13972",
@@ -603,7 +619,7 @@
     },
     {
       "slug": "15164",
-      "points": 9
+      "points": 11
     },
     {
       "slug": "15351",
@@ -611,11 +627,11 @@
     },
     {
       "slug": "16099",
-      "points": 15
+      "points": 20
     },
     {
       "slug": "16863",
-      "points": 16
+      "points": 18
     },
     {
       "slug": "18017",
@@ -627,19 +643,19 @@
     },
     {
       "slug": "775",
-      "points": 10
+      "points": 15
     },
     {
       "slug": "13974",
-      "points": 5
+      "points": 13
     },
     {
       "slug": "972",
-      "points": 1
+      "points": 4
     },
     {
       "slug": "10217",
-      "points": 1
+      "points": 7
     },
     {
       "slug": "1927",
@@ -743,11 +759,11 @@
     },
     {
       "slug": "899",
-      "points": 12
+      "points": 15
     },
     {
       "slug": "1919",
-      "points": 28
+      "points": 33
     },
     {
       "slug": "1989",
@@ -763,7 +779,7 @@
     },
     {
       "slug": "3881",
-      "points": 17
+      "points": 23
     },
     {
       "slug": "5083",
@@ -771,23 +787,23 @@
     },
     {
       "slug": "8496",
-      "points": 20
+      "points": 22
     },
     {
       "slug": "8944",
-      "points": 17
+      "points": 31
     },
     {
       "slug": "10463",
-      "points": 15
+      "points": 18
     },
     {
       "slug": "11202",
-      "points": 7
+      "points": 8
     },
     {
       "slug": "11905",
-      "points": 4
+      "points": 6
     },
     {
       "slug": "11916",
@@ -815,11 +831,11 @@
     },
     {
       "slug": "16004",
-      "points": 1
+      "points": 2
     },
     {
       "slug": "17161",
-      "points": 3
+      "points": 7
     },
     {
       "slug": "18322",
@@ -827,7 +843,7 @@
     },
     {
       "slug": "7995",
-      "points": 9
+      "points": 10
     },
     {
       "slug": "18411",
@@ -839,11 +855,11 @@
     },
     {
       "slug": "7028",
-      "points": 4
+      "points": 9
     },
     {
       "slug": "12539",
-      "points": 0
+      "points": 1
     },
     {
       "slug": "16149",
@@ -851,23 +867,27 @@
     },
     {
       "slug": "8782",
-      "points": 2
+      "points": 9
+    },
+    {
+      "slug": "18732",
+      "points": 0
     },
     {
       "slug": "1566",
-      "points": 22
+      "points": 21
     },
     {
       "slug": "1743",
-      "points": 43
+      "points": 42
     },
     {
       "slug": "4976",
-      "points": 7
+      "points": 3
     },
     {
       "slug": "6346",
-      "points": 26
+      "points": 27
     },
     {
       "slug": "6605",
@@ -875,7 +895,7 @@
     },
     {
       "slug": "7629",
-      "points": 14
+      "points": 22
     },
     {
       "slug": "7644",
@@ -883,7 +903,7 @@
     },
     {
       "slug": "8088",
-      "points": 18
+      "points": 21
     },
     {
       "slug": "8646",
@@ -911,7 +931,7 @@
     },
     {
       "slug": "16020",
-      "points": 17
+      "points": 18
     },
     {
       "slug": "16022",
@@ -919,7 +939,7 @@
     },
     {
       "slug": "18006",
-      "points": 24
+      "points": 29
     },
     {
       "slug": "18027",
@@ -943,7 +963,7 @@
     },
     {
       "slug": "9157",
-      "points": 21
+      "points": 29
     },
     {
       "slug": "12598",
@@ -955,7 +975,7 @@
     },
     {
       "slug": "18406",
-      "points": 0
+      "points": 2
     },
     {
       "slug": "18294",
@@ -963,7 +983,7 @@
     },
     {
       "slug": "11998",
-      "points": 0
+      "points": 1
     },
     {
       "slug": "15089",
@@ -971,11 +991,11 @@
     },
     {
       "slug": "3174",
-      "points": 19
+      "points": 21
     },
     {
       "slug": "6050",
-      "points": 12
+      "points": 15
     },
     {
       "slug": "6814",
@@ -983,7 +1003,7 @@
     },
     {
       "slug": "6973",
-      "points": 22
+      "points": 30
     },
     {
       "slug": "7686",
@@ -991,15 +1011,15 @@
     },
     {
       "slug": "7703",
-      "points": 4
+      "points": 7
     },
     {
       "slug": "8250",
-      "points": 10
+      "points": 15
     },
     {
       "slug": "8780",
-      "points": 12
+      "points": 15
     },
     {
       "slug": "9321",
@@ -1011,7 +1031,7 @@
     },
     {
       "slug": "10823",
-      "points": 4
+      "points": 6
     },
     {
       "slug": "10860",
@@ -1023,15 +1043,15 @@
     },
     {
       "slug": "13982",
-      "points": 8
+      "points": 10
     },
     {
       "slug": "13983",
-      "points": 9
+      "points": 12
     },
     {
       "slug": "14096",
-      "points": 12
+      "points": 13
     },
     {
       "slug": "15336",
@@ -1039,15 +1059,15 @@
     },
     {
       "slug": "15344",
-      "points": 17
+      "points": 20
     },
     {
       "slug": "15417",
-      "points": 17
+      "points": 20
     },
     {
       "slug": "16286",
-      "points": 16
+      "points": 19
     },
     {
       "slug": "18225",
@@ -1059,11 +1079,11 @@
     },
     {
       "slug": "7614",
-      "points": 6
+      "points": 17
     },
     {
       "slug": "5671",
-      "points": 0
+      "points": 1
     },
     {
       "slug": "8536",
@@ -1075,7 +1095,7 @@
     },
     {
       "slug": "12475",
-      "points": 0
+      "points": 7
     },
     {
       "slug": "660",
@@ -1195,11 +1215,11 @@
     },
     {
       "slug": "1881",
-      "points": 29
+      "points": 31
     },
     {
       "slug": "3623",
-      "points": 8
+      "points": 10
     },
     {
       "slug": "6560",
@@ -1207,7 +1227,7 @@
     },
     {
       "slug": "6562",
-      "points": 35
+      "points": 45
     },
     {
       "slug": "6633",
@@ -1219,7 +1239,7 @@
     },
     {
       "slug": "6889",
-      "points": 9
+      "points": 12
     },
     {
       "slug": "6957",
@@ -1227,11 +1247,11 @@
     },
     {
       "slug": "7251",
-      "points": -1
+      "points": 0
     },
     {
       "slug": "7307",
-      "points": 20
+      "points": 24
     },
     {
       "slug": "7570",
@@ -1243,7 +1263,7 @@
     },
     {
       "slug": "11758",
-      "points": 4
+      "points": 5
     },
     {
       "slug": "12651",
@@ -1275,11 +1295,11 @@
     },
     {
       "slug": "8337",
-      "points": 1
+      "points": 3
     },
     {
       "slug": "5587",
-      "points": -3
+      "points": 2
     },
     {
       "slug": "13813",
@@ -1291,15 +1311,15 @@
     },
     {
       "slug": "2413",
-      "points": -2
+      "points": 2
     },
     {
       "slug": "5228",
-      "points": 0
+      "points": 1
     },
     {
       "slug": "12608",
-      "points": 0
+      "points": 1
     },
     {
       "slug": "7100",
@@ -1311,23 +1331,23 @@
     },
     {
       "slug": "59",
-      "points": 29
+      "points": 35
     },
     {
       "slug": "2536",
-      "points": 11
+      "points": 17
     },
     {
       "slug": "3429",
-      "points": 56
+      "points": 67
     },
     {
       "slug": "3431",
-      "points": 11
+      "points": 15
     },
     {
       "slug": "3758",
-      "points": 25
+      "points": 28
     },
     {
       "slug": "4480",
@@ -1335,11 +1355,11 @@
     },
     {
       "slug": "4884",
-      "points": 14
+      "points": 18
     },
     {
       "slug": "5013",
-      "points": 17
+      "points": 18
     },
     {
       "slug": "5035",
@@ -1351,23 +1371,23 @@
     },
     {
       "slug": "5565",
-      "points": 37
+      "points": 44
     },
     {
       "slug": "6055",
-      "points": 11
+      "points": 13
     },
     {
       "slug": "8386",
-      "points": 55
+      "points": 64
     },
     {
       "slug": "8479",
-      "points": 12
+      "points": 14
     },
     {
       "slug": "10176",
-      "points": 18
+      "points": 24
     },
     {
       "slug": "10767",
@@ -1375,7 +1395,7 @@
     },
     {
       "slug": "11439",
-      "points": 39
+      "points": 51
     },
     {
       "slug": "11830",
@@ -1395,7 +1415,7 @@
     },
     {
       "slug": "15342",
-      "points": 8
+      "points": 15
     },
     {
       "slug": "16948",
@@ -1411,7 +1431,7 @@
     },
     {
       "slug": "9669",
-      "points": 0
+      "points": 2
     },
     {
       "slug": "12639",
@@ -1427,15 +1447,15 @@
     },
     {
       "slug": "1975",
-      "points": 26
+      "points": 30
     },
     {
       "slug": "2675",
-      "points": 25
+      "points": 28
     },
     {
       "slug": "2799",
-      "points": 25
+      "points": 31
     },
     {
       "slug": "2802",
@@ -1447,7 +1467,7 @@
     },
     {
       "slug": "6363",
-      "points": 14
+      "points": 21
     },
     {
       "slug": "6394",
@@ -1455,7 +1475,7 @@
     },
     {
       "slug": "6446",
-      "points": 20
+      "points": 21
     },
     {
       "slug": "7091",
@@ -1467,7 +1487,7 @@
     },
     {
       "slug": "8392",
-      "points": 27
+      "points": 30
     },
     {
       "slug": "8651",
@@ -1479,7 +1499,7 @@
     },
     {
       "slug": "9011",
-      "points": 2
+      "points": 3
     },
     {
       "slug": "10660",
@@ -1499,11 +1519,11 @@
     },
     {
       "slug": "12538",
-      "points": 16
+      "points": 19
     },
     {
       "slug": "14021",
-      "points": 17
+      "points": 15
     },
     {
       "slug": "14881",
@@ -1511,7 +1531,7 @@
     },
     {
       "slug": "15273",
-      "points": -2
+      "points": 0
     },
     {
       "slug": "16155",
@@ -1523,7 +1543,7 @@
     },
     {
       "slug": "2242",
-      "points": 12
+      "points": 17
     },
     {
       "slug": "11816",
@@ -1539,7 +1559,7 @@
     },
     {
       "slug": "15944",
-      "points": 3
+      "points": 4
     },
     {
       "slug": "11577",

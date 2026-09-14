@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { PLAYERS as MOCK_PLAYERS } from '../data/mockPlayers'
 
-// Intenta cargar el jugadores.json real (generado por el scraper nocturno).
-// Si no existe todavía o falla la carga, usa los datos de prueba para que
-// el front siga siendo usable durante el desarrollo.
+// Intenta cargar los jugadores reales desde /api/players (Neon, actualizado
+// cada noche por el scraper). Si la API no responde (por ejemplo en
+// desarrollo local sin `vercel dev`) usa los datos de prueba para que el
+// front siga siendo usable.
 export function usePlayers() {
   const [players, setPlayers] = useState(MOCK_PLAYERS)
   const [source, setSource] = useState('mock')
@@ -12,9 +13,9 @@ export function usePlayers() {
   useEffect(() => {
     let cancelled = false
 
-    fetch('/jugadores.json')
+    fetch('/api/players')
       .then((res) => {
-        if (!res.ok) throw new Error('sin jugadores.json todavía')
+        if (!res.ok) throw new Error('sin /api/players todavía')
         return res.json()
       })
       .then((data) => {

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { usePlayers } from './hooks/usePlayers'
+import { useFixtures } from './hooks/useFixtures'
 import { useSquad } from './hooks/useSquad'
 import { useTheme } from './hooks/useTheme'
 import { Show, SignInButton, UserButton } from '@clerk/react'
@@ -11,6 +12,7 @@ import './App.css'
 
 export default function App() {
   const { players, source } = usePlayers()
+  const { fixtures } = useFixtures()
   const { squad, squadIds, totalValue, canAdd, addPlayer, removePlayer, teamName, renameTeam } = useSquad(players)
   const { theme, toggleTheme } = useTheme()
   const TABS = [
@@ -128,6 +130,7 @@ export default function App() {
 
       <PlayerDetail
         player={selected}
+        fixtures={fixtures}
         inSquad={selected ? squadIds.includes(selected.id) : false}
         onAdd={(p) => {
           addPlayer(p)

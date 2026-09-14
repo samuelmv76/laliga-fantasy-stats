@@ -18,27 +18,52 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Instalar dependencias
-        run: pip install -r scraper/requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
 
-      - name: Scrapear mercado y puntos de hoy
+      - name: Instalar dependencias
+        run: |
+          pip install -r scraper/requirements.txt
+          npm ci
+
+      - name: Scrapear mercado, puntos y calendario de hoy
         run: |
           python scraper/scrape_market.py
           python scraper/scrape_points.py
+          LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
+          python scraper/scrape_fixtures.py "$LATEST_MERCADO"
 
-      - name: Fusionar en jugadores.json
+      - name: Fusionar mercado y puntos en jugadores.json
         run: |
           LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
           LATEST_PUNTOS=$(ls -t scraper/data/raw/puntos_*.json | head -n 1)
           python scraper/merge_history.py "$LATEST_MERCADO" "$LATEST_PUNTOS"
 
-      - name: Copiar al front (opcional, si sirves el JSON como estático)
-        run: cp scraper/data/jugadores.json public/jugadores.json
+      - name: Scrapear puntos por jornada (una petición por jugador, ~5-10 min)
+        run: python scraper/scrape_matchday_points.py scraper/data/jugadores.json
+
+      - name: Fusionar jornadas y calendario
+        run: |
+          LATEST_JORNADAS=$(ls -t scraper/data/raw/jornadas_*.json | head -n 1)
+          LATEST_CALENDARIO=$(ls -t scraper/data/raw/calendario_*.json | head -n 1)
+          python scraper/merge_history.py "$LATEST_JORNADAS"
+          python scraper/build_calendar.py "$LATEST_CALENDARIO"
+
+      - name: Subir a Neon (el front lee de /api/players y /api/fixtures)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: node scraper/sync_to_neon.mjs
 
       - name: Commit y push si hay cambios
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add scraper/data public/jugadores.json
-          git diff --staged --quiet || git commit -m "Actualizar precios $(date -u +%F)"
+          git add scraper/data
+          MESES=(enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre)
+          DIA=$(date -u +%-d)
+          MES=${MESES[$(( $(date -u +%-m) - 1 ))]}
+          ANIO=$(date -u +%Y)
+          git diff --staged --quiet || git commit -m "Datos actualizados día $DIA de $MES de $ANIO"
           git push

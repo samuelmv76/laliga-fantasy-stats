@@ -56,6 +56,46 @@ python merge_history.py data/raw/mercado_2026-09-08.json   # lo acumula en data/
 añade un punto más a `priceHistory` de cada jugador (nunca lo pisa, salvo
 que ejecutes dos veces el mismo día, que entonces sustituye el de hoy).
 
+## Calendario / próximos partidos
+
+`scrape_fixtures.py` **no** usa la página general de calendario para leer
+los partidos: esa página reutiliza un widget de pestañas genérico
+compartido por varias competiciones, y el número de "jornada" que se lee
+ahí es solo la posición de la pestaña, no la jornada real de LaLiga
+(comprobado a mano contra el HTML — daba resultados incoherentes). Solo se
+usa esa página para sacar el mapa equipo -> slug de URL.
+
+En su lugar pide la ficha de partidos de cada equipo
+(`/laliga/equipos/<slug>/partidos`), que trae el calendario completo de la
+temporada con la jornada real y la competición explícitas en cada partido
+— así que son ~20 peticiones (una por equipo, con pausa entre ellas) en
+vez de 1:
+
+```bash
+python scrape_market.py
+python scrape_fixtures.py data/raw/mercado_2026-09-14.json
+python build_calendar.py data/raw/calendario_2026-09-14.json   # -> data/calendario.json
+```
+
+Guarda hasta 6 próximos partidos de LaLiga por equipo (el front muestra
+los que haya, mínimo pensado para 4).
+
+A diferencia de `jugadores.json`, `calendario.json` no acumula histórico:
+cada ejecución lo sustituye entero (solo interesan los partidos por jugar).
+Formato, uno por equipo:
+
+```json
+{
+  "Real Madrid": [
+    { "matchday": 6, "opponent": "Elche", "home": false, "kickoff": "2026-09-15T21:30:00+02:00" }
+  ]
+}
+```
+
+El front lo consume vía `src/hooks/useFixtures.js` (mismo patrón que
+`usePlayers`: intenta `/calendario.json`, si no existe usa
+`src/data/mockFixtures.js`).
+
 ## Automatización (gratis)
 
 `.github/workflows/update-prices.yml` ya está listo: corre cada noche vía

@@ -600,6 +600,10 @@
   margin-left: auto;
 }
 
+.team-view__stat-cards {
+  margin-bottom: 16px;
+}
+
 .team-view__charts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -853,6 +857,13 @@
   overflow-y: auto;
 }
 
+@media (min-width: 760px) {
+  .modal {
+    max-width: 620px;
+    padding: 28px 32px;
+  }
+}
+
 .modal.is-closing {
   animation: modal-pop-out var(--duration-quick) var(--ease-smooth-out) forwards;
 }
@@ -895,6 +906,10 @@
   margin-bottom: 14px;
 }
 
+.modal__stat-cards {
+  margin-bottom: 14px;
+}
+
 .modal__stats > div {
   display: flex;
   flex-direction: column;
@@ -904,6 +919,46 @@
 .modal__stat-value {
   font-family: var(--font-display);
   font-size: 1.15rem;
+}
+
+.modal__fixtures {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal__fixture {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
+.modal__fixture-matchday {
+  font-family: var(--font-display);
+  color: var(--text-muted);
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.modal__fixture-opponent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.modal__fixture-time {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .modal .btn {

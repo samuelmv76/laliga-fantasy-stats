@@ -2,11 +2,13 @@ import { useEffect, useMemo, useState } from 'react'
 import { POSITIONS, POSITION_LABEL, currentPrice, todayDelta } from '../data/mockPlayers'
 import { teamValueSeries, teamDailySeries, unionDates } from '../utils/teamStats'
 import { formatEuros } from '../utils/format'
+import { formatEurosCompact } from '../utils/format'
 import TeamValueChart from './TeamValueChart'
 import TeamDailyBars from './TeamDailyBars'
 import TeamCrest from './TeamCrest'
 import { SORTERS, TeamSelect } from './Market'
 import { MAX_SQUAD } from '../hooks/useSquad'
+import { StatCards } from './spectrumui/charts/stat-cards'
 
 export default function TeamView({ squad, totalValue, removePlayer, onSelect, onAddPlayer, teamName, onRenameTeam }) {
   const [nameDraft, setNameDraft] = useState(teamName)
@@ -60,10 +62,26 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
             {squad.length}/{MAX_SQUAD} jugadores · valor total {formatEuros(totalValue)}
           </p>
         </div>
-        <span className={`team-view__today ${todayTeamDelta > 0 ? 'is-rise' : todayTeamDelta < 0 ? 'is-fall' : ''}`}>
-          {todayTeamDelta > 0 ? '▲' : todayTeamDelta < 0 ? '▼' : '·'} {formatEuros(Math.abs(todayTeamDelta))} hoy
-        </span>
       </header>
+
+      <StatCards
+        className="team-view__stat-cards"
+        columns={2}
+        cards={[
+          {
+            label: 'Valor total del equipo',
+            series: valueSeries.map((d) => d.value),
+            format: formatEurosCompact,
+            deltaLabel: 'vs inicio del historial',
+          },
+          {
+            label: 'Variación hoy',
+            value: todayTeamDelta,
+            caption: `${squad.length}/${MAX_SQUAD} jugadores`,
+            format: formatEurosCompact,
+          },
+        ]}
+      />
 
       <div className="team-view__charts">
         <TeamValueChart data={valueSeries} />

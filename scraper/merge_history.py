@@ -17,6 +17,9 @@ Formato de salida (uno por jugador):
   ],
   "pointsHistory": [
     {"date": "2026-09-09", "points": 17}
+  ],
+  "pointsByMatchday": [
+    {"matchday": 5, "points": 6}
   ]
 }
 
@@ -27,7 +30,7 @@ puntos de temporada, en cambio, la web solo los da "a día de hoy": el
 histórico de puntos se construye día a día, una entrada por ejecución.
 
 Se ejecuta con:
-  python merge_history.py data/raw/mercado_2026-09-09.json [data/raw/puntos_2026-09-09.json]
+  python merge_history.py data/raw/mercado_2026-09-09.json [data/raw/puntos_2026-09-09.json] [data/raw/jornadas_2026-09-09.json]
 """
 
 import json
@@ -120,6 +123,29 @@ def merge_points(raw_scrape_path: Path, by_id: dict):
     print(f"[ok] puntos: {matched} jugadores actualizados.")
 
 
+def set_matchday_point(history, matchday, points):
+    """Inserta/reemplaza un punto por jornada exacta (idempotente ante re-ejecuciones)."""
+    history[:] = [h for h in history if h["matchday"] != matchday]
+    history.append({"matchday": matchday, "points": points})
+    history.sort(key=lambda h: h["matchday"])
+
+
+def merge_jornadas(raw_scrape_path: Path, by_id: dict):
+    raw = json.loads(raw_scrape_path.read_text(encoding="utf-8"))
+
+    matched = 0
+    for player_id, matchdays in raw["players"].items():
+        entry = by_id.get(player_id)
+        if entry is None:
+            continue  # jugador sin ficha en el mercado, se ignora
+        entry.setdefault("pointsByMatchday", [])
+        for md in matchdays:
+            set_matchday_point(entry["pointsByMatchday"], md["matchday"], md["points"])
+        matched += 1
+
+    print(f"[ok] jornadas: {matched} jugadores actualizados.")
+
+
 def main(paths):
     by_id = {p["id"]: p for p in load_canonical()}
 
@@ -128,8 +154,10 @@ def main(paths):
             merge_market(path, by_id)
         elif path.name.startswith("puntos_"):
             merge_points(path, by_id)
+        elif path.name.startswith("jornadas_"):
+            merge_jornadas(path, by_id)
         else:
-            print(f"[aviso] '{path.name}' no empieza por 'mercado_' ni 'puntos_', se ignora.")
+            print(f"[aviso] '{path.name}' no empieza por 'mercado_', 'puntos_' ni 'jornadas_', se ignora.")
 
     save_canonical(list(by_id.values()))
     print(f"[ok] total en {CANONICAL_PATH}: {len(by_id)}")

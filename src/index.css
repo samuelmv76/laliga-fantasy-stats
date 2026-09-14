@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 @import './_root.css';
 
 :root {
