@@ -108,13 +108,42 @@ export default function App() {
       </main>
 
       <footer className="app__footer">
-        <div className="app__footer-brand">
-          <AppMark size={28} />
-          <div>
-            <p className="app__footer-title">LaLiga Fantasy Stats</p>
-            <p className="app__footer-tagline">Seguimiento de precios y puntos, temporada 25/26.</p>
+        <div className="app__footer-top">
+          <div className="app__footer-brand">
+            <AppMark size={28} />
+            <div>
+              <p className="app__footer-title">LaLiga Fantasy Stats</p>
+              <p className="app__footer-tagline">Seguimiento de precios y puntos, temporada 25/26.</p>
+            </div>
+          </div>
+          <div className="app__footer-links">
+            <a
+              href="https://www.linkedin.com/in/samuel-martos-7953803ab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="app__footer-link"
+              aria-label="Perfil de LinkedIn de Samuel Martos"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/samuelmv76/laliga-fantasy-stats"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="app__footer-link"
+              aria-label="Repositorio del proyecto en GitHub"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.61-3.37-1.2-3.37-1.2-.46-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.28 9.28 0 0 1 5 0c1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .27.18.6.69.5A10.03 10.03 0 0 0 22 12.2C22 6.58 17.52 2 12 2z" />
+              </svg>
+              GitHub
+            </a>
           </div>
         </div>
+        <div className="app__footer-divider" />
         <div className="app__footer-meta">
           <p>
             {source === 'real'
@@ -123,7 +152,7 @@ export default function App() {
           </p>
           <p className="app__footer-legal">
             Proyecto personal, no oficial ni afiliado a LaLiga. El equipo y el seguimiento se guardan en este
-            navegador. © {new Date().getFullYear()}
+            navegador. © {new Date().getFullYear()} Samuel Martos
           </p>
         </div>
       </footer>
