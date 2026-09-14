@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { usePlayers } from './hooks/usePlayers'
 import { useFixtures } from './hooks/useFixtures'
 import { useSquad } from './hooks/useSquad'
@@ -27,14 +27,8 @@ export default function App() {
     <div className="app">
       <header className="app__header">
         <div className="app__brand">
-          <AppMark />
-          <div>
-            <p className="app__eyebrow">LaLiga Fantasy</p>
-            <h1>LaLiga Fantasy Stats</h1>
-            <p className="app__tagline">
-              Temporada 25/26 · {source === 'real' ? 'datos actualizados cada noche' : 'datos de prueba'}
-            </p>
-          </div>
+          <AppMark size={30} />
+          <span className="app__wordmark">LaLiga Fantasy</span>
         </div>
         <div className="app__header-controls">
           <nav className="tabs" role="tablist">
@@ -81,6 +75,16 @@ export default function App() {
           </Show>
         </div>
       </header>
+
+      <div className="app__hero">
+        <p className="app__eyebrow">Temporada 25/26</p>
+        <h1 className="app__title">LaLiga Fantasy Stats</h1>
+        <p className="app__tagline">
+          {source === 'real'
+            ? 'Precios y puntos de todos los jugadores, actualizados cada noche.'
+            : 'Datos de prueba — se sustituirán en cuanto el scraper publique jugadores.json.'}
+        </p>
+      </div>
 
       <main className="app__main app__main--single">
         {tab === 'mercado' && (
@@ -173,13 +177,24 @@ export default function App() {
   )
 }
 
-function AppMark({ size = 36 }) {
+function AppMark({ size = 32 }) {
+  const gradientId = `mark-${useId().replace(/:/g, '')}`
   return (
-    <span className="app__mark" style={{ width: size, height: size }} aria-hidden="true">
-      <svg width={size * 0.56} height={size * 0.56} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 3v3.2M12 17.8V21M4.4 8.5l3.1.9M16.5 14.6l3.1.9M4.4 15.5l3.1-.9M16.5 9.4l3.1-.9M9 9l3 2 3-2-1-3.5h-4z" />
-      </svg>
-    </span>
+    <svg className="app__mark" width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
+      <defs>
+        <linearGradient id={gradientId} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="64" y2="64">
+          <stop offset="0" stopColor="#0A9BFF" />
+          <stop offset="1" stopColor="#0A45E0" />
+        </linearGradient>
+      </defs>
+      <rect width="64" height="64" rx="14.4" fill={`url(#${gradientId})`} />
+      <g fill="#fff">
+        <circle cx="32" cy="23" r="10.5" />
+        <rect x="19" y="43.5" width="6.5" height="7.5" rx="3.25" />
+        <rect x="28.75" y="40" width="6.5" height="11" rx="3.25" />
+        <rect x="38.5" y="36" width="6.5" height="15" rx="3.25" />
+      </g>
+      <path d="M32 16.6 38.56 21.37 36.06 29.08 27.94 29.08 25.44 21.37Z" fill={`url(#${gradientId})`} />
+    </svg>
   )
 }
