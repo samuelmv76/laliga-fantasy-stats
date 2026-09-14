@@ -1,3 +1,5 @@
+@import './_root.css';
+
 :root {
   --font-display: -apple-system, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
   --font-body: -apple-system, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
   LineChart,
   Line,
@@ -15,26 +16,42 @@ import { formatDay, formatEuros, formatEurosCompact } from '../utils/format'
 import TeamCrest from './TeamCrest'
 
 export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose }) {
-  if (!player) return null
-  const delta = todayDelta(player)
+  const [rendered, setRendered] = useState(player)
+  const [closing, setClosing] = useState(false)
+
+  useEffect(() => {
+    if (player) {
+      setRendered(player)
+      setClosing(false)
+    } else if (rendered) {
+      setClosing(true)
+    }
+  }, [player])
+
+  if (!rendered) return null
+  const delta = todayDelta(rendered)
 
   return (
-    <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+    <div
+      className={`modal-backdrop${closing ? ' is-closing' : ''}`}
+      onClick={onClose}
+      onAnimationEnd={() => closing && setRendered(null)}
+    >
+      <div className={`modal${closing ? ' is-closing' : ''}`} onClick={(e) => e.stopPropagation()}>
         <button className="modal__close" onClick={onClose} aria-label="Cerrar">
           ×
         </button>
 
         <p className="app__eyebrow modal__team-line" style={{ color: 'var(--turf)' }}>
-          <TeamCrest team={player.team} size={16} />
-          {player.team} · {POSITION_LABEL[player.pos]}
+          <TeamCrest team={rendered.team} size={16} />
+          {rendered.team} · {POSITION_LABEL[rendered.pos]}
         </p>
-        <h2 className="modal__title">{player.name}</h2>
+        <h2 className="modal__title">{rendered.name}</h2>
 
         <div className="modal__stats">
           <div>
             <span className="scoreboard__label">Precio actual</span>
-            <span className="modal__stat-value">{formatEuros(currentPrice(player))}</span>
+            <span className="modal__stat-value">{formatEuros(currentPrice(rendered))}</span>
           </div>
           <div>
             <span className="scoreboard__label">Variación hoy</span>
@@ -45,12 +62,12 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
           </div>
           <div>
             <span className="scoreboard__label">Puntos</span>
-            <span className="modal__stat-value">{player.points}</span>
+            <span className="modal__stat-value">{rendered.points}</span>
           </div>
         </div>
 
         <ResponsiveContainer width="100%" height={200}>
-          <LineChart data={player.priceHistory} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
+          <LineChart data={rendered.priceHistory} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--paper-dim)" vertical={false} />
             <XAxis dataKey="date" tickFormatter={formatDay} fontSize={11} stroke="var(--text-muted)" />
             <YAxis width={44} fontSize={11} stroke="var(--text-muted)" tickFormatter={formatEurosCompact} domain={['dataMin - 300000', 'dataMax + 300000']} />
@@ -63,11 +80,11 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
           </LineChart>
         </ResponsiveContainer>
 
-        {player.pointsByMatchday && player.pointsByMatchday.length > 0 && (
+        {rendered.pointsByMatchday && rendered.pointsByMatchday.length > 0 && (
           <>
             <h3 className="modal__section-title">Puntos por jornada</h3>
             <ResponsiveContainer width="100%" height={140}>
-              <BarChart data={player.pointsByMatchday} margin={{ top: 4, right: 12, left: -12, bottom: 0 }}>
+              <BarChart data={rendered.pointsByMatchday} margin={{ top: 4, right: 12, left: -12, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--paper-dim)" vertical={false} />
                 <XAxis dataKey="matchday" tickFormatter={(v) => `J${v}`} fontSize={11} stroke="var(--text-muted)" />
                 <YAxis width={30} fontSize={11} stroke="var(--text-muted)" />
@@ -77,7 +94,7 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
                   contentStyle={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', borderRadius: 6 }}
                 />
                 <Bar dataKey="points" radius={[3, 3, 3, 3]}>
-                  {player.pointsByMatchday.map((d, i) => (
+                  {rendered.pointsByMatchday.map((d, i) => (
                     <Cell key={i} fill={d.points >= 0 ? 'var(--rise)' : 'var(--fall)'} />
                   ))}
                 </Bar>
@@ -86,11 +103,11 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
           </>
         )}
 
-        {!player.pointsByMatchday && player.pointsHistory && player.pointsHistory.length > 1 && (
+        {!rendered.pointsByMatchday && rendered.pointsHistory && rendered.pointsHistory.length > 1 && (
           <>
             <h3 className="modal__section-title">Evolución de puntos</h3>
             <ResponsiveContainer width="100%" height={140}>
-              <LineChart data={player.pointsHistory} margin={{ top: 4, right: 12, left: -12, bottom: 0 }}>
+              <LineChart data={rendered.pointsHistory} margin={{ top: 4, right: 12, left: -12, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--paper-dim)" vertical={false} />
                 <XAxis dataKey="date" tickFormatter={formatDay} fontSize={11} stroke="var(--text-muted)" />
                 <YAxis width={30} fontSize={11} stroke="var(--text-muted)" />
@@ -106,11 +123,11 @@ export default function PlayerDetail({ player, inSquad, onAdd, onRemove, onClose
         )}
 
         {inSquad ? (
-          <button className="btn btn--remove" onClick={() => onRemove(player.id)}>
+          <button className="btn btn--remove" onClick={() => onRemove(rendered.id)}>
             Quitar de mi equipo
           </button>
         ) : (
-          <button className="btn btn--add" onClick={() => onAdd(player)}>
+          <button className="btn btn--add" onClick={() => onAdd(rendered)}>
             Seguir en mi equipo
           </button>
         )}

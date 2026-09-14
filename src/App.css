@@ -279,7 +279,7 @@
   border: 1px solid var(--paper-dim);
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
-  animation: modal-pop 0.18s var(--ease);
+  animation: dropdown-pop var(--duration-fast) var(--ease-smooth-out);
 }
 
 .team-select__option {
@@ -813,15 +813,31 @@
   justify-content: center;
   padding: 20px;
   z-index: 20;
-  animation: modal-fade 0.25s var(--ease);
+  animation: modal-fade var(--duration-fast) var(--ease-smooth-out);
+}
+
+.modal-backdrop.is-closing {
+  animation: modal-fade-out var(--duration-quick) var(--ease-smooth-out) forwards;
 }
 
 @keyframes modal-fade {
   from { opacity: 0; }
 }
 
+@keyframes modal-fade-out {
+  to { opacity: 0; }
+}
+
 @keyframes modal-pop {
-  from { opacity: 0; transform: scale(0.94) translateY(8px); }
+  from { opacity: 0; transform: scale(var(--scale-large)); }
+}
+
+@keyframes modal-pop-out {
+  to { opacity: 0; transform: scale(var(--scale-large)); }
+}
+
+@keyframes dropdown-pop {
+  from { opacity: 0; transform: scale(var(--scale-medium)) translateY(var(--distance-base)); }
 }
 
 .modal {
@@ -829,12 +845,22 @@
   background: var(--paper);
   border-radius: 20px;
   box-shadow: var(--shadow-lg);
-  animation: modal-pop 0.3s var(--ease);
+  animation: modal-pop var(--duration-fast) var(--ease-smooth-out);
   padding: 24px;
   width: 100%;
   max-width: 460px;
   max-height: 90vh;
   overflow-y: auto;
+}
+
+.modal.is-closing {
+  animation: modal-pop-out var(--duration-quick) var(--ease-smooth-out) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop, .modal, .team-select__menu {
+    animation: none !important;
+  }
 }
 
 .modal__close {
@@ -975,5 +1001,43 @@
   .roster__item .btn--remove {
     grid-area: button;
     justify-self: end;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 18px 14px 48px;
+  }
+
+  .app__header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .app__header-controls {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .tabs {
+    flex: 1 1 100%;
+  }
+
+  .tabs__item {
+    flex: 1;
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+
+  .market__header {
+    flex-wrap: wrap;
+  }
+
+  .market__search {
+    max-width: none;
+    flex: 1 1 100%;
   }
 }
