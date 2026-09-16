@@ -13,6 +13,7 @@ import {
 import { POSITION_LABEL } from '../data/mockPlayers'
 import { formatDay, formatEuros, formatEurosCompact, formatMatchDateTime } from '../utils/format'
 import { oddsLabel, winChance } from '../utils/opponent'
+import { form, matchesPlayed, pointsAverage } from '../utils/playerStats'
 import { DifficultyBars, StatusBadge } from './PlayerRow'
 import TeamCrest from './TeamCrest'
 import { StatCards } from './spectrumui/charts/stat-cards'
@@ -26,6 +27,28 @@ function cumulativeByMatchday(pointsByMatchday) {
     total += d.points
     return { matchday: d.matchday, points: d.points, total }
   })
+}
+
+// Estadísticas reales de la temporada (scrape_stats.py). Se muestran solo
+// las que hay: con los datos de prueba no existe `stats`, y un jugador de
+// campo no tiene paradas.
+function seasonStats(player) {
+  const played = matchesPlayed(player)
+  const { minutes, goals, assists, yellow, red, saves, conceded } = player.stats ?? {}
+  const isKeeper = player.pos === 'POR'
+  const cards = (yellow ?? 0) + (red ?? 0)
+
+  return [
+    { label: 'Partidos', value: played || null },
+    { label: 'Media', value: played > 0 ? pointsAverage(player).toFixed(1).replace('.', ',') : null },
+    { label: 'Forma (3 J)', value: player.pointsByMatchday?.length ? form(player) : null },
+    { label: 'Minutos', value: minutes ?? null },
+    { label: 'Goles', value: goals ?? null },
+    { label: 'Asistencias', value: assists ?? null },
+    { label: 'Paradas', value: isKeeper ? saves ?? null : null },
+    { label: 'Goles encajados', value: isKeeper ? conceded ?? null : null },
+    { label: 'Tarjetas', value: yellow === undefined ? null : cards },
+  ].filter((stat) => stat.value !== null && stat.value !== undefined)
 }
 
 function MatchdayDot({ cx, cy, payload }) {
@@ -53,6 +76,7 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
     ? cumulativeByMatchday(rendered.pointsByMatchday)
     : null
   const teamFixtures = fixtures?.[rendered.team]
+  const realStats = seasonStats(rendered)
 
   return (
     <div
@@ -72,7 +96,7 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
         <h2 className="modal__title">
           <span className="player-row__name-line">
             {rendered.name}
-            <StatusBadge status={rendered.status} />
+            <StatusBadge status={rendered.status} note={rendered.statusNote} />
           </span>
         </h2>
 
@@ -97,6 +121,17 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
             },
           ]}
         />
+
+        {realStats.length > 0 && (
+          <ul className="modal__stats">
+            {realStats.map(({ label, value }) => (
+              <li key={label} className="modal__stat">
+                <span className="modal__stat-value">{value}</span>
+                <span className="modal__stat-label">{label}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <ResponsiveContainer width="100%" height={200}>
           <LineChart data={rendered.priceHistory} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>

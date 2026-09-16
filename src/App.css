@@ -503,6 +503,152 @@
   font-weight: 600;
 }
 
+/* ---------- filtros avanzados ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Los grupos de filtro son <fieldset> por accesibilidad (la leyenda nombra
+   el grupo para el lector de pantalla), no por estilo: se les quita el
+   marco que trae el navegador. */
+.chip-group,
+.team-select__menu {
+  border: 0;
+  margin: 0;
+  min-inline-size: 0;
+}
+
+.team-select__menu {
+  border: 1px solid var(--hairline);
+}
+
+/* El chip es un <label> con el checkbox oculto: el foco del teclado tiene
+   que verse igual que en un botón. */
+.chip:has(input:focus-visible) {
+  outline: 2px solid var(--turf);
+  outline-offset: 2px;
+}
+
+.team-select__clear:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.market__advanced {
+  flex-basis: 100%;
+}
+
+.market__advanced-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  width: fit-content;
+  padding: 6px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--ink-soft);
+  color: var(--text-muted);
+  font-size: 0.81rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.market__advanced-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.market__advanced[open] .market__advanced-trigger {
+  background: var(--paper-dim);
+  color: var(--text);
+}
+
+.market__advanced-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin: 12px 0 10px;
+  padding: 14px;
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--ink) 40%, transparent);
+}
+
+.filter-group {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+.filter-group > legend {
+  padding: 0 0 7px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.filter-group__checks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.filter-group__row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.84rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.filter-check input,
+.team-select__option input {
+  accent-color: var(--turf);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.filter-number {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  flex: 1 1 78px;
+}
+
+.filter-number input {
+  width: 100%;
+  border: 1px solid var(--hairline);
+  border-radius: 9px;
+  padding: 7px 8px;
+  background: color-mix(in srgb, var(--ink) 70%, transparent);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---------- player list ---------- */
 /* La tabla tiene 9 columnas: por debajo de ~900px se desplaza en horizontal
    dentro de la tarjeta en vez de desbordar la página. */
@@ -1302,23 +1448,34 @@
 
 .modal__stats {
   display: flex;
-  gap: 22px;
-  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
 }
 
 .modal__stat-cards {
   margin-bottom: 14px;
 }
 
-.modal__stats > div {
+.modal__stat {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
+.modal__stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 .modal__stat-value {
   font-family: var(--font-display);
   font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .modal__fixtures {

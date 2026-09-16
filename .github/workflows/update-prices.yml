@@ -43,11 +43,21 @@ jobs:
           LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
           python scraper/scrape_odds.py "$LATEST_MERCADO"
 
-      - name: Fusionar mercado y puntos en jugadores.json
+      # Estado deportivo y estadísticas reales: son un extra, si una de las
+      # dos páginas falla el resto de la actualización sigue adelante.
+      - name: Scrapear lesiones/sanciones y estadísticas por equipo
+        continue-on-error: true
+        run: |
+          python scraper/scrape_status.py
+          python scraper/scrape_stats.py
+
+      - name: Fusionar mercado, puntos, estado y estadísticas en jugadores.json
         run: |
           LATEST_MERCADO=$(ls -t scraper/data/raw/mercado_*.json | head -n 1)
           LATEST_PUNTOS=$(ls -t scraper/data/raw/puntos_*.json | head -n 1)
-          python scraper/merge_history.py "$LATEST_MERCADO" "$LATEST_PUNTOS"
+          LATEST_ESTADISTICAS=$(ls -t scraper/data/raw/estadisticas_*.json 2>/dev/null | head -n 1)
+          LATEST_ESTADO=$(ls -t scraper/data/raw/estado_*.json 2>/dev/null | head -n 1)
+          python scraper/merge_history.py "$LATEST_MERCADO" "$LATEST_PUNTOS" $LATEST_ESTADISTICAS $LATEST_ESTADO
 
       - name: Scrapear puntos por jornada (una petición por jugador, ~5-10 min)
         run: python scraper/scrape_matchday_points.py scraper/data/jugadores.json

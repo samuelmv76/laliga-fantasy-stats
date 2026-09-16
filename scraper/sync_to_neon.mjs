@@ -28,14 +28,29 @@ function readJson(relativePath) {
 }
 
 async function syncPlayers(players) {
+  // Estado deportivo y estadísticas reales (scrape_status.py / scrape_stats.py).
+  // Se añaden aquí por si la tabla es anterior a estos scrapers.
+  await sql`ALTER TABLE players
+    ADD COLUMN IF NOT EXISTS status text,
+    ADD COLUMN IF NOT EXISTS status_note text,
+    ADD COLUMN IF NOT EXISTS play_probability int,
+    ADD COLUMN IF NOT EXISTS played int,
+    ADD COLUMN IF NOT EXISTS played5 int,
+    ADD COLUMN IF NOT EXISTS stats jsonb`
   await sql`
-    INSERT INTO players (id, name, team, pos, points, updated_at)
+    INSERT INTO players (id, name, team, pos, points, status, status_note, play_probability, played, played5, stats, updated_at)
     SELECT * FROM UNNEST(
       ${players.map((p) => p.id)}::text[],
       ${players.map((p) => p.name)}::text[],
       ${players.map((p) => p.team)}::text[],
       ${players.map((p) => p.pos)}::text[],
       ${players.map((p) => p.points)}::int[],
+      ${players.map((p) => p.status ?? null)}::text[],
+      ${players.map((p) => p.statusNote ?? null)}::text[],
+      ${players.map((p) => p.playProbability ?? null)}::int[],
+      ${players.map((p) => p.played ?? null)}::int[],
+      ${players.map((p) => p.played5 ?? null)}::int[],
+      ${players.map((p) => (p.stats ? JSON.stringify(p.stats) : null))}::jsonb[],
       ${players.map(() => new Date().toISOString())}::timestamptz[]
     )
     ON CONFLICT (id) DO UPDATE SET
@@ -43,6 +58,12 @@ async function syncPlayers(players) {
       team = EXCLUDED.team,
       pos = EXCLUDED.pos,
       points = EXCLUDED.points,
+      status = EXCLUDED.status,
+      status_note = EXCLUDED.status_note,
+      play_probability = EXCLUDED.play_probability,
+      played = EXCLUDED.played,
+      played5 = EXCLUDED.played5,
+      stats = EXCLUDED.stats,
       updated_at = EXCLUDED.updated_at
   `
   console.log(`[ok] players: ${players.length} filas sincronizadas.`)

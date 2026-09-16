@@ -123,6 +123,72 @@ El front lo consume vía `src/hooks/useFixtures.js` (mismo patrón que
 `usePlayers`: intenta `/calendario.json`, si no existe usa
 `src/data/mockFixtures.js`).
 
+## Estado deportivo (lesión / duda / sanción)
+
+`scrape_status.py` lee dos páginas públicas y las fusiona:
+
+```
+https://www.futbolfantasy.com/laliga/lesionados    -> lesionados y dudas
+https://www.futbolfantasy.com/laliga/sancionados   -> sancionados
+```
+
+El estado no se deduce del porcentaje sino del icono que pone la propia
+web (`lesionado_box_min.png` / `duda_box_min.png` / `disponible_box_min.png`),
+y el porcentaje se guarda aparte como `playProbability` (probabilidad de
+jugar el próximo partido). El id del jugador sale de la URL de su foto de
+ficha, que es el mismo id que `data-id` del mercado.
+
+Un jugador que ya aparece como *disponible* se publica con estado nulo a
+propósito: `merge_history.py` usa el fichero como foto completa del día y
+**borra** el estado de todos los que no salen, para que un recuperado no se
+quede lesionado para siempre.
+
+```bash
+python scrape_status.py    # -> data/raw/estado_*.json
+```
+
+## Estadísticas reales (minutos, goles, asistencias, tarjetas)
+
+`scrape_stats.py` recorre una página por equipo
+(`/analytics/<equipo>/estadisticas`, ~20 peticiones con pausa). Esa tabla
+guarda cada columna en atributos `data-<n>-total`, donde `<n>` **no** es
+fijo por significado: la cabecera es la que dice qué es cada columna
+(`data-sort="<n>"` + `data-tooltip="Minutos jugados"`). Por eso el scraper
+lee la cabecera en cada página y extrae solo las columnas de
+`STAT_BY_TOOLTIP`; si la web reordena columnas sigue funcionando, y si
+renombra un tooltip esa estadística desaparece con un aviso en vez de
+publicar un número equivocado.
+
+```bash
+python scrape_stats.py     # -> data/raw/estadisticas_*.json
+```
+
+Publica por jugador: `minutes`, `goals`, `assists`, `yellow`, `red`,
+`saves`, `conceded` (acumulado de temporada).
+
+**Lo que NO está disponible en estas fuentes**: el porcentaje de mánagers
+que tienen a un jugador y el valor de cláusula. Eso solo vive dentro de la
+app oficial de LaLiga Fantasy, que pide sesión; no se puede sacar de
+futbolfantasy.com.
+
+## Partidos jugados
+
+`scrape_points.py` publica además `played` (partidos de la temporada) y
+`played5` (de las últimas 5 jornadas), leídos de la misma tabla de puntos
+sin peticiones extra. Hacen falta para distinguir "jugó y sacó 0 puntos"
+de "no jugó": el desglose por jornada solo trae las jornadas con datos.
+
+## Cadena completa de un día
+
+```bash
+python scrape_market.py
+python scrape_points.py
+python scrape_status.py
+python scrape_stats.py
+python merge_history.py data/raw/mercado_*.json data/raw/puntos_*.json                         data/raw/estadisticas_*.json data/raw/estado_*.json
+DATABASE_URL=postgres://... node sync_to_neon.mjs
+```
+
 ## Automatización (gratis)
 
 `.github/workflows/update-prices.yml` ya está listo: corre cada noche vía

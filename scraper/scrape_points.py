@@ -6,6 +6,11 @@ data-puntostemporada de la tabla de puntos. A diferencia de la página de
 mercado, aquí la fila no trae un data-id: el id del jugador va como primer
 argumento de openPlayerPointsStats(id, ...) en el onclick de la fila (mismo
 espacio de ids que data-id en scrape_market.py, comprobado a mano).
+
+La misma fila trae además los partidos jugados (data-temporada) y los
+jugados en las últimas 5 jornadas (data-jugados5). Sin ellos no hay forma
+de distinguir "jugó y sacó 0 puntos" de "no jugó", porque el desglose por
+jornada solo trae las jornadas con datos.
 """
 
 import json
@@ -38,6 +43,13 @@ def fetch_html(url: str) -> str:
     return resp.text
 
 
+def _int_or_none(value):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
 def parse_table(html: str):
     soup = BeautifulSoup(html, "html.parser")
     rows = soup.select("tr.elemento_jugador")
@@ -54,7 +66,14 @@ def parse_table(html: str):
         if not match or total is None or total == "":
             continue
 
-        players.append({"slug": match.group(1), "points": int(total)})
+        players.append(
+            {
+                "slug": match.group(1),
+                "points": int(total),
+                "played": _int_or_none(tr.get("data-temporada")),
+                "played5": _int_or_none(tr.get("data-jugados5")),
+            }
+        )
     return players
 
 

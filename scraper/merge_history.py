@@ -1,6 +1,6 @@
 """
-Fusiona los scrapes del día (data/raw/mercado_YYYY-MM-DD.json y, si existe,
-data/raw/puntos_YYYY-MM-DD.json) dentro del fichero canónico
+Fusiona los scrapes del día (data/raw/mercado_, puntos_, jornadas_,
+estadisticas_ y estado_YYYY-MM-DD.json) dentro del fichero canónico
 data/jugadores.json, que es el que consume el front (mismo formato que
 src/data/mockPlayers.js pero con datos reales).
 
@@ -20,7 +20,16 @@ Formato de salida (uno por jugador):
   ],
   "pointsByMatchday": [
     {"matchday": 5, "points": 6}
-  ]
+  ],
+  "played": 5,                  # partidos jugados en la temporada
+  "played5": 4,                 # partidos jugados en las últimas 5 jornadas
+  "status": "lesion",           # o "duda"/"sancion"; ausente si está disponible
+  "statusNote": "Rotura de lig. cruzado anterior · Baja hasta abril",
+  "playProbability": 0,         # % de que juegue el próximo partido
+  "stats": {                    # acumulado de temporada, de /analytics/<equipo>/estadisticas
+    "minutes": 450, "goals": 6, "assists": 1,
+    "yellow": 0, "red": 0, "saves": 0, "conceded": 4
+  }
 }
 
 La página de mercado trae, en la misma llamada, el precio exacto de hoy y el
@@ -30,7 +39,7 @@ puntos de temporada, en cambio, la web solo los da "a día de hoy": el
 histórico de puntos se construye día a día, una entrada por ejecución.
 
 Se ejecuta con:
-  python merge_history.py data/raw/mercado_2026-09-09.json [data/raw/puntos_2026-09-09.json] [data/raw/jornadas_2026-09-09.json]
+  python merge_history.py data/raw/mercado_2026-09-09.json [data/raw/puntos_2026-09-09.json] [data/raw/jornadas_2026-09-09.json] [data/raw/estadisticas_2026-09-09.json] [data/raw/estado_2026-09-09.json]
 """
 
 import json
@@ -116,6 +125,11 @@ def merge_points(raw_scrape_path: Path, by_id: dict):
             continue  # jugador sin ficha en el mercado de hoy, se ignora
 
         entry["points"] = sp["points"]
+        # Partidos jugados: sin esto no se distingue "jugó y sacó 0" de "no jugó".
+        if sp.get("played") is not None:
+            entry["played"] = sp["played"]
+        if sp.get("played5") is not None:
+            entry["played5"] = sp["played5"]
         entry.setdefault("pointsHistory", [])
         set_history_point(entry["pointsHistory"], scrape_date, points=sp["points"])
         matched += 1
@@ -146,6 +160,47 @@ def merge_jornadas(raw_scrape_path: Path, by_id: dict):
     print(f"[ok] jornadas: {matched} jugadores actualizados.")
 
 
+def merge_status(raw_scrape_path: Path, by_id: dict):
+    """Estado deportivo del día. El fichero es la foto completa de quién está
+    lesionado/sancionado hoy, así que a todos los demás se les BORRA el estado:
+    si no, un jugador recuperado se quedaría lesionado para siempre."""
+    raw = json.loads(raw_scrape_path.read_text(encoding="utf-8"))
+    by_scraped_id = {p["slug"]: p for p in raw["players"] if p.get("slug")}
+
+    matched = 0
+    for player_id, entry in by_id.items():
+        scraped = by_scraped_id.get(player_id)
+        status = scraped.get("status") if scraped else None
+        if status:
+            entry["status"] = status
+            entry["statusNote"] = scraped.get("note")
+            entry["playProbability"] = scraped.get("playProbability")
+            matched += 1
+        else:
+            entry.pop("status", None)
+            entry.pop("statusNote", None)
+            entry.pop("playProbability", None)
+
+    unknown = len(by_scraped_id) - sum(1 for k in by_scraped_id if k in by_id)
+    print(f"[ok] estado: {matched} jugadores con baja ({unknown} sin ficha en el mercado).")
+
+
+def merge_stats(raw_scrape_path: Path, by_id: dict):
+    """Estadísticas reales acumuladas (minutos, goles, asistencias…). Se
+    sustituyen enteras: la web publica el acumulado de temporada, no un delta."""
+    raw = json.loads(raw_scrape_path.read_text(encoding="utf-8"))
+
+    matched = 0
+    for sp in raw["players"]:
+        entry = by_id.get(sp.get("slug"))
+        if entry is None:
+            continue  # jugador sin ficha en el mercado, se ignora
+        entry["stats"] = sp["stats"]
+        matched += 1
+
+    print(f"[ok] estadísticas: {matched} jugadores actualizados.")
+
+
 def main(paths):
     by_id = {p["id"]: p for p in load_canonical()}
 
@@ -156,8 +211,15 @@ def main(paths):
             merge_points(path, by_id)
         elif path.name.startswith("jornadas_"):
             merge_jornadas(path, by_id)
+        elif path.name.startswith("estadisticas_"):
+            merge_stats(path, by_id)
+        elif path.name.startswith("estado_"):
+            merge_status(path, by_id)
         else:
-            print(f"[aviso] '{path.name}' no empieza por 'mercado_', 'puntos_' ni 'jornadas_', se ignora.")
+            print(
+                f"[aviso] '{path.name}' no empieza por 'mercado_', 'puntos_', 'jornadas_', "
+                "'estadisticas_' ni 'estado_', se ignora."
+            )
 
     save_canonical(list(by_id.values()))
     print(f"[ok] total en {CANONICAL_PATH}: {len(by_id)}")
@@ -165,6 +227,9 @@ def main(paths):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Uso: python merge_history.py data/raw/mercado_YYYY-MM-DD.json [data/raw/puntos_YYYY-MM-DD.json]")
+        print(
+            "Uso: python merge_history.py data/raw/mercado_YYYY-MM-DD.json "
+            "[data/raw/puntos_...] [data/raw/jornadas_...] [data/raw/estadisticas_...] [data/raw/estado_...]"
+        )
         sys.exit(1)
     main([Path(p) for p in sys.argv[1:]])

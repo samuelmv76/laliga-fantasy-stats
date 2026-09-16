@@ -3,10 +3,14 @@ import { formatDeltaShort, formatMillions } from '../utils/format'
 import { difficultyColor, fixtureDifficulty, oddsLabel, winChance } from '../utils/opponent'
 import TeamCrest from './TeamCrest'
 
-export function StatusBadge({ status }) {
+export function StatusBadge({ status, note }) {
   const info = PLAYER_STATUS[status]
   if (!info) return null
-  return <span className={`status-badge status-badge--${info.tone}`}>{info.label}</span>
+  return (
+    <span className={`status-badge status-badge--${info.tone}`} title={note || undefined}>
+      {info.label}
+    </span>
+  )
 }
 
 export function DifficultyBars({ fixture }) {
@@ -63,7 +67,7 @@ export default function PlayerRow({ player, status, onAdd, onRemove, inSquad, on
       <button className="player-row__id player-row__id--link" onClick={() => onSelect(player)}>
         <span className="player-row__name-line">
           <span className="player-row__name">{player.name}</span>
-          <StatusBadge status={player.status} />
+          <StatusBadge status={player.status} note={player.statusNote} />
         </span>
         <span className="player-row__team">
           <TeamCrest team={player.team} size={14} />

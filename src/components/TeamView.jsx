@@ -16,7 +16,7 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
   useEffect(() => setNameDraft(teamName), [teamName])
   const [query, setQuery] = useState('')
   const [pos, setPos] = useState('TODOS')
-  const [team, setTeam] = useState('TODOS')
+  const [teamFilter, setTeamFilter] = useState([])
   const [sortKey, setSortKey] = useState('puntos')
 
   const teams = useMemo(() => [...new Set(squad.map((p) => p.team))].sort(), [squad])
@@ -29,10 +29,10 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
   const filtered = useMemo(() => {
     return squad
       .filter((p) => (pos === 'TODOS' ? true : p.pos === pos))
-      .filter((p) => (team === 'TODOS' ? true : p.team === team))
+      .filter((p) => (teamFilter.length === 0 ? true : teamFilter.includes(p.team)))
       .filter((p) => p.name.toLowerCase().includes(query.toLowerCase()) || p.team.toLowerCase().includes(query.toLowerCase()))
       .sort(SORTERS[sortKey])
-  }, [squad, pos, team, query, sortKey])
+  }, [squad, pos, teamFilter, query, sortKey])
 
   if (squad.length === 0) {
     return (
@@ -108,7 +108,7 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
           onChange={(e) => setQuery(e.target.value)}
         />
         <div className="market__selects">
-          <TeamSelect teams={teams} value={team} onChange={setTeam} />
+          <TeamSelect teams={teams} value={teamFilter} onChange={setTeamFilter} />
           <select className="market__sort" value={sortKey} onChange={(e) => setSortKey(e.target.value)}>
             <option value="puntos">Ordenar: puntos</option>
             <option value="precio">Ordenar: precio</option>
