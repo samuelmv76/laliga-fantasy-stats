@@ -46,7 +46,20 @@ for (const team of Object.keys(jornadaCompleta(7, diez(18)))) {
 const enJuego = nextMatchdayWindow(empezada)
 assert.equal(enJuego.matchday, 7)
 assert.equal(enJuego.started, true)
-assert.equal(matchdayLabel(enJuego, ahora).text, 'J7 · en juego · hasta dom 21:00')
+assert.equal(enJuego.next.matchday, 8)
+// (el cero del mes lo pone formatDay y depende del entorno, de ahí el regex)
+assert.match(
+  matchdayLabel(enJuego, ahora).text,
+  /^J7 · en juego hasta dom 21:00 · J8 empieza vie 25\/0?9 · 21:00$/
+)
+
+// Con una sola jornada en el calendario no hay siguiente que anunciar (y
+// tampoco se puede saber si esa ya ha empezado, porque no hay con qué
+// comparar el número de partidos).
+const solaJornada = nextMatchdayWindow({ local0: [{ matchday: 7, kickoff: '2026-09-20T21:00:00+02:00' }] })
+assert.equal(solaJornada.next, null)
+assert.equal(solaJornada.started, false)
+assert.equal(matchdayLabel(solaJornada, ahora).text, 'J7 · dom 21:00')
 
 // Jornada con un único horario para todos los partidos: no hay rango.
 const unica = nextMatchdayWindow(jornadaCompleta(9, Array.from({ length: 10 }, () => '2026-09-19T21:00:00+02:00')))

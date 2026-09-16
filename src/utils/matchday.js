@@ -16,10 +16,12 @@ function entriesByMatchday(fixtures) {
   return byMatchday
 }
 
-// { matchday, start, end, started } de la próxima jornada, o null si no hay
-// calendario. `started` es true cuando la jornada ya ha empezado: /api/fixtures
-// solo devuelve los partidos que quedan, así que en ese caso `start` no es el
-// principio real de la jornada y no se debe enseñar como tal.
+// { matchday, start, end, started, next } de la jornada en curso o la que
+// viene, o null si no hay calendario. `started` es true cuando la jornada ya ha
+// empezado: /api/fixtures solo devuelve los partidos que quedan, así que en ese
+// caso `start` no es el principio real de la jornada y no se debe enseñar como
+// tal. `next` es { matchday, start } de la jornada siguiente, para poder decir
+// cuándo arranca la próxima mientras se juega esta.
 export function nextMatchdayWindow(fixtures) {
   const byMatchday = entriesByMatchday(fixtures)
   const matchdays = Object.keys(byMatchday).map(Number)
@@ -29,11 +31,15 @@ export function nextMatchdayWindow(fixtures) {
   const kickoffs = byMatchday[matchday].sort((a, b) => a - b)
   const full = Math.max(...matchdays.map((m) => byMatchday[m].length))
 
+  const following = matchdays.filter((m) => m > matchday)
+  const next = following.length > 0 ? Math.min(...following) : null
+
   return {
     matchday,
     start: kickoffs[0],
     end: kickoffs[kickoffs.length - 1],
     started: kickoffs.length < full,
+    next: next === null ? null : { matchday: next, start: byMatchday[next].sort((a, b) => a - b)[0] },
   }
 }
 
@@ -55,12 +61,22 @@ export function matchdayLabel(window, now = new Date()) {
   const end = formatKickoff(window.end, now)
 
   if (window.started) {
+    // Mientras se juega esta jornada, lo útil es cuándo arranca la siguiente:
+    // es la hora a la que hay que tener el equipo hecho.
+    const next = window.next && {
+      matchday: window.next.matchday,
+      start: formatKickoff(window.next.start, now),
+    }
+    const despues = next ? ` · J${next.matchday} empieza ${next.start}` : ''
     return {
       matchday,
-      text: `J${matchday} · en juego · hasta ${end}`,
-      title: `Jornada ${matchday} en juego. Último partido: ${end}.`,
+      text: `J${matchday} · en juego hasta ${end}${despues}`,
+      title:
+        `Jornada ${matchday} en juego, último partido ${end}.` +
+        (next ? ` La jornada ${next.matchday} empieza ${next.start}.` : ''),
     }
   }
+
   // El calendario puede traer un único horario para toda la jornada (aún sin
   // confirmar): entonces no hay rango que enseñar.
   if (start === end) {

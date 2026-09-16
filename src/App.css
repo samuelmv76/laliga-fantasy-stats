@@ -54,6 +54,16 @@
   font-size: 0.72rem;
   font-weight: 600;
   white-space: nowrap;
+  max-width: 100%;
+}
+
+/* Con el parón de selecciones el texto crece ("J8 empieza sáb 10/10 · 21:00")
+   y en móvil no cabe de una línea: ahí se deja partir en vez de sacar scroll
+   horizontal a toda la página. */
+@media (max-width: 560px) {
+  .app__live {
+    white-space: normal;
+  }
 }
 
 .app__live-dot {
