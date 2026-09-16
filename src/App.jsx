@@ -130,6 +130,7 @@ export default function App() {
         {tab === 'equipo' && (
           <TeamView
             squad={squad}
+            fixtures={fixtures}
             totalValue={totalValue}
             removePlayer={removePlayer}
             onSelect={setSelected}

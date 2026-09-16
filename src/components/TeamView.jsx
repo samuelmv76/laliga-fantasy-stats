@@ -1,38 +1,45 @@
 import { useEffect, useMemo, useState } from 'react'
-import { POSITIONS, POSITION_LABEL, currentPrice, todayDelta } from '../data/mockPlayers'
+import { currentPrice, todayDelta } from '../data/mockPlayers'
 import { teamValueSeries, teamDailySeries, unionDates } from '../utils/teamStats'
 import { formatEuros } from '../utils/format'
 import { formatEurosCompact } from '../utils/format'
 import TeamValueChart from './TeamValueChart'
 import TeamDailyBars from './TeamDailyBars'
 import TeamCrest from './TeamCrest'
-import { SORTERS, TeamSelect } from './Market'
+import {
+  EMPTY_FILTERS,
+  SORT_BY_DIFFICULTY,
+  SORTERS,
+  difficultyByTeam,
+  filterPlayers,
+  sortPlayers,
+} from '../utils/playerFilters'
+import PlayerFilters from './PlayerFilters'
 import { StatusBadge } from './PlayerRow'
 import { MAX_SQUAD } from '../hooks/useSquad'
 import { StatCards } from './spectrumui/charts/stat-cards'
 
-export default function TeamView({ squad, totalValue, removePlayer, onSelect, onAddPlayer, teamName, onRenameTeam }) {
+const SORT_KEYS = [...Object.keys(SORTERS), SORT_BY_DIFFICULTY]
+
+export default function TeamView({ squad, fixtures, totalValue, removePlayer, onSelect, onAddPlayer, teamName, onRenameTeam }) {
   const [nameDraft, setNameDraft] = useState(teamName)
   useEffect(() => setNameDraft(teamName), [teamName])
   const [query, setQuery] = useState('')
-  const [pos, setPos] = useState('TODOS')
-  const [teamFilter, setTeamFilter] = useState([])
   const [sortKey, setSortKey] = useState('puntos')
+  const [filters, setFilters] = useState(EMPTY_FILTERS)
 
   const teams = useMemo(() => [...new Set(squad.map((p) => p.team))].sort(), [squad])
+  const difficulty = useMemo(() => difficultyByTeam(teams, fixtures), [teams, fixtures])
 
   const dateRange = useMemo(() => unionDates(squad), [squad])
   const valueSeries = useMemo(() => teamValueSeries(squad, dateRange), [squad, dateRange])
   const dailySeries = useMemo(() => teamDailySeries(squad, dateRange), [squad, dateRange])
   const todayTeamDelta = dailySeries[dailySeries.length - 1]?.delta ?? 0
 
-  const filtered = useMemo(() => {
-    return squad
-      .filter((p) => (pos === 'TODOS' ? true : p.pos === pos))
-      .filter((p) => (teamFilter.length === 0 ? true : teamFilter.includes(p.team)))
-      .filter((p) => p.name.toLowerCase().includes(query.toLowerCase()) || p.team.toLowerCase().includes(query.toLowerCase()))
-      .sort(SORTERS[sortKey])
-  }, [squad, pos, teamFilter, query, sortKey])
+  const filtered = useMemo(
+    () => sortPlayers(filterPlayers(squad, filters, { query, difficulty }), sortKey, difficulty),
+    [squad, filters, query, sortKey, difficulty]
+  )
 
   if (squad.length === 0) {
     return (
@@ -89,17 +96,14 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
         <TeamDailyBars data={dailySeries} />
       </div>
 
-      <div className="market__filters">
-        <div className="chip-group" role="tablist" aria-label="Filtrar por posición">
-          <button className={`chip${pos === 'TODOS' ? ' chip--active' : ''}`} onClick={() => setPos('TODOS')}>
-            Todos
-          </button>
-          {POSITIONS.map((p) => (
-            <button key={p} className={`chip${pos === p ? ' chip--active' : ''}`} onClick={() => setPos(p)}>
-              {POSITION_LABEL[p]}
-            </button>
-          ))}
-        </div>
+      <PlayerFilters
+        teams={teams}
+        filters={filters}
+        onChange={setFilters}
+        sortKey={sortKey}
+        onSortChange={setSortKey}
+        sortKeys={SORT_KEYS}
+      >
         <input
           className="market__search"
           type="search"
@@ -107,16 +111,7 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <div className="market__selects">
-          <TeamSelect teams={teams} value={teamFilter} onChange={setTeamFilter} />
-          <select className="market__sort" value={sortKey} onChange={(e) => setSortKey(e.target.value)}>
-            <option value="puntos">Ordenar: puntos</option>
-            <option value="precio">Ordenar: precio</option>
-            <option value="ratio">Ordenar: puntos/millón</option>
-            <option value="subida">Ordenar: subida de hoy</option>
-          </select>
-        </div>
-      </div>
+      </PlayerFilters>
 
       <ul className="roster">
         {filtered.length === 0 && <li className="player-list__empty">Ningún jugador coincide con el filtro.</li>}
@@ -127,7 +122,7 @@ export default function TeamView({ squad, totalValue, removePlayer, onSelect, on
               <button className="roster__name" onClick={() => onSelect(p)}>
                 <span className="player-row__name-line">
                   {p.name}
-                  <StatusBadge status={p.status} />
+                  <StatusBadge status={p.status} note={p.statusNote} />
                 </span>
                 <span className="roster__team">
                   <TeamCrest team={p.team} size={14} />
