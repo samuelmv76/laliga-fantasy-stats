@@ -3,6 +3,7 @@ import { currentPrice, todayDelta } from './data/mockPlayers'
 import { formatDeltaShort } from './utils/format'
 import { usePlayers } from './hooks/usePlayers'
 import { useFixtures } from './hooks/useFixtures'
+import { matchdayLabel, nextMatchdayWindow } from './utils/matchday'
 import { useSquad } from './hooks/useSquad'
 import { useTheme } from './hooks/useTheme'
 import { Show, SignInButton, UserButton } from '@clerk/react'
@@ -24,7 +25,7 @@ export default function App() {
   ]
   const [tab, setTab] = useState('mercado')
   const [selected, setSelected] = useState(null)
-  const nextMatch = useMemo(() => nextMatchday(fixtures), [fixtures])
+  const nextMatch = useMemo(() => matchdayLabel(nextMatchdayWindow(fixtures)), [fixtures])
   const pulse = useMemo(() => pulseStats(players), [players])
 
   return (
@@ -36,8 +37,9 @@ export default function App() {
             Fantasy <span className="app__wordmark-dim">Stats</span>
           </span>
           {nextMatch && (
-            <span className="app__live">
-              <span className="app__live-dot" />J{nextMatch.matchday} · cierra {nextMatch.label}
+            <span className="app__live" title={nextMatch.title}>
+              <span className="app__live-dot" />
+              {nextMatch.text}
             </span>
           )}
         </div>
@@ -207,22 +209,6 @@ export default function App() {
 }
 
 // Próxima jornada = la más baja del calendario, con el primer partido que se juega.
-function nextMatchday(fixtures) {
-  // /api/fixtures es dato externo: solo cuentan los partidos con jornada y hora válidas.
-  const all = Object.values(fixtures ?? {})
-    .flat()
-    .filter((f) => Number.isFinite(f?.matchday) && !Number.isNaN(Date.parse(f?.kickoff)))
-  if (all.length === 0) return null
-  const matchday = Math.min(...all.map((f) => f.matchday))
-  const first = all
-    .filter((f) => f.matchday === matchday)
-    .sort((a, b) => new Date(a.kickoff) - new Date(b.kickoff))[0]
-  const d = new Date(first.kickoff)
-  const day = d.toLocaleDateString('es-ES', { weekday: 'short' }).replace('.', '')
-  const time = d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })
-  return { matchday, label: `${day} ${time}` }
-}
-
 function pulseStats(players) {
   // /api/players es dato externo: sin histórico de precios no hay variación que resumir.
   const valid = players.filter((p) => Array.isArray(p?.priceHistory) && p.priceHistory.length > 0 && currentPrice(p) > 0)
