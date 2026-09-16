@@ -2,6 +2,39 @@
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 @import './_root.css';
 
+/* Puente entre los tokens de diseño (que cambian con [data-theme]) y las
+   utilidades de Tailwind: `@theme inline` hace que bg-paper-solid, text-muted
+   o border-hairline resuelvan a var(--…), así que el cambio de tema sigue
+   siendo un atributo en <html> y no dos juegos de clases. */
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-turf: var(--turf);
+  --color-turf-on: var(--turf-on);
+  --color-turf-line: var(--turf-line);
+  --color-paper-solid: var(--paper-solid);
+  --color-paper-dim: var(--paper-dim);
+  --color-hairline: var(--hairline);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-gold: var(--gold);
+  --color-rise: var(--rise);
+  --color-fall: var(--fall);
+  --color-pos-por: var(--pos-por);
+  --color-pos-def: var(--pos-def);
+  --color-pos-mid: var(--pos-mid);
+  --color-pos-del: var(--pos-del);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --shadow-card: var(--shadow-sm);
+  --shadow-pop: var(--shadow-md);
+  --shadow-float: var(--shadow-lg);
+
+  --ease-smooth: var(--ease);
+}
+
 :root {
   --font-display: -apple-system, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
   --font-body: -apple-system, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
@@ -97,4 +130,166 @@ button {
 :focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
+}
+
+
+/* Primitivas que se repiten en media app (botones, chips, tarjetas). Van como
+   @utility de Tailwind en vez de repetir ocho clases en cada sitio: son las
+   únicas piezas con suficientes usos para que compense. */
+@utility btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.82rem;
+  border-radius: 980px;
+  padding: 7px 14px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s var(--ease), background 0.2s var(--ease), opacity 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+@utility btn-add {
+  background: var(--gold);
+  color: var(--turf-on);
+  box-shadow: var(--shadow-sm);
+
+  &:hover:not(:disabled) {
+    background: color-mix(in srgb, var(--gold) 86%, var(--ink));
+    box-shadow: var(--shadow-md);
+  }
+
+  &:disabled {
+    background: var(--paper-dim);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+@utility btn-following {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--turf-line);
+
+  &:hover {
+    background: var(--paper-dim);
+  }
+}
+
+@utility btn-remove {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--turf-line);
+
+  &:hover {
+    background: var(--paper-dim);
+    color: var(--text);
+  }
+}
+
+@utility btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--hairline);
+
+  &:hover {
+    background: var(--paper-dim);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+@utility btn-ghost-dark {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--hairline);
+
+  &:hover {
+    background: var(--paper-dim);
+    color: var(--text);
+  }
+}
+
+/* Chip de filtro: forma y comportamiento. Los colores (activo o no) van como
+   utilidades en el propio componente, que es donde se decide el estado. */
+@utility chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid;
+  border-radius: 999px;
+  padding: 6px 13px;
+  font-size: 0.81rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+
+  &:has(input:focus-visible) {
+    outline: 2px solid var(--turf);
+    outline-offset: 2px;
+  }
+}
+
+/* La tarjeta de fondo translúcido que usan Mercado, Ranking y Mi equipo. */
+@utility card {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: 22px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Cabecera y pie: cristal translúcido. Se queda en CSS porque lleva su propia
+   caída para quien pide menos transparencia en el sistema. */
+@utility glass {
+  background: color-mix(in srgb, var(--paper-solid) 72%, transparent);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+
+  @media (prefers-reduced-transparency: reduce) {
+    background: var(--paper);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* El punto verde que late junto a la jornada. */
+@utility live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rise);
+  flex-shrink: 0;
+  animation: live-pulse 2.4s ease-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--rise) 50%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 7px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
 }
