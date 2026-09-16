@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
   CartesianGrid,
 } from 'recharts'
-import { POSITION_LABEL } from '../data/mockPlayers'
+import { PLAYER_STATUS, POSITION_LABEL } from '../data/mockPlayers'
 import { formatDay, formatEuros, formatEurosCompact, formatMatchDateTime } from '../utils/format'
 import { oddsLabel, winChance } from '../utils/opponent'
 import { form, matchesPlayed, pointsAverage } from '../utils/playerStats'
@@ -122,9 +122,20 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
         <h2 className="modal__title">
           <span className="player-row__name-line">
             {rendered.name}
-            <StatusBadge status={rendered.status} note={rendered.statusNote} />
+            <StatusBadge status={rendered.status} note={rendered.statusNote} until={rendered.statusUntil} />
           </span>
         </h2>
+
+        {rendered.status && (
+          <p className={`modal__status modal__status--${PLAYER_STATUS[rendered.status]?.tone}`}>
+            {[rendered.statusNote, rendered.statusUntil].filter(Boolean).join(' · ')}
+            {rendered.playProbability != null && (
+              <span className="modal__status-chance">
+                {rendered.playProbability}% de jugar el próximo partido
+              </span>
+            )}
+          </p>
+        )}
 
         <StatCards
           className="modal__stat-cards"

@@ -16,7 +16,7 @@ import {
   sortPlayers,
 } from '../utils/playerFilters'
 import PlayerFilters from './PlayerFilters'
-import { StatusBadge } from './PlayerRow'
+import { StatusBadge, StatusUntil } from './PlayerRow'
 import { MAX_SQUAD } from '../hooks/useSquad'
 import { StatCards } from './spectrumui/charts/stat-cards'
 
@@ -149,11 +149,12 @@ export default function TeamView({ squad, fixtures, totalValue, removePlayer, on
               <button className="roster__name" onClick={() => onSelect(p)}>
                 <span className="player-row__name-line">
                   {p.name}
-                  <StatusBadge status={p.status} note={p.statusNote} />
+                  <StatusBadge status={p.status} note={p.statusNote} until={p.statusUntil} />
                 </span>
                 <span className="roster__team">
                   <TeamCrest team={p.team} size={14} />
                   {p.team}
+                  <StatusUntil player={p} />
                 </span>
               </button>
               <span className="roster__points">{p.points} pts</span>

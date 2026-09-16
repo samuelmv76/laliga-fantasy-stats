@@ -4065,8 +4065,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Traumatismo craneoencefálico · Baja hasta finales de septiembre",
-    "playProbability": 10
+    "statusNote": "Traumatismo craneoencefálico",
+    "playProbability": 10,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "16922",
@@ -7263,8 +7264,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Esguince de tobillo · Baja hasta finales de septiembre",
-    "playProbability": 0
+    "statusNote": "Esguince de tobillo",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "16924",
@@ -7568,8 +7570,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión de rodilla · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Lesión de rodilla",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "16863",
@@ -10086,8 +10089,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión en el sóleo · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Lesión en el sóleo",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "13983",
@@ -13898,8 +13902,9 @@
       }
     ],
     "status": "duda",
-    "statusNote": "Lesión de tobillo · Duda para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Lesión de tobillo",
+    "playProbability": 0,
+    "statusUntil": "Duda para la jornada 6"
   },
   {
     "id": "7309",
@@ -14705,8 +14710,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de menisco · Baja hasta enero",
-    "playProbability": 0
+    "statusNote": "Rotura de menisco",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta enero"
   },
   {
     "id": "16004",
@@ -16570,8 +16576,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Luxación de hombro · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Luxación de hombro",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "10114",
@@ -18086,8 +18093,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Lesión en los isquiotibiales · Baja hasta finales de septiembre",
-    "playProbability": 0
+    "statusNote": "Lesión en los isquiotibiales",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "13145",
@@ -18636,8 +18644,9 @@
       }
     ],
     "status": "duda",
-    "statusNote": "Molestias sin determinar · Duda para la jornada 7",
-    "playProbability": 0
+    "statusNote": "Molestias sin determinar",
+    "playProbability": 0,
+    "statusUntil": "Duda para la jornada 7"
   },
   {
     "id": "9157",
@@ -28478,8 +28487,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta marzo",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta marzo"
   },
   {
     "id": "13871",
@@ -45452,8 +45462,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta abril",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta abril"
   },
   {
     "id": "6814",
@@ -46096,8 +46107,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Tendinopatía en el hombro · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Tendinopatía en el hombro",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "16359",
@@ -48651,8 +48663,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta abril",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta abril"
   },
   {
     "id": "18021",
@@ -53759,8 +53772,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Molestias sin determinar · Duda para la jornada 6",
-    "playProbability": 40
+    "statusNote": "Molestias sin determinar",
+    "playProbability": 40,
+    "statusUntil": "Duda para la jornada 6"
   },
   {
     "id": "16760",
@@ -54354,8 +54368,9 @@
       "red": 1
     },
     "status": "lesion",
-    "statusNote": "Esguince de tobillo · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Esguince de tobillo",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "2771",
@@ -57134,7 +57149,8 @@
     },
     "status": "sancion",
     "statusNote": "Roja directa (2/2)",
-    "playProbability": 0
+    "playProbability": 0,
+    "statusUntil": null
   },
   {
     "id": "989",
@@ -57736,8 +57752,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Lesión en el cuádriceps · Duda para la jornada 7",
-    "playProbability": 10
+    "statusNote": "Lesión en el cuádriceps",
+    "playProbability": 10,
+    "statusUntil": "Duda para la jornada 7"
   },
   {
     "id": "6853",
@@ -57939,8 +57956,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Molestias musculares · Duda para la jornada 7",
-    "playProbability": 20
+    "statusNote": "Molestias musculares",
+    "playProbability": 20,
+    "statusUntil": "Duda para la jornada 7"
   },
   {
     "id": "7570",
@@ -58938,8 +58956,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el aductor · Baja hasta noviembre",
-    "playProbability": 0
+    "statusNote": "Lesión en el aductor",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta noviembre"
   },
   {
     "id": "7307",
@@ -60096,8 +60115,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión en el bíceps femoral · Baja hasta finales de septiembre",
-    "playProbability": 0
+    "statusNote": "Lesión en el bíceps femoral",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "8386",
@@ -60846,8 +60866,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de ligamento cruzado y menisco · Baja hasta noviembre-diciembre",
-    "playProbability": 0
+    "statusNote": "Rotura de ligamento cruzado y menisco",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta noviembre-diciembre"
   },
   {
     "id": "1928",
@@ -61980,8 +62001,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de menisco · Baja hasta octubre",
-    "playProbability": 0
+    "statusNote": "Rotura de menisco",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta octubre"
   },
   {
     "id": "2663",
@@ -62967,8 +62989,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el bíceps femoral · Baja hasta finales de septiembre",
-    "playProbability": 0
+    "statusNote": "Lesión en el bíceps femoral",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "3206",
@@ -63950,8 +63973,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el bíceps femoral · Baja hasta finales de septiembre",
-    "playProbability": 0
+    "statusNote": "Lesión en el bíceps femoral",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "6635",
@@ -67309,8 +67333,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el aductor · Baja hasta princpios de octubre",
-    "playProbability": 0
+    "statusNote": "Lesión en el aductor",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta princpios de octubre"
   },
   {
     "id": "9201",
@@ -67467,8 +67492,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta diciembre",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta diciembre"
   },
   {
     "id": "9927",
@@ -68067,7 +68093,8 @@
     },
     "status": "sancion",
     "statusNote": "Roja directa",
-    "playProbability": 0
+    "playProbability": 0,
+    "statusUntil": null
   },
   {
     "id": "5080",
@@ -68669,8 +68696,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en los isquiotibiales · Baja hasta mediados de noviembre",
-    "playProbability": 0
+    "statusNote": "Lesión en los isquiotibiales",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta mediados de noviembre"
   },
   {
     "id": "5526",
@@ -70371,8 +70399,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión en el recto femoral · Baja hasta octubre",
-    "playProbability": 0
+    "statusNote": "Lesión en el recto femoral",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta octubre"
   },
   {
     "id": "1975",
@@ -70925,8 +70954,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta octubre",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta octubre"
   },
   {
     "id": "6394",
@@ -72834,8 +72864,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta diciembre",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta diciembre"
   },
   {
     "id": "63",
@@ -74164,8 +74195,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta enero 2027",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta enero 2027"
   },
   {
     "id": "775",
@@ -75547,8 +75579,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el sóleo · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Lesión en el sóleo",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "6450",
@@ -77122,8 +77155,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Lesión muscular en el muslo · Duda para la jornada 6",
-    "playProbability": 20
+    "statusNote": "Lesión muscular en el muslo",
+    "playProbability": 20,
+    "statusUntil": "Duda para la jornada 6"
   },
   {
     "id": "3802",
@@ -77725,8 +77759,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Fractura en el hueso calcáneo · Duda para la jornada 7",
-    "playProbability": 10
+    "statusNote": "Fractura en el hueso calcáneo",
+    "playProbability": 10,
+    "statusUntil": "Duda para la jornada 7"
   },
   {
     "id": "9909",
@@ -78083,8 +78118,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura completa del tendón proximal del bíceps femoral · Baja hasta diciembre",
-    "playProbability": 0
+    "statusNote": "Rotura completa del tendón proximal del bíceps femoral",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta diciembre"
   },
   {
     "id": "3736",
@@ -79621,8 +79657,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión en el aductor · Baja hsata principios de octubre",
-    "playProbability": 0
+    "statusNote": "Lesión en el aductor",
+    "playProbability": 0,
+    "statusUntil": "Baja hsata principios de octubre"
   },
   {
     "id": "7916",
@@ -81388,8 +81425,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el recto anterior · Baja hasta mediados de octubre",
-    "playProbability": 0
+    "statusNote": "Lesión en el recto anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta mediados de octubre"
   },
   {
     "id": "3255",
@@ -82187,8 +82225,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Esguince de rodilla · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Esguince de rodilla",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "3881",
@@ -85301,8 +85340,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión de rodilla · Baja hasta principios de octubre",
-    "playProbability": 0
+    "statusNote": "Lesión de rodilla",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta principios de octubre"
   },
   {
     "id": "6674",
@@ -88207,8 +88247,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Operado del menisco · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Operado del menisco",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "663",
@@ -89398,8 +89439,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el sóleo · Baja confirmada para la jornada 6",
-    "playProbability": 10
+    "statusNote": "Lesión en el sóleo",
+    "playProbability": 10,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "9314",
@@ -89993,8 +90035,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta abril",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta abril"
   },
   {
     "id": "9125",
@@ -90192,8 +90235,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Parameniscitis en la rodilla · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Parameniscitis en la rodilla",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "13830",
@@ -92171,8 +92215,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el recto anterior · Baja hasta finales de septiembre",
-    "playProbability": 0
+    "statusNote": "Lesión en el recto anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "10660",
@@ -94346,8 +94391,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el aductor · Baja hasta octubre",
-    "playProbability": 0
+    "statusNote": "Lesión en el aductor",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta octubre"
   },
   {
     "id": "13814",
@@ -97251,8 +97297,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Sometido a artroscopia en la rodilla · Baja confirmada para la jornada 7",
-    "playProbability": 0
+    "statusNote": "Sometido a artroscopia en la rodilla",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 7"
   },
   {
     "id": "10358",
@@ -98948,8 +98995,9 @@
       }
     ],
     "status": "duda",
-    "statusNote": "Rotura en los isquiotibiales · Baja hasta finales de septiembre",
-    "playProbability": 0
+    "statusNote": "Rotura en los isquiotibiales",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta finales de septiembre"
   },
   {
     "id": "5995",
@@ -106430,8 +106478,9 @@
       }
     ],
     "status": "duda",
-    "statusNote": "Fractura de costilla(s) · Duda para la jornada 6",
-    "playProbability": 10
+    "statusNote": "Fractura de costilla(s)",
+    "playProbability": 10,
+    "statusUntil": "Duda para la jornada 6"
   },
   {
     "id": "582",
@@ -106788,8 +106837,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de lig. cruzado anterior · Baja hasta octubre",
-    "playProbability": 0
+    "statusNote": "Rotura de lig. cruzado anterior",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta octubre"
   },
   {
     "id": "3879",
@@ -107391,8 +107441,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Molestias en el pubis · Baja confirmada para la jornada 7",
-    "playProbability": 0
+    "statusNote": "Molestias en el pubis",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 7"
   },
   {
     "id": "3738",
@@ -107794,8 +107845,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Fractura de tibia · Baja hasta enero",
-    "playProbability": 0
+    "statusNote": "Fractura de tibia",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta enero"
   },
   {
     "id": "10176",
@@ -108348,8 +108400,9 @@
       }
     ],
     "status": "duda",
-    "statusNote": "Contractura muscular · Duda para la jornada 6",
-    "playProbability": 10
+    "statusNote": "Contractura muscular",
+    "playProbability": 10,
+    "statusUntil": "Duda para la jornada 6"
   },
   {
     "id": "8684",
@@ -109151,8 +109204,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Lesión en el isquiosural · Baja hasta principios de octubre",
-    "playProbability": 0
+    "statusNote": "Lesión en el isquiosural",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta principios de octubre"
   },
   {
     "id": "5549",
@@ -109742,8 +109796,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Molestias en el tendón de Aquiles · Baja confirmada para la jornada 6",
-    "playProbability": 30
+    "statusNote": "Molestias en el tendón de Aquiles",
+    "playProbability": 30,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "7645",
@@ -110333,8 +110388,9 @@
       "red": 1
     },
     "status": "lesion",
-    "statusNote": "Lesión en los isquiotibiales · Baja hasta octubre",
-    "playProbability": 0
+    "statusNote": "Lesión en los isquiotibiales",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta octubre"
   },
   {
     "id": "8944",
@@ -112063,8 +112119,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión de rodilla · Baja hasta noviembre",
-    "playProbability": 0
+    "statusNote": "Lesión de rodilla",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta noviembre"
   },
   {
     "id": "12918",
@@ -113050,8 +113107,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Molestias sin determinar · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Molestias sin determinar",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "11230",
@@ -114196,8 +114254,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Rotura de ligamento cruzado y menisco · Baja hasta mayo 2027",
-    "playProbability": 0
+    "statusNote": "Rotura de ligamento cruzado y menisco",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta mayo 2027"
   },
   {
     "id": "12891",
@@ -114595,8 +114654,9 @@
       "red": 0
     },
     "status": "duda",
-    "statusNote": "Sobrecarga muscular · Duda para la jornada 6",
-    "playProbability": 30
+    "statusNote": "Sobrecarga muscular",
+    "playProbability": 30,
+    "statusUntil": "Duda para la jornada 6"
   },
   {
     "id": "10214",
@@ -116353,8 +116413,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Esguince de rodilla · Baja hasta mediados de octubre",
-    "playProbability": 0
+    "statusNote": "Esguince de rodilla",
+    "playProbability": 0,
+    "statusUntil": "Baja hasta mediados de octubre"
   },
   {
     "id": "11983",
@@ -118075,8 +118136,9 @@
       }
     ],
     "status": "lesion",
-    "statusNote": "Lesión en el bíceps femoral · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Lesión en el bíceps femoral",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "6174",
@@ -122025,8 +122087,9 @@
       "red": 0
     },
     "status": "lesion",
-    "statusNote": "Sobrecarga en el aductor · Baja confirmada para la jornada 6",
-    "playProbability": 0
+    "statusNote": "Sobrecarga en el aductor",
+    "playProbability": 0,
+    "statusUntil": "Baja confirmada para la jornada 6"
   },
   {
     "id": "10003",

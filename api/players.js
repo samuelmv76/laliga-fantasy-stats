@@ -15,7 +15,8 @@ export default async function handler(req, res) {
       players = await sql`
         SELECT
           p.id, p.name, p.team, p.pos, p.points,
-          p.status, p.status_note AS "statusNote", p.play_probability AS "playProbability",
+          p.status, p.status_note AS "statusNote", p.status_until AS "statusUntil",
+          p.play_probability AS "playProbability",
           p.played, p.played5, p.stats,
           COALESCE(price.hist, '[]'::json) AS "priceHistory",
           COALESCE(pts.hist, '[]'::json) AS "pointsHistory",

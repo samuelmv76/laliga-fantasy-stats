@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import { POSITIONS } from '../data/mockPlayers'
 import {
   EMPTY_FILTERS,
   SORT_BY_DIFFICULTY,
@@ -21,10 +20,15 @@ export default function Market({ players, fixtures, squadIds, canAdd, addPlayer,
   const teams = useMemo(() => [...new Set(players.map((p) => p.team))].sort(), [players])
   const difficulty = useMemo(() => difficultyByTeam(teams, fixtures), [teams, fixtures])
 
+  // Cuántos jugadores hay por posición y por estado, para el número de cada chip.
   const counts = useMemo(() => {
-    const byPosition = { total: players.length }
-    for (const p of POSITIONS) byPosition[p] = players.filter((x) => x.pos === p).length
-    return byPosition
+    const total = { total: players.length }
+    for (const player of players) {
+      total[player.pos] = (total[player.pos] ?? 0) + 1
+      const status = player.status ?? 'ok'
+      total[status] = (total[status] ?? 0) + 1
+    }
+    return total
   }, [players])
 
   const filtered = useMemo(
@@ -64,18 +68,7 @@ export default function Market({ players, fixtures, squadIds, canAdd, addPlayer,
         onSortChange={setSortKey}
         sortKeys={SORT_KEYS}
         counts={counts}
-      >
-        <p className="market__legend">
-          <span className="market__legend-item">
-            <span className="market__legend-dot" style={{ background: '#ffd60a' }} />
-            Duda
-          </span>
-          <span className="market__legend-item">
-            <span className="market__legend-dot" style={{ background: '#ff453a' }} />
-            Lesión / sanción
-          </span>
-        </p>
-      </PlayerFilters>
+      />
 
       <div className="market__table">
         <div className="market__table-inner">

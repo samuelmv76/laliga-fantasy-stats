@@ -3,12 +3,32 @@ import { formatDeltaShort, formatMillions } from '../utils/format'
 import { difficultyColor, fixtureDifficulty, oddsLabel, winChance } from '../utils/opponent'
 import TeamCrest from './TeamCrest'
 
-export function StatusBadge({ status, note }) {
+export function StatusBadge({ status, note, until }) {
   const info = PLAYER_STATUS[status]
   if (!info) return null
   return (
-    <span className={`status-badge status-badge--${info.tone}`} title={note || undefined}>
+    <span className={`status-badge status-badge--${info.tone}`} title={statusTitle(note, until)}>
       {info.label}
+    </span>
+  )
+}
+
+// "Rotura de lig. cruzado anterior · Baja hasta abril" para el tooltip. En
+// sanciones la web no publica hasta cuándo, así que solo va el motivo.
+function statusTitle(note, until) {
+  return [note, until].filter(Boolean).join(' · ') || undefined
+}
+
+// Cuánto dura la baja, para enseñarlo en la fila sin ocupar otra columna. En
+// las sanciones la web no publica hasta cuándo, así que ahí se enseña el
+// motivo ("Roja directa (2/2)"), que es lo que hay.
+export function StatusUntil({ player }) {
+  const text = player.status && (player.statusUntil || player.statusNote)
+  if (!text) return null
+  const tone = PLAYER_STATUS[player.status]?.tone
+  return (
+    <span className={`status-until status-until--${tone}`} title={statusTitle(player.statusNote, player.statusUntil)}>
+      {text}
     </span>
   )
 }
@@ -67,11 +87,12 @@ export default function PlayerRow({ player, status, onAdd, onRemove, inSquad, on
       <button className="player-row__id player-row__id--link" onClick={() => onSelect(player)}>
         <span className="player-row__name-line">
           <span className="player-row__name">{player.name}</span>
-          <StatusBadge status={player.status} note={player.statusNote} />
+          <StatusBadge status={player.status} note={player.statusNote} until={player.statusUntil} />
         </span>
         <span className="player-row__team">
           <TeamCrest team={player.team} size={14} />
           {player.team} · {POSITION_LABEL[player.pos]}
+          <StatusUntil player={player} />
         </span>
       </button>
 

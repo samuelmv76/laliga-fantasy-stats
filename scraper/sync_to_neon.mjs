@@ -33,12 +33,13 @@ async function syncPlayers(players) {
   await sql`ALTER TABLE players
     ADD COLUMN IF NOT EXISTS status text,
     ADD COLUMN IF NOT EXISTS status_note text,
+    ADD COLUMN IF NOT EXISTS status_until text,
     ADD COLUMN IF NOT EXISTS play_probability int,
     ADD COLUMN IF NOT EXISTS played int,
     ADD COLUMN IF NOT EXISTS played5 int,
     ADD COLUMN IF NOT EXISTS stats jsonb`
   await sql`
-    INSERT INTO players (id, name, team, pos, points, status, status_note, play_probability, played, played5, stats, updated_at)
+    INSERT INTO players (id, name, team, pos, points, status, status_note, status_until, play_probability, played, played5, stats, updated_at)
     SELECT * FROM UNNEST(
       ${players.map((p) => p.id)}::text[],
       ${players.map((p) => p.name)}::text[],
@@ -47,6 +48,7 @@ async function syncPlayers(players) {
       ${players.map((p) => p.points)}::int[],
       ${players.map((p) => p.status ?? null)}::text[],
       ${players.map((p) => p.statusNote ?? null)}::text[],
+      ${players.map((p) => p.statusUntil ?? null)}::text[],
       ${players.map((p) => p.playProbability ?? null)}::int[],
       ${players.map((p) => p.played ?? null)}::int[],
       ${players.map((p) => p.played5 ?? null)}::int[],
@@ -60,6 +62,7 @@ async function syncPlayers(players) {
       points = EXCLUDED.points,
       status = EXCLUDED.status,
       status_note = EXCLUDED.status_note,
+      status_until = EXCLUDED.status_until,
       play_probability = EXCLUDED.play_probability,
       played = EXCLUDED.played,
       played5 = EXCLUDED.played5,

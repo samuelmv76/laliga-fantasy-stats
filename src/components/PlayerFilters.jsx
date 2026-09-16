@@ -5,14 +5,19 @@ import { EMPTY_FILTERS, SORT_LABELS, countActive } from '../utils/playerFilters'
 import TeamCrest from './TeamCrest'
 
 // Valor de `status` en el jugador -> etiqueta del filtro. Un jugador
-// disponible no trae `status`, de ahí el 'ok' como clave propia.
+// disponible no trae `status`, de ahí el 'ok' como clave propia. El color del
+// punto es el mismo que el del badge de la fila, para que se lean como lo
+// mismo.
+const DOT_BY_TONE = { warn: '#ffd60a', danger: 'var(--fall)' }
+
 const STATUS_FILTERS = [
-  { id: 'ok', label: 'Disponible' },
-  // La etiqueta del badge va en mayúsculas ("LESIÓN"); en una lista de
-  // filtros se lee mejor normal.
+  { id: 'ok', label: 'Disponible', dot: 'var(--rise)' },
+  // La etiqueta del badge va en mayúsculas ("LESIÓN"); como filtro se lee
+  // mejor normal.
   ...Object.entries(PLAYER_STATUS).map(([id, info]) => ({
     id,
     label: info.label.charAt(0) + info.label.slice(1).toLowerCase(),
+    dot: DOT_BY_TONE[info.tone],
   })),
 ]
 
@@ -66,6 +71,23 @@ export default function PlayerFilters({
         ))}
       </fieldset>
 
+      <fieldset className="chip-group">
+        <legend className="sr-only">Filtrar por estado</legend>
+        {STATUS_FILTERS.map((status) => (
+          <label key={status.id} className={`chip${filters.statuses.includes(status.id) ? ' chip--active' : ''}`}>
+            <input
+              type="checkbox"
+              className="sr-only"
+              checked={filters.statuses.includes(status.id)}
+              onChange={() => toggle('statuses', status.id)}
+            />
+            <span className="chip__dot chip__dot--round" style={{ background: status.dot }} />
+            {status.label}
+            {counts && <span className="chip__count">{counts[status.id] ?? 0}</span>}
+          </label>
+        ))}
+      </fieldset>
+
       {children}
 
       <div className="market__selects">
@@ -87,13 +109,6 @@ export default function PlayerFilters({
         </summary>
 
         <div className="market__advanced-grid">
-          <CheckGroup
-            legend="Estado"
-            options={STATUS_FILTERS}
-            selected={filters.statuses}
-            onToggle={(id) => toggle('statuses', id)}
-          />
-
           <CheckGroup
             legend="Calendario (próx. 3 partidos)"
             options={DIFFICULTY_BANDS}

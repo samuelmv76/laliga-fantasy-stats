@@ -12,6 +12,10 @@ Cada jugador es un `<div class="elemento lesionado|sancionado">`. El id
 numérico (el mismo que data-id del mercado) sale de la URL de su foto de
 ficha: .../uploads/images/jugadores/ficha/<id>.png
 
+De cada jugador se publican tres cosas: qué le pasa (`note`), hasta cuándo
+(`until`, tal cual lo dice la web: "Baja hasta abril", "Baja confirmada para
+la jornada 6") y la probabilidad de jugar el próximo partido.
+
 El estado NO se deduce del porcentaje: la propia página pone un icono
 distinto según el caso (lesionado_box_min.png / duda_box_min.png /
 disponible_box_min.png), así que se usa ese nombre de fichero, que es lo
@@ -91,13 +95,18 @@ def play_probability(element):
 
 
 def note(element):
-    """Texto corto para el tooltip: tipo de lesión y hasta cuándo es baja."""
-    parts = [
-        span.get_text(" ", strip=True)
-        for span in element.select(".comentario > span, .datos > span.sancion")
-        if span.find("i", class_="fa-calendar") is None
-    ]
-    return " · ".join(p for p in parts if p) or None
+    """Qué le pasa: "Rotura de lig. cruzado anterior", "Roja directa (2/2)"."""
+    span = element.select_one(".comentario > span.lesion, .datos > span.sancion")
+    return span.get_text(" ", strip=True) if span else None
+
+
+def until(element):
+    """Cuánto dura, tal y como lo publica la web: "Baja hasta abril",
+    "Baja confirmada para la jornada 6", "Disponible para la jornada 7". La
+    página de sancionados no dice hasta cuándo, así que ahí no hay nada que
+    publicar y se deja en None en vez de inventarlo."""
+    span = element.select_one(".comentario > span[class*='gravedad']")
+    return span.get_text(" ", strip=True) if span else None
 
 
 def parse_injured(html: str):
@@ -126,6 +135,7 @@ def parse_injured(html: str):
                 "slug": identifier,
                 "status": ICON_STATUS[icon_name],
                 "note": note(element),
+                "until": until(element),
                 "playProbability": play_probability(element),
             }
         )
@@ -146,6 +156,7 @@ def parse_suspended(html: str):
                 "slug": identifier,
                 "status": "sancion",
                 "note": note(element),
+                "until": until(element),
                 "playProbability": 0,
             }
         )

@@ -412,6 +412,12 @@
   flex-shrink: 0;
 }
 
+/* El punto de estado es redondo, como el del badge de la fila; el de
+   posición es cuadrado. */
+.chip__dot--round {
+  border-radius: 50%;
+}
+
 .chip__count {
   font-weight: 500;
   font-variant-numeric: tabular-nums;
@@ -770,31 +776,57 @@
   color: color-mix(in srgb, #ffd60a 82%, var(--text));
 }
 
-.status-badge--danger {
-  background: color-mix(in srgb, var(--fall) 18%, transparent);
-  color: color-mix(in srgb, var(--fall) 84%, var(--text));
+.status-until {
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.market__legend {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  font-size: 0.76rem;
+.status-until::before {
+  content: ' · ';
   color: var(--text-muted);
 }
 
-.market__legend-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+.status-until--warn {
+  color: color-mix(in srgb, #ffd60a 75%, var(--text));
 }
 
-.market__legend-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
+.status-until--danger {
+  color: color-mix(in srgb, var(--fall) 78%, var(--text));
+}
+
+.modal__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 0 0 14px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.modal__status--warn {
+  background: color-mix(in srgb, #ffd60a 14%, transparent);
+  color: color-mix(in srgb, #ffd60a 80%, var(--text));
+}
+
+.modal__status--danger {
+  background: color-mix(in srgb, var(--fall) 14%, transparent);
+  color: color-mix(in srgb, var(--fall) 82%, var(--text));
+}
+
+.modal__status-chance {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.status-badge--danger {
+  background: color-mix(in srgb, var(--fall) 18%, transparent);
+  color: color-mix(in srgb, var(--fall) 84%, var(--text));
 }
 
 .delta-pill {

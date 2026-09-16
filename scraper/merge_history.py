@@ -24,7 +24,8 @@ Formato de salida (uno por jugador):
   "played": 5,                  # partidos jugados en la temporada
   "played5": 4,                 # partidos jugados en las últimas 5 jornadas
   "status": "lesion",           # o "duda"/"sancion"; ausente si está disponible
-  "statusNote": "Rotura de lig. cruzado anterior · Baja hasta abril",
+  "statusNote": "Rotura de lig. cruzado anterior",
+  "statusUntil": "Baja hasta abril",   # como lo publica la web; null en sanciones
   "playProbability": 0,         # % de que juegue el próximo partido
   "stats": {                    # acumulado de temporada, de /analytics/<equipo>/estadisticas
     "minutes": 450, "goals": 6, "assists": 1,
@@ -174,11 +175,13 @@ def merge_status(raw_scrape_path: Path, by_id: dict):
         if status:
             entry["status"] = status
             entry["statusNote"] = scraped.get("note")
+            entry["statusUntil"] = scraped.get("until")
             entry["playProbability"] = scraped.get("playProbability")
             matched += 1
         else:
             entry.pop("status", None)
             entry.pop("statusNote", None)
+            entry.pop("statusUntil", None)
             entry.pop("playProbability", None)
 
     unknown = len(by_scraped_id) - sum(1 for k in by_scraped_id if k in by_id)
