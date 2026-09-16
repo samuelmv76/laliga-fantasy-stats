@@ -43,29 +43,28 @@ export function nextMatchdayWindow(fixtures) {
   }
 }
 
-// "vie 21:00" para esta semana; "sáb 10/10 · 21:00" si cae más allá, donde el
-// día de la semana solo no basta para situarlo.
-export function formatKickoff(date, now = new Date()) {
+// "vie 18/09 21:00". La fecha va siempre, aunque el partido sea mañana: con
+// el día de la semana solo no se sabe de qué mes se habla, y entre jornadas
+// puede haber tres semanas de parón.
+export function formatKickoff(date) {
   const weekday = date.toLocaleDateString('es-ES', { weekday: 'short' }).replace('.', '')
   const time = date.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })
-  const days = (date - now) / 86_400_000
-  if (days < 0 || days >= 6) return `${weekday} ${formatDay(date)} · ${time}`
-  return `${weekday} ${time}`
+  return `${weekday} ${formatDay(date)} ${time}`
 }
 
 // Texto de la píldora de la cabecera y su tooltip.
-export function matchdayLabel(window, now = new Date()) {
+export function matchdayLabel(window) {
   if (!window) return null
   const { matchday } = window
-  const start = formatKickoff(window.start, now)
-  const end = formatKickoff(window.end, now)
+  const start = formatKickoff(window.start)
+  const end = formatKickoff(window.end)
 
   if (window.started) {
     // Mientras se juega esta jornada, lo útil es cuándo arranca la siguiente:
     // es la hora a la que hay que tener el equipo hecho.
     const next = window.next && {
       matchday: window.next.matchday,
-      start: formatKickoff(window.next.start, now),
+      start: formatKickoff(window.next.start),
     }
     const despues = next ? ` · J${next.matchday} empieza ${next.start}` : ''
     return {
