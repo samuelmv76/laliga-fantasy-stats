@@ -1078,6 +1078,15 @@
   font-family: var(--font-display);
 }
 
+.team-view--empty p {
+  max-width: 46ch;
+  margin: 10px auto;
+}
+
+.team-view__signin {
+  margin-top: 6px;
+}
+
 .team-view__header {
   display: flex;
   align-items: center;
@@ -1353,7 +1362,9 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  z-index: 20;
+  /* Por encima de la cabecera pegajosa (z-index 30): si no, la cabecera
+     translúcida se pinta sobre la ficha y deja ver la lista sin desenfocar. */
+  z-index: 40;
   animation: modal-fade var(--duration-fast) var(--ease-smooth-out);
 }
 

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { SignInButton, useAuth } from '@clerk/react'
 import { currentPrice, todayDelta } from '../data/mockPlayers'
 import { teamValueSeries, teamDailySeries, unionDates } from '../utils/teamStats'
 import { formatEuros } from '../utils/format'
@@ -22,6 +23,7 @@ import { StatCards } from './spectrumui/charts/stat-cards'
 const SORT_KEYS = [...Object.keys(SORTERS), SORT_BY_DIFFICULTY]
 
 export default function TeamView({ squad, fixtures, totalValue, removePlayer, onSelect, onAddPlayer, teamName, onRenameTeam }) {
+  const { isLoaded, isSignedIn } = useAuth()
   const [nameDraft, setNameDraft] = useState(teamName)
   useEffect(() => setNameDraft(teamName), [teamName])
   const [query, setQuery] = useState('')
@@ -40,6 +42,31 @@ export default function TeamView({ squad, fixtures, totalValue, removePlayer, on
     () => sortPlayers(filterPlayers(squad, filters, { query, difficulty }), sortKey, difficulty),
     [squad, filters, query, sortKey, difficulty]
   )
+
+  // Sin sesión no hay equipo que enseñar: el equipo se guarda en la cuenta,
+  // no en el navegador. Hasta que Clerk responde no se dice nada, para no
+  // enseñar «inicia sesión» a quien ya la tiene iniciada.
+  if (isLoaded && !isSignedIn) {
+    return (
+      <section className="team-view team-view--empty">
+        <h2>{teamName}</h2>
+        <p>
+          Para tener equipo necesitas <strong>iniciar sesión</strong>. Tu plantilla se guarda en tu
+          cuenta, así que la tienes igual desde cualquier dispositivo y no se pierde al cerrar el
+          navegador.
+        </p>
+        <p>
+          Mientras tanto puedes usar el <strong>Mercado</strong>: precios, puntos, estadísticas y
+          calendario se ven sin cuenta.
+        </p>
+        <SignInButton mode="modal">
+          <button type="button" className="btn btn--add team-view__signin">
+            Iniciar sesión
+          </button>
+        </SignInButton>
+      </section>
+    )
+  }
 
   if (squad.length === 0) {
     return (

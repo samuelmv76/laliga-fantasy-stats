@@ -18,6 +18,9 @@ import { DifficultyBars, StatusBadge } from './PlayerRow'
 import TeamCrest from './TeamCrest'
 import { StatCards } from './spectrumui/charts/stat-cards'
 
+// Lo que dura la animación de cierre (--duration-quick en App.css).
+const CLOSE_MS = 150
+
 // Convierte los puntos de cada jornada (pueden ser negativos) en un total
 // acumulado ascendente, para que la gráfica se lea como progreso de
 // temporada en vez de como un vaivén de barras.
@@ -70,6 +73,30 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
     }
   }, [player])
 
+  // El desmontaje va por tiempo y no por onAnimationEnd: ese evento no llega
+  // si la animación no corre (prefers-reduced-motion la desactiva, y una
+  // pestaña en segundo plano ni la arranca) y la ficha se quedaba abierta.
+  useEffect(() => {
+    if (!closing) return undefined
+    const timer = setTimeout(() => setRendered(null), CLOSE_MS)
+    return () => clearTimeout(timer)
+  }, [closing])
+
+  // Con la ficha abierta, la página de detrás no se mueve: si no, la rueda
+  // del ratón sobre el modal scrollea la lista y la cabecera pegajosa se
+  // pasea por encima. Se cierra con Escape, como cualquier diálogo.
+  useEffect(() => {
+    if (!player) return undefined
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const onKey = (e) => e.key === 'Escape' && onClose()
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = previous
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [player, onClose])
+
   if (!rendered) return null
 
   const cumulativePoints = rendered.pointsByMatchday?.length
@@ -82,7 +109,6 @@ export default function PlayerDetail({ player, fixtures, inSquad, onAdd, onRemov
     <div
       className={`modal-backdrop${closing ? ' is-closing' : ''}`}
       onClick={onClose}
-      onAnimationEnd={() => closing && setRendered(null)}
     >
       <div className={`modal${closing ? ' is-closing' : ''}`} onClick={(e) => e.stopPropagation()}>
         <button className="modal__close" onClick={onClose} aria-label="Cerrar">
