@@ -64,6 +64,18 @@ export function countActive(filters) {
   }, 0)
 }
 
+// Cuántos jugadores hay por posición y por estado, para el número de cada
+// chip. 'total' es la lista entera y 'ok' los que no tienen ninguna baja.
+export function filterCounts(players) {
+  const counts = { total: players.length }
+  for (const player of players) {
+    counts[player.pos] = (counts[player.pos] ?? 0) + 1
+    const status = player.status ?? 'ok'
+    counts[status] = (counts[status] ?? 0) + 1
+  }
+  return counts
+}
+
 // Dificultad media de los próximos partidos, una vez por equipo en vez de
 // una vez por jugador.
 export function difficultyByTeam(teams, fixtures) {

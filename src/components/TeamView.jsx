@@ -12,6 +12,7 @@ import {
   SORT_BY_DIFFICULTY,
   SORTERS,
   difficultyByTeam,
+  filterCounts,
   filterPlayers,
   sortPlayers,
 } from '../utils/playerFilters'
@@ -32,6 +33,7 @@ export default function TeamView({ squad, fixtures, totalValue, removePlayer, on
 
   const teams = useMemo(() => [...new Set(squad.map((p) => p.team))].sort(), [squad])
   const difficulty = useMemo(() => difficultyByTeam(teams, fixtures), [teams, fixtures])
+  const counts = useMemo(() => filterCounts(squad), [squad])
 
   const dateRange = useMemo(() => unionDates(squad), [squad])
   const valueSeries = useMemo(() => teamValueSeries(squad, dateRange), [squad, dateRange])
@@ -130,6 +132,7 @@ export default function TeamView({ squad, fixtures, totalValue, removePlayer, on
         sortKey={sortKey}
         onSortChange={setSortKey}
         sortKeys={SORT_KEYS}
+        counts={counts}
       >
         <input
           className="market__search"

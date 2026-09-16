@@ -412,10 +412,16 @@
   flex-shrink: 0;
 }
 
-/* El punto de estado es redondo, como el del badge de la fila; el de
-   posición es cuadrado. */
-.chip__dot--round {
-  border-radius: 50%;
+/* Icono de estado dentro del chip (cruz médica, tarjeta, visto,
+   interrogación). El color lo pone el propio chip por `style`. */
+.chip__icon-box {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.chip__icon {
+  width: 13px;
+  height: 13px;
 }
 
 .chip__count {

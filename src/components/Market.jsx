@@ -4,6 +4,7 @@ import {
   SORT_BY_DIFFICULTY,
   SORTERS,
   difficultyByTeam,
+  filterCounts,
   filterPlayers,
   sortPlayers,
 } from '../utils/playerFilters'
@@ -20,16 +21,7 @@ export default function Market({ players, fixtures, squadIds, canAdd, addPlayer,
   const teams = useMemo(() => [...new Set(players.map((p) => p.team))].sort(), [players])
   const difficulty = useMemo(() => difficultyByTeam(teams, fixtures), [teams, fixtures])
 
-  // Cuántos jugadores hay por posición y por estado, para el número de cada chip.
-  const counts = useMemo(() => {
-    const total = { total: players.length }
-    for (const player of players) {
-      total[player.pos] = (total[player.pos] ?? 0) + 1
-      const status = player.status ?? 'ok'
-      total[status] = (total[status] ?? 0) + 1
-    }
-    return total
-  }, [players])
+  const counts = useMemo(() => filterCounts(players), [players])
 
   const filtered = useMemo(
     () => sortPlayers(filterPlayers(players, filters, { query, difficulty }), sortKey, difficulty),
@@ -68,6 +60,7 @@ export default function Market({ players, fixtures, squadIds, canAdd, addPlayer,
         onSortChange={setSortKey}
         sortKeys={SORT_KEYS}
         counts={counts}
+        shortPositions
       />
 
       <div className="market__table">
