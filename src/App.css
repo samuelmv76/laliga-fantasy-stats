@@ -29,9 +29,11 @@
   border: 0;
 }
 
-/* En móvil la tabla del mercado deja de comportarse como tabla: desaparece la
-   cabecera de columnas y cada fila se apila. Son varias piezas coordinadas,
-   así que se queda como bloque en vez de repartirse en clases sueltas. */
+/* En móvil las listas dejan de comportarse como tabla: desaparece la cabecera
+   de columnas y cada fila se apila en dos alturas, con el nombre a la
+   izquierda y las cifras a la derecha. Cada celda se coloca por su posición
+   entre los hijos de la fila, así que si cambia el orden de los hijos en el
+   componente hay que cambiar también estas reglas. */
 @media (max-width: 560px) {
   .market-head {
     display: none;
@@ -41,15 +43,95 @@
     min-width: 0;
   }
 
+  /* Mercado:  POS | nombre | valor
+                   | rival  | hoy
+                   |        | seguir */
   .player-row {
-    grid-template-columns: 34px minmax(0, 1fr) 96px;
-    row-gap: 6px;
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    row-gap: 8px;
   }
 
   .player-row > :nth-child(3),
   .player-row > :nth-child(4),
   .player-row > :nth-child(5) {
     display: none;
+  }
+
+  .player-row > :nth-child(1) {
+    grid-area: 1 / 1;
+    align-self: start;
+  }
+
+  .player-row > :nth-child(2) {
+    grid-area: 1 / 2;
+  }
+
+  .player-row > :nth-child(8) {
+    grid-area: 1 / 3;
+  }
+
+  .player-row > :nth-child(6) {
+    grid-area: 2 / 2;
+  }
+
+  .player-row > :nth-child(7) {
+    grid-area: 2 / 3;
+  }
+
+  .player-row > :nth-child(9) {
+    grid-area: 3 / 2 / auto / -1;
+    justify-self: end;
+  }
+
+  /* Mi equipo:  nombre | precio    | quitar
+                 puntos | variación |        */
+  .roster-row {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    row-gap: 4px;
+  }
+
+  .roster-row > :nth-child(1) {
+    grid-area: 1 / 1;
+  }
+
+  .roster-row > :nth-child(3) {
+    grid-area: 1 / 2;
+    margin-right: 0;
+  }
+
+  .roster-row > :nth-child(5) {
+    grid-area: 1 / 3 / span 2;
+  }
+
+  .roster-row > :nth-child(2) {
+    grid-area: 2 / 1;
+    text-align: left;
+  }
+
+  .roster-row > :nth-child(4) {
+    grid-area: 2 / 2;
+  }
+}
+
+/* El ranking se parte en dos columnas desde 701px, así que sus filas siguen
+   siendo estrechas mucho después de dejar de ser móvil: se apilan hasta 900px.
+       nº | nombre | precio
+          |        | variación */
+@media (max-width: 900px) {
+  .ranking-row {
+    grid-template-columns: 18px minmax(0, 1fr) auto;
+  }
+
+  .ranking-row > :nth-child(2) {
+    grid-area: 1 / 2 / span 2;
+  }
+
+  .ranking-row > :nth-child(3) {
+    grid-area: 1 / 3;
+  }
+
+  .ranking-row > :nth-child(4) {
+    grid-area: 2 / 3;
   }
 }
 

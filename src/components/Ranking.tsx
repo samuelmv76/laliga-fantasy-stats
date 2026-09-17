@@ -42,11 +42,11 @@ function RankingColumn({
           return (
             <li
               key={p.id}
-              className="grid grid-cols-[20px_1fr_100px_80px] items-center gap-2 border-b border-hairline py-[7px]"
+              className="ranking-row grid grid-cols-[20px_minmax(0,1fr)_100px_80px] items-center gap-2 border-b border-hairline py-[7px]"
             >
               <span className="font-display text-[0.82rem] text-muted">{i + 1}</span>
               <button
-                className="flex cursor-pointer flex-col p-0 text-left text-[0.88rem] font-semibold text-text"
+                className="flex min-w-0 cursor-pointer flex-col p-0 text-left text-[0.88rem] font-semibold text-text"
                 onClick={() => onSelect(p)}
               >
                 {p.name}

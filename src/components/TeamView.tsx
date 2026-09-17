@@ -132,7 +132,7 @@ export default function TeamView({
             label: 'Valor total del equipo',
             series: valueSeries.map((d) => d.value),
             format: formatEurosCompact,
-            deltaLabel: 'vs inicio del historial',
+            deltaLabel: 'vs inicio',
           },
           {
             label: 'Variación hoy',
@@ -175,10 +175,10 @@ export default function TeamView({
           return (
             <li
               key={p.id}
-              className="roster-row grid animate-[row-in_var(--duration-slow)_var(--ease-smooth-out)_both] grid-cols-[1fr_60px_92px_78px_78px] items-center gap-2.5 rounded-[10px] border-b border-hairline px-2 py-[11px] transition-colors duration-200 hover:bg-ink-soft"
+              className="roster-row grid animate-[row-in_var(--duration-slow)_var(--ease-smooth-out)_both] grid-cols-[minmax(0,1fr)_60px_92px_78px_78px] items-center gap-2.5 rounded-[10px] border-b border-hairline px-2 py-[11px] transition-colors duration-200 hover:bg-ink-soft"
             >
               <button
-                className="flex cursor-pointer flex-col p-0 text-left text-[0.92rem] font-semibold text-text"
+                className="flex min-w-0 cursor-pointer flex-col p-0 text-left text-[0.92rem] font-semibold text-text"
                 onClick={() => onSelect(p)}
               >
                 <span className="flex min-w-0 items-center gap-[7px]">

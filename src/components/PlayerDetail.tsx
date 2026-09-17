@@ -190,7 +190,7 @@ export default function PlayerDetail({
               label: 'Precio actual',
               series: rendered.priceHistory?.map((d) => d.price),
               format: formatEurosCompact,
-              deltaLabel: 'vs inicio del historial',
+              deltaLabel: 'vs inicio',
             },
             {
               label: 'Puntos',
@@ -202,7 +202,7 @@ export default function PlayerDetail({
                 [],
               value: rendered.points,
               format: (v) => `${Math.round(v)}`,
-              deltaLabel: 'vs inicio del historial',
+              deltaLabel: 'vs inicio',
             },
           ]}
         />
@@ -219,7 +219,7 @@ export default function PlayerDetail({
         )}
 
         <ResponsiveContainer width="100%" height={200}>
-          <LineChart data={rendered.priceHistory} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
+          <LineChart data={rendered.priceHistory} margin={{ top: 8, right: 12, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--paper-dim)" vertical={false} />
             <XAxis dataKey="date" tickFormatter={formatDay} fontSize={11} stroke="var(--text-muted)" />
             <YAxis width={44} fontSize={11} stroke="var(--text-muted)" tickFormatter={formatEurosCompact} domain={['dataMin - 300000', 'dataMax + 300000']} />
@@ -294,12 +294,14 @@ export default function PlayerDetail({
               {teamFixtures.map((f) => (
                 <li
                   key={f.matchday}
-                  className="flex items-center gap-2.5 rounded-[10px] bg-ink-soft px-2.5 py-2 text-[0.86rem]"
+                  className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-[10px] bg-ink-soft px-2.5 py-2 text-[0.86rem]"
                 >
                   <span className="w-7 shrink-0 font-display text-muted">J{f.matchday}</span>
-                  <span className="flex min-w-0 flex-1 items-center gap-1.5">
+                  <span className="flex min-w-0 flex-1 basis-[128px] items-center gap-1.5">
                     <TeamCrest team={f.opponent} size={16} />
-                    {f.home ? `vs ${f.opponent}` : `en ${f.opponent}`}
+                    <span className="truncate">{f.home ? `vs ${f.opponent}` : `en ${f.opponent}`}</span>
+                  </span>
+                  <span className="flex shrink-0 items-center gap-1.5">
                     <DifficultyBars fixture={f} />
                     <span className="whitespace-nowrap text-[0.72rem] font-semibold tabular-nums" title={oddsLabel(f)}>
                       {winChance(f)}%
